@@ -1,0 +1,14 @@
+main {
+  display: grid;
+  font-family: 'Architects Daughter', cursive; 
+  justify-content: center;
+  justify-items: center;
+}
+h1, h2 { margin-bottom: 6rem; }
+h2.stacked {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 8rem;
+  text-align: center;
+}

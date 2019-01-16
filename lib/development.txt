@@ -1,0 +1,8 @@
+################################################################################
+1-16-19: #######################################################################
+• Custom font:
+: https://stackoverflow.com/q/7961721/247626
+: figure out how to implement Archistico (free for commercial use):
+  https://www.1001fonts.com/archistico-font.html
+: or even better yet Handwriting Draft (not free for commercial use):
+  https://www.fontspace.com/fontscafe/handwriting-draft-free-version
