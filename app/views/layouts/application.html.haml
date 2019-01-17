@@ -5,10 +5,13 @@
     %title Rhouse2
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag('application', media: 'all',
-      data_turbolinks_track: 'reload')
-    = stylesheet_link_tag('https://fonts.googleapis.com/css?family=Architects+Daughter')
-    = javascript_include_tag('application', data_turbolinks_track: 'reload')
+    = stylesheet_link_tag 'application', media: 'all',
+      data_turbolinks_track: 'reload'
+    = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Architects+Daughter'
+    = javascript_include_tag 'application', data_turbolinks_track: 'reload'
 
   %body
-    = yield
+    %nav
+      = render 'navigation'
+    %main
+      = yield
