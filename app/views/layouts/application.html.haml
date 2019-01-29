@@ -11,6 +11,10 @@
     = javascript_include_tag 'application', data_turbolinks_track: 'reload'
 
   %body
+    %header
+      = image_tag 'rhouse2.jpg', class: 'header__responsive-logo'
+      %h4 Your Home Improvement Specialist
+      %h5 We Will Treat it Like Our House Too!
     %nav
       = render 'navigation'
     %main
