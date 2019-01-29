@@ -24,16 +24,9 @@ header h5 {
   width: 100%;
 }
 
-
-main {
-  color: #222;
-  display: grid;
-}
-span.tall { line-height: 2.5; }
-
 nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 ul.nav {
   display: flex;
@@ -41,6 +34,12 @@ ul.nav {
   margin: 0;
 }
 ul.nav li { padding: 1rem; }
+
+main {
+  color: #222;
+  display: grid;
+}
+span.tall { line-height: 2.5; }
 
 mark.rh2 {
   background-color: inherit;
