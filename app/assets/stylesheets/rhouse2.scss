@@ -15,6 +15,9 @@ ul.nav {
 }
 ul.nav li { padding: 1rem; }
 
+.flexrow { display: flex; }
+.justify-content--space-around { justify-content: space-around; }
+
 article.flip-card {
   font-family: 'Architects Daughter', cursive;
   font-size: 200%;
