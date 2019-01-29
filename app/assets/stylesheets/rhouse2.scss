@@ -42,7 +42,12 @@ ul.nav {
 }
 ul.nav li { padding: 1rem; }
 
-span.rh2 { font-style: italic; font-weight: bold; }
+mark.rh2 {
+  background-color: inherit;
+  color: inherit;
+  font-style: italic;
+  font-weight: bold;
+}
 
 .flexrow { display: flex; }
 .justify-content--space-around { justify-content: space-around; }
