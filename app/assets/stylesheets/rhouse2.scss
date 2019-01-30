@@ -27,13 +27,18 @@ header h5 {
 nav {
   display: flex;
   justify-content: center;
+  margin: 1rem 0;
 }
 ul.nav {
   display: flex;
   list-style-type: none;
   margin: 0;
+  padding-left: 0;
 }
-ul.nav li { padding: 1rem; }
+ul.nav li {
+  padding: .4rem;
+  white-space: nowrap;
+}
 
 main {
   color: #222;
