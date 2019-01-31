@@ -13,7 +13,7 @@
     %li= link_to_unless_current 'Gutters', gutters_path
     %li= link_to_unless_current 'Decks', decks_path
 
-  - if action_name.in?(repairs)
+  - if action_name.in?(mend)
     %li= link_to_unless_current 'Hail damage', hail_path
     %li= link_to_unless_current 'Ice dams', ice_path
     %li= link_to_unless_current 'Snow removal', snow_path

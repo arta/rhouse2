@@ -1,13 +1,13 @@
 module ServicesHelper
   def exteriors
-    %w(siding roofing green gutters decks)
+    %w(exterior siding roofing green gutters decks)
   end
 
   def interiors
-    %w(kitchens bathrooms flooring stone windows)
+    %w(interior kitchens bathrooms flooring stone windows)
   end
 
-  def repairs
-    %w(hail ice snow bats)
+  def mend
+    %w(mend hail ice snow bats)
   end
 end

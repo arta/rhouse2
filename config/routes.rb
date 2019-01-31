@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
 
   get '/services',  to: 'services#index'
+  get '/exterior',  to: 'services#exterior'
+  get '/interior',  to: 'services#interior'
+  get '/mend',      to: 'services#mend'
   get '/kitchens',  to: 'services#kitchens'
   get '/bathrooms', to: 'services#bathrooms'
   get '/roofing',   to: 'services#roofing'
@@ -20,7 +23,7 @@ Rails.application.routes.draw do
   get '/snow',      to: 'services#snow'
   get '/bats',      to: 'services#bats'
 
-  get '/portfolios', to: 'portfolios#index'
+  get 'portfolios', to: 'portfolios#index'
   get 'portfolios/kitchens'
   get 'portfolios/bathrooms'
   get 'portfolios/roofing'

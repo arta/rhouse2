@@ -1,5 +1,14 @@
 class ServicesController < ApplicationController
-  def index    
+  def index
+  end
+
+  def exterior
+  end
+
+  def interior
+  end
+
+  def mend
   end
 
   def kitchens
