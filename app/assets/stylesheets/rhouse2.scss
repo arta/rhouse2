@@ -1,3 +1,7 @@
+body {
+  color: #333;
+  font-family: 'Playfair Display', sans-serif;
+}
 header {
   display: flex;
   flex-direction: column;
@@ -50,7 +54,6 @@ li.roofing-supplier {
 }
 
 main {
-  color: #222;
   display: grid;
 }
 span.tall { line-height: 2.5; }
