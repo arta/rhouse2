@@ -37,7 +37,16 @@ ul.nav {
 }
 ul.nav li {
   padding: .4rem;
+  margin: 0;
   white-space: nowrap;
+}
+
+li { margin-bottom: 1rem; }
+
+li.roofing-supplier {
+  align-items: center;
+  display: flex;
+  margin: 1.5rem 0;
 }
 
 main {
@@ -57,6 +66,10 @@ blockquote { margin-bottom: 3rem; }
 
 .flexrow { display: flex; }
 .justify-content--space-around { justify-content: space-around; }
+.align-items--center { align-items: center; }
+.push { margin-left: auto; }
+
+.mr--1rem { margin-right: 1rem; }
 
 // 1-29-19: was a mock home page, not used now
 article.flip-card {
