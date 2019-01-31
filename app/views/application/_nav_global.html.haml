@@ -1,10 +1,18 @@
 %ul.nav
-  %li= link_to_unless_current 'Home', root_path
-  %li= link_to_unless current_service_exterior?, 'Exterior', exterior_path
-  %li= link_to_unless current_service_interior?, 'Interior', interior_path
-  %li= link_to_unless current_service_mend?, 'Repairs & cares', mend_path
+  %li{ class: current?('pages', 'index') }
+    = link_to_unless_current 'Home', root_path
+  %li{ class: ('current' if current_service_exterior?) }
+    = link_to_unless current_service_exterior?, 'Exterior', exterior_path
+  %li{ class: ('current' if current_service_interior?) }
+    = link_to_unless current_service_interior?, 'Interior', interior_path
+  %li{ class: ('current' if current_service_mend?) }
+    = link_to_unless current_service_mend?, 'Repairs & cares', mend_path
   -# %li= link_to_unless current_service_mend?, 'Mend', mend_path
-  %li= link_to_unless current_portfolio?, 'Portfolios', portfolios_path
-  %li= link_to_unless_current 'Testimonials', testimonials_path
-  %li= link_to_unless_current 'Contact us', contact_path
-  %li= link_to_unless_current 'About', about_path
+  %li{ class: ('current' if current_portfolio?) }
+    = link_to_unless current_portfolio?, 'Portfolios', portfolios_path
+  %li{ class: current?('testimonials', 'index') }
+    = link_to_unless_current 'Testimonials', testimonials_path
+  %li{ class: current?('pages', 'contact') }
+    = link_to_unless_current 'Contact us', contact_path
+  %li{ class: current?('pages', 'about') }
+    = link_to_unless_current 'About', about_path

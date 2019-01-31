@@ -42,10 +42,14 @@ ul.nav {
   padding-left: 0;
 }
 ul.nav li {
-  padding: .4rem;
-  margin: 0;
+  border: 1px transparent solid;
+  border-radius: 3px;
+  padding: .3rem;
+  margin: .1rem;
   white-space: nowrap;
 }
+ul.nav li.current { border: 1px lightgrey solid; }
+ul.nav a { text-decoration: none; }
 
 li { margin-bottom: 1rem; }
 
