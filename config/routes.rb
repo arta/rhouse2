@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get '/snow',      to: 'services#snow'
   get '/bats',      to: 'services#bats'
 
-  get 'portfolios/index'
+  get '/portfolios', to: 'portfolios#index'
   get 'portfolios/kitchens'
   get 'portfolios/bathrooms'
   get 'portfolios/roofing'
