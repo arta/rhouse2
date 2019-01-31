@@ -1,0 +1,12 @@
+%ul.nav
+  %li= link_to_unless_current 'Home', root_path
+  - interior = %w(kitchens bathrooms flooring stone windows)
+  %li= link_to_unless action_name.in?(interior), 'Interior', kitchens_path
+  - exterior = %w(siding roofing green gutters decks)
+  %li= link_to_unless action_name.in?(exterior), 'Exterior', siding_path
+  - repair = %w(hail ice snow bats)
+  %li= link_to_unless action_name.in?(repair), 'Repair/Care', hail_path
+  %li= link_to_unless_current 'Portfolios', '#'
+  %li= link_to_unless_current 'Testimonials', testimonials_path
+  %li= link_to_unless_current 'Contact us', contact_path
+  %li= link_to_unless_current 'About', about_path

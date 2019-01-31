@@ -17,6 +17,8 @@
       %h4 Your Home Improvement Specialist
       %h5 We Will Treat it Like Our House Too!
     %nav
-      = render 'navigation'
+      = render 'nav_global'
+      - if lookup_context.exists?('nav_regional', controller_name, true)
+        = render 'nav_regional'
     %main
       = yield

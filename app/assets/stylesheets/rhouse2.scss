@@ -31,7 +31,8 @@ header h5 {
 
 nav {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin: 1rem 0;
 }
 ul.nav {
