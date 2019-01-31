@@ -1,12 +1,9 @@
 %ul.nav
   %li= link_to_unless_current 'Home', root_path
-  %li= link_to_unless controller_name == 'services' && action_name.in?(interior_actions),
-    'Interior', interior_path
-  %li= link_to_unless controller_name == 'services' && action_name.in?(exterior_actions),
-    'Exterior', exterior_path
-  %li= link_to_unless action_name.in?(mend_actions), 'Mend', mend_path
-  %li= link_to_unless controller_name == 'portfolios' && action_name.in?(portfolios_actions),
-    'Portfolios', portfolios_path
+  %li= link_to_unless current_service_interior?, 'Interior', interior_path
+  %li= link_to_unless current_service_exterior?, 'Exterior', exterior_path
+  %li= link_to_unless current_service_mend?, 'Mend', mend_path
+  %li= link_to_unless current_portfolio?, 'Portfolios', portfolios_path
   %li= link_to_unless_current 'Testimonials', testimonials_path
   %li= link_to_unless_current 'Contact us', contact_path
   %li= link_to_unless_current 'About', about_path
