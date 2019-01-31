@@ -2,7 +2,8 @@
   %li= link_to_unless_current 'Home', root_path
   %li= link_to_unless current_service_exterior?, 'Exterior', exterior_path
   %li= link_to_unless current_service_interior?, 'Interior', interior_path
-  %li= link_to_unless current_service_mend?, 'Mend', mend_path
+  %li= link_to_unless current_service_mend?, 'Repairs & cares', mend_path
+  -# %li= link_to_unless current_service_mend?, 'Mend', mend_path
   %li= link_to_unless current_portfolio?, 'Portfolios', portfolios_path
   %li= link_to_unless_current 'Testimonials', testimonials_path
   %li= link_to_unless_current 'Contact us', contact_path
