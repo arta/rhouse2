@@ -1,19 +1,19 @@
 %ul.nav
-  - if action_name.in?(interiors)
+  - if action_name.in?(interior_actions)
     %li= link_to_unless_current 'Kitchens', kitchens_path
     %li= link_to_unless_current 'Bathrooms', bathrooms_path
     %li= link_to_unless_current 'Flooring', flooring_path
     %li= link_to_unless_current 'Cultured stone', stone_path
     %li= link_to_unless_current 'Windows', windows_path
 
-  - if action_name.in?(exteriors)
+  - if action_name.in?(exterior_actions)
     %li= link_to_unless_current 'Siding', siding_path
     %li= link_to_unless_current 'Roofing', roofing_path
     %li= link_to_unless_current 'Green roofs', green_path
     %li= link_to_unless_current 'Gutters', gutters_path
     %li= link_to_unless_current 'Decks', decks_path
 
-  - if action_name.in?(mend)
+  - if action_name.in?(mend_actions)
     %li= link_to_unless_current 'Hail damage', hail_path
     %li= link_to_unless_current 'Ice dams', ice_path
     %li= link_to_unless_current 'Snow removal', snow_path

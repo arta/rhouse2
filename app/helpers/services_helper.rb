@@ -1,13 +1,13 @@
 module ServicesHelper
-  def exteriors
+  def exterior_actions
     %w(exterior siding roofing green gutters decks)
   end
 
-  def interiors
+  def interior_actions
     %w(interior kitchens bathrooms flooring stone windows)
   end
 
-  def mend
+  def mend_actions
     %w(mend hail ice snow bats)
   end
 end
