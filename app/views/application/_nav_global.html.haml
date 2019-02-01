@@ -1,5 +1,5 @@
 %ul.nav
-  %li{ class: current?('pages', 'index') }
+  %li{ class: current?(root_path) }
     = link_to_unless_current 'Home', root_path
   %li{ class: ('current' if current_service_exterior?) }
     = link_to_unless current_service_exterior?, 'Exterior', exterior_path
@@ -10,9 +10,9 @@
   -# %li= link_to_unless current_service_mend?, 'Mend', mend_path
   %li{ class: ('current' if current_portfolio?) }
     = link_to_unless current_portfolio?, 'Portfolios', portfolios_path
-  %li{ class: current?('testimonials', 'index') }
+  %li{ class: current?(testimonials_path) }
     = link_to_unless_current 'Testimonials', testimonials_path
-  %li{ class: current?('pages', 'contact') }
+  %li{ class: current?(contact_path) }
     = link_to_unless_current 'Contact us', contact_path
-  %li{ class: current?('pages', 'about') }
+  %li{ class: current?(about_path) }
     = link_to_unless_current 'About', about_path

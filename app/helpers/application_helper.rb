@@ -1,5 +1,6 @@
 module ApplicationHelper
-  def current?(controller=nil, action=nil)
-    'current' if current_page?(controller: controller, action: action)
+  # Set CSS class .current
+  def current?(target_page)
+    'current' if current_page?(target_page)
   end
 end
