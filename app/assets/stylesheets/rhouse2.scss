@@ -73,6 +73,11 @@ mark.rh2 {
 
 blockquote { margin-bottom: 3rem; }
 
+.tile-wall {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .flexrow { display: flex; }
 .justify-content--space-around { justify-content: space-around; }
 .align-items--center { align-items: center; }
