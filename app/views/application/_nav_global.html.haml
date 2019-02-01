@@ -6,7 +6,7 @@
   %li{ class: ('current' if current_service_interior?) }
     = link_to_unless current_service_interior?, 'Interior', interior_path
   %li{ class: ('current' if current_service_mend?) }
-    = link_to_unless current_service_mend?, 'Repairs & cares', mend_path
+    = link_to_unless current_service_mend?, 'Other services', mend_path
   -# %li= link_to_unless current_service_mend?, 'Mend', mend_path
   %li{ class: ('current' if current_portfolio?) }
     = link_to_unless current_portfolio?, 'Portfolios', portfolios_path
