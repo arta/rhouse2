@@ -6,20 +6,20 @@
       = link_to_unless_current 'Bathrooms', bathrooms_path
     %li{ class: current?(flooring_path) }
       = link_to_unless_current 'Flooring', flooring_path
-    %li{ class: current?(stone_path) }
-      = link_to_unless_current 'Cultured stone', stone_path
     %li{ class: current?(windows_path) }
       = link_to_unless_current 'Windows', windows_path
 
   - if action_name.in?(exterior_actions)
-    %li{ class: current?(siding_path) }
-      = link_to_unless_current 'Siding', siding_path
     %li{ class: current?(roofing_path) }
       = link_to_unless_current 'Roofing', roofing_path
     %li{ class: current?(green_path) }
       = link_to_unless_current 'Green roofs', green_path
     %li{ class: current?(gutters_path) }
       = link_to_unless_current 'Gutters', gutters_path
+    %li{ class: current?(siding_path) }
+      = link_to_unless_current 'Siding', siding_path
+    %li{ class: current?(stone_path) }
+      = link_to_unless_current 'Cultured stone', stone_path
     %li{ class: current?(decks_path) }
       = link_to_unless_current 'Decks', decks_path
 
