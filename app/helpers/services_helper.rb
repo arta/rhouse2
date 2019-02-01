@@ -4,7 +4,7 @@ module ServicesHelper
   end
 
   def exterior_actions
-    %w(exterior roofing green gutters siding stone decks)
+    %w(exterior roofing siding gutters green stone decks)
   end
 
   def current_service_interior?
