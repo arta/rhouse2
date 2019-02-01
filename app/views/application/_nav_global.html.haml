@@ -1,17 +1,24 @@
 %ul.nav
   %li{ class: current?(root_path) }
     = link_to_unless_current 'Home', root_path
+
   %li{ class: ('current' if current_service_exterior?) }
     = link_to_unless current?(exterior_path), 'Exterior', exterior_path
+
   %li{ class: ('current' if current_service_interior?) }
     = link_to_unless current?(interior_path), 'Interior', interior_path
+
   %li{ class: ('current' if current_service_mend?) }
     = link_to_unless current?(mend_path), 'Other services', mend_path
+
   %li{ class: ('current' if current_portfolio?) }
     = link_to_unless current?(portfolios_path), 'Portfolios', portfolios_path
+
   %li{ class: current?(testimonials_path) }
     = link_to_unless_current 'Testimonials', testimonials_path
+
   %li{ class: current?(contact_path) }
     = link_to_unless_current 'Contact us', contact_path
+
   %li{ class: current?(about_path) }
     = link_to_unless_current 'About', about_path
