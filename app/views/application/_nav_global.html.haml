@@ -2,16 +2,16 @@
   %li{ class: current?(root_path) }
     = link_to_unless_current 'Home', root_path
 
-  %li{ class: ('current' if current_service_exterior?) }
+  %li{ class: current?(exterior_paths) }
     = link_to_unless current?(exterior_path), 'Exterior', exterior_path
 
-  %li{ class: ('current' if current_service_interior?) }
+  %li{ class: current?(interior_paths) }
     = link_to_unless current?(interior_path), 'Interior', interior_path
 
-  %li{ class: ('current' if current_service_mend?) }
+  %li{ class: current?(mend_paths) }
     = link_to_unless current?(mend_path), 'Other services', mend_path
 
-  %li{ class: ('current' if current_portfolio?) }
+  %li{ class: current?(portfolios_paths) }
     = link_to_unless current?(portfolios_path), 'Portfolios', portfolios_path
 
   %li{ class: current?(testimonials_path) }

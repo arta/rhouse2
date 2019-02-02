@@ -1,25 +1,14 @@
 module ServicesHelper
-  def current_service_exterior?
-    controller_name == 'services' && action_name.in?(exterior_actions)
+  def exterior_paths
+    [exterior_path, roofing_path, siding_path, gutters_path, green_path,
+      stone_path, decks_path]
   end
 
-  def exterior_actions
-    %w(exterior roofing siding gutters green stone decks)
+  def interior_paths
+    [interior_path, kitchens_path, bathrooms_path, flooring_path, windows_path]
   end
 
-  def current_service_interior?
-    controller_name == 'services' && action_name.in?(interior_actions)
-  end
-
-  def interior_actions
-    %w(interior kitchens bathrooms flooring windows)
-  end
-
-  def current_service_mend?
-    controller_name == 'services' && action_name.in?(mend_actions)
-  end
-
-  def mend_actions
-    %w(mend hail ice snow bats)
+  def mend_paths
+    [mend_path, hail_path, ice_path, snow_path, bats_path]
   end
 end

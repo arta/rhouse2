@@ -1,9 +1,6 @@
 module PortfoliosHelper
-  def current_portfolio?
-    controller_name == 'portfolios' && action_name.in?(portfolios_actions)
-  end
-
-  def portfolios_actions
-    %w(index flooring windows siding roofing decks)
+  def portfolios_paths
+    [portfolios_path, portfolios_roofing_path, portfolios_siding_path, portfolios_decks_path, portfolios_flooring_path,
+      portfolios_windows_path]
   end
 end

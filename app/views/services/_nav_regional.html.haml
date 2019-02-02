@@ -1,5 +1,5 @@
 %ul.nav
-  - if action_name.in?(interior_actions)
+  - if current?(interior_paths)
     %li{ class: current?(kitchens_path) }
       = link_to_unless_current 'Kitchens', kitchens_path
     %li{ class: current?(bathrooms_path) }
@@ -9,7 +9,7 @@
     %li{ class: current?(windows_path) }
       = link_to_unless_current 'Windows', windows_path
 
-  - if action_name.in?(exterior_actions)
+  - if current?(exterior_paths)
     %li{ class: current?(roofing_path) }
       = link_to_unless_current 'Roofing', roofing_path
     %li{ class: current?(siding_path) }
@@ -23,7 +23,7 @@
     %li{ class: current?(decks_path) }
       = link_to_unless_current 'Decks', decks_path
 
-  - if action_name.in?(mend_actions)
+  - if current?(mend_paths)
     %li{ class: current?(hail_path) }
       = link_to_unless_current 'Hail damage', hail_path
     %li{ class: current?(ice_path) }
