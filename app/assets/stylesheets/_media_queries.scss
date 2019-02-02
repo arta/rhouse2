@@ -1,0 +1,19 @@
+// BREAKPOINTS:
+// Foundation, Bootstrap, Material Design Light:
+//								480					480
+//								575
+//		640
+//								768
+//														839
+//								991
+//		1024										1024
+//		1200				1199
+//		1440
+
+@media (min-width: 768px) {
+  .griddle.portfolio { grid-template-columns: 1fr 1fr; }
+}
+
+@media (min-width: 1024px) {
+  .griddle.portfolio { grid-template-columns: 1fr 1fr 1fr; }
+}
