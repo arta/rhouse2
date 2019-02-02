@@ -1,34 +1,47 @@
 %ul.nav
-  - if current?(interior_paths)
-    %li{ class: current?(kitchens_path) }
-      = link_to_unless_current 'Kitchens', kitchens_path
-    %li{ class: current?(bathrooms_path) }
-      = link_to_unless_current 'Bathrooms', bathrooms_path
-    %li{ class: current?(flooring_path) }
-      = link_to_unless_current 'Flooring', flooring_path
-    %li{ class: current?(windows_path) }
-      = link_to_unless_current 'Windows', windows_path
-
   - if current?(exterior_paths)
     %li{ class: current?(roofing_path) }
       = link_to_unless_current 'Roofing', roofing_path
+
     %li{ class: current?(siding_path) }
       = link_to_unless_current 'Siding', siding_path
+
     %li{ class: current?(gutters_path) }
       = link_to_unless_current 'Gutters', gutters_path
+
     %li{ class: current?(green_path) }
       = link_to_unless_current 'Green roofs', green_path
+
     %li{ class: current?(stone_path) }
       = link_to_unless_current 'Cultured stone', stone_path
+
     %li{ class: current?(decks_path) }
       = link_to_unless_current 'Decks', decks_path
 
-  - if current?(mend_paths)
+
+  - elsif current?(interior_paths)
+    %li{ class: current?(kitchens_path) }
+      = link_to_unless_current 'Kitchens', kitchens_path
+
+    %li{ class: current?(bathrooms_path) }
+      = link_to_unless_current 'Bathrooms', bathrooms_path
+
+    %li{ class: current?(flooring_path) }
+      = link_to_unless_current 'Flooring', flooring_path
+
+    %li{ class: current?(windows_path) }
+      = link_to_unless_current 'Windows', windows_path
+
+
+  - elsif current?(mend_paths)
     %li{ class: current?(hail_path) }
       = link_to_unless_current 'Hail damage', hail_path
+
     %li{ class: current?(ice_path) }
       = link_to_unless_current 'Ice dams', ice_path
+
     %li{ class: current?(snow_path) }
       = link_to_unless_current 'Snow removal', snow_path
+
     %li{ class: current?(bats_path) }
       = link_to_unless_current 'Bat removal', bats_path

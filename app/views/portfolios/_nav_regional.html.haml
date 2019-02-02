@@ -1,13 +1,15 @@
 %ul.nav
   %li{ class: current?(portfolios_roofing_path) }
     = link_to_unless_current 'Roofing', portfolios_roofing_path
+
   %li{ class: current?(portfolios_siding_path) }
     = link_to_unless_current 'Siding', portfolios_siding_path
+
   %li{ class: current?(portfolios_decks_path) }
     = link_to_unless_current 'Decks', portfolios_decks_path
-  -# %li= link_to_unless_current 'Kitchens', portfolios_kitchens_path
-  -# %li= link_to_unless_current 'Bathrooms', portfolios_bathrooms_path
+
   %li{ class: current?(portfolios_flooring_path) }
     = link_to_unless_current 'Flooring', portfolios_flooring_path
+
   %li{ class: current?(portfolios_windows_path) }
     = link_to_unless_current 'Windows', portfolios_windows_path
