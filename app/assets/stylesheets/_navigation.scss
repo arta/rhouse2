@@ -1,0 +1,39 @@
+nav {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Telegrafico';
+  font-size: 126%;
+  margin: 1rem 0;
+}
+
+ul.nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+ul.nav li {
+  border: 1px transparent solid;
+  border-radius: 3px;
+  padding: .3rem;
+  margin: .1rem;
+  white-space: nowrap;
+}
+
+ul.nav li.current {
+  color: #e60000;
+  // border: 1px lightgrey solid;
+}
+
+ul.nav a {
+  color: #333;
+  text-decoration: none;
+}
+ul.nav li.current a {
+  color: #e60000;
+}
+
+ul.nav li:hover { border: 1px lightgrey solid; }
+ul.nav.regional li.current:hover { border: 1px transparent solid; }

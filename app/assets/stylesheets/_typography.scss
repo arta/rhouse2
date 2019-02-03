@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Archistico Bold';
+  src: font-url('Archistico_Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Archistico Simple';
+  src: font-url('Archistico_Simple.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Telegrafico';
+  src: font-url('telegrafico.ttf') format('truetype');
+}
+
+h1 {
+  font-family: 'Archistico Bold';
+  font-size: 380%;
+}
+h2 { font-size: 180%; }
+h2, h3, h4 {
+  color: #505050;
+  font-family: 'Archistico Simple';
+}
+
+header h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  margin: .4rem 0;
+}
+header h5 {
+  color: black;
+  font-size: 16px;
+  font-weight: normal;
+  margin: .8rem 0;
+}
+
+mark.rh2 {
+  background-color: inherit;
+  color: #444; //inherit;
+  font-family: 'Archistico Simple';
+  font-weight: bold;
+}

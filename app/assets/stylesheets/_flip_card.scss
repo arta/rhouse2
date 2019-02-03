@@ -1,0 +1,17 @@
+// 1-29-19: was a mock home page, not used now
+// may use in the future as a little "treat"/"surprise" ?
+article.flip-card {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 200%;
+  justify-content: center;
+  justify-items: center;
+  text-align: center;
+}
+h1.flip-card { margin-bottom: 6rem; }
+h3.flip-card { margin-bottom: 10rem; }
+h3.flip-card.stacked {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 8rem;
+}
