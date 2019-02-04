@@ -7,32 +7,26 @@ nav {
   margin: 1rem 0;
 }
 
-ul.nav {
+nav ul {
   display: flex;
   list-style-type: none;
   margin: 0;
   padding-left: 0;
 }
-
-ul.nav li {
+nav li {
   border: 1px transparent solid;
   border-radius: 3px;
   padding: .3rem;
   margin: .1rem;
   white-space: nowrap;
 }
-
-ul.nav li.current {
-  color: #e60000;
-}
-
-ul.nav a {
+nav a {
   color: #333;
   text-decoration: none;
 }
-ul.nav li.current a {
-  color: #e60000;
-}
+
+nav li.current, // no a inside li.current, courtesy of link_to_unless_current
+nav li.current a { color: #e60000; }
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
@@ -43,8 +37,9 @@ ul.nav li.current a {
 // li.has-nav.current                red          border      |
 // li.has-nav.current.showing        red            -     <---
 //
-ul.nav li:hover { border: 1px lightgrey solid; }
-ul.nav li.current:hover { border: 1px transparent solid; }
-ul.nav li.current.has-nav:hover { border: 1px lightgrey solid; }
-ul.nav li.current.has-nav.showing:hover { border: 1px transparent solid; }
-ul.nav.regional li.current:hover { border: 1px transparent solid; }
+// Hover ON:
+nav li:hover,
+nav li.current.has-nav:hover { border-color: lightgrey; }
+// Hover OFF:
+nav li.current:hover,
+nav li.current.has-nav.showing:hover { border-color: transparent; }
