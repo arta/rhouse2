@@ -1,4 +1,28 @@
 ################################################################################
+2-4-19: ########################################################################
+• States, specifically, styling css classes for nav items states;
+: spent quite a lot of time on iterations figuring it out a solution that
+  : reads well in all contexts
+  : is minimalistic & simple
+
+: Could have been a faster process if I started with thinking about the
+  specific states first, e.g.:
+  : nave item can be:
+    : black, hover                       idle, can go to
+    : red (no hover)                     current page, "cannot go to it"
+    : red, hover                         parent/upstream/bread-crumb, can go to
+
+  : realizing this could have possibly lead to arriving at the number of
+    required state (& styling) classes and their names faster:
+    : li, li:hover                       <= black,  hover effect
+    : li.current.view:hover              <= red,    no hover effect
+    : li.current                         <= red,    hover effect
+
+################################################################################
+
+
+
+################################################################################
 1-16-19: #######################################################################
 • Custom font:
 : https://stackoverflow.com/q/7961721/247626
