@@ -25,19 +25,19 @@ nav a {
   text-decoration: none;
 }
 
-// No anchor inside li.current.showing
-// i.e. when .current serves as a bread-crumb in the nav
-// courtesty of link_to_unless _current(), current?() helpers
+// No anchor inside li.current.view
+// i.e. when .current used as a bread-crumb in the nav
+// courtesty of link_to_unless _current(), current_view?() helpers
 nav li.current a,
-nav li.current.showing { color: #e60000; }
+nav li.current.view { color: #e60000; }
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
 // li                               black         border
 // li.current                        red          border
-// li.current.showing                red            -
+// li.current.view                   red            -
 
 // Hover ON:
 nav li:hover { border-color: lightgrey; }
 // Hover OFF:
-nav li.showing:hover { border-color: transparent; }
+nav li.current.view:hover { border-color: transparent; }

@@ -1,24 +1,28 @@
 %ul.nav
-  %li{ class: current?(root_path) }
+  %li{ class: current_view?(root_path) }
     = link_to_unless_current 'Home', root_path
 
-  %li{ class: current?(exterior_paths) }
-    = link_to_unless current?(exterior_path), 'Exterior', exterior_path
+  %li{ class: current_view?(exterior_paths) }
+    = link_to_unless current_view?(exterior_path),
+      'Exterior', exterior_path
 
-  %li{ class: current?(interior_paths) }
-    = link_to_unless current?(interior_path), 'Interior', interior_path
+  %li{ class: current_view?(interior_paths) }
+    = link_to_unless current_view?(interior_path),
+      'Interior', interior_path
 
-  %li{ class: current?(mend_paths) }
-    = link_to_unless current?(mend_path), 'Other services', mend_path
+  %li{ class: current_view?(mend_paths) }
+    = link_to_unless current_view?(mend_path),
+      'Other services', mend_path
 
-  %li{ class: current?(portfolios_paths) }
-    = link_to_unless current?(portfolios_path), 'Portfolios', portfolios_path
+  %li{ class: current_view?(portfolios_paths) }
+    = link_to_unless current_view?(portfolios_path),
+      'Portfolios', portfolios_path
 
-  %li{ class: current?(testimonials_path) }
+  %li{ class: current_view?(testimonials_path) }
     = link_to_unless_current 'Testimonials', testimonials_path
 
-  %li{ class: current?(contact_path) }
+  %li{ class: current_view?(contact_path) }
     = link_to_unless_current 'Contact us', contact_path
 
-  %li{ class: current?(about_path) }
+  %li{ class: current_view?(about_path) }
     = link_to_unless_current 'About', about_path
