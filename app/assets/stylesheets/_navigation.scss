@@ -25,21 +25,16 @@ nav a {
   text-decoration: none;
 }
 
-nav li.current, // no a inside li.current, courtesy of link_to_unless_current
+nav li.current, // no a inside li.current; link_to_unless _current(), current?()
 nav li.current a { color: #e60000; }
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
-// li                               black         border  +-------
-// li.current                        red            -     <---    |
-//                                                            |   |
-// li.has-nav                       black         border  +---|---
-// li.has-nav.current                red          border      |
-// li.has-nav.current.showing        red            -     <---
-//
+// li                               black         border
+// li.current                        red          border
+// li.current.showing                red            -
+
 // Hover ON:
-nav li:hover,
-nav li.current.has-nav:hover { border-color: lightgrey; }
+nav li:hover { border-color: lightgrey; }
 // Hover OFF:
-nav li.current:hover,
-nav li.current.has-nav.showing:hover { border-color: transparent; }
+nav li.showing:hover { border-color: transparent; }

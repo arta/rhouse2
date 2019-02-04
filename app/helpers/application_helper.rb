@@ -9,7 +9,7 @@ module ApplicationHelper
       end
     elsif link_paths.is_a? String
       path = link_paths
-      'current' if current_page?(path)
+      'current showing' if current_page?(path)
     end
   end
 
