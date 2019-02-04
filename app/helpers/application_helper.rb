@@ -1,10 +1,15 @@
 module ApplicationHelper
-  # Return CSS class 'current' (& implicit true), or false in nav bars
-  def current?(target)
-    if target.is_a? Array
-      'current' if target.any?{ |target| current_page?(target) }
-    elsif target.is_a? String
-      'current' if current_page?(target)
+  # Return CSS class 'current <showing>' (& implicit true), or false for nav
+  def current?(link_paths)
+    if link_paths.is_a? Array
+      if link_paths.any?{ |path| current_page?(path) && path.in?(parent_paths) }
+        'current showing'
+      elsif link_paths.any?{ |path| current_page?(path) }
+        'current'
+      end
+    elsif link_paths.is_a? String
+      path = link_paths
+      'current' if current_page?(path)
     end
   end
 
@@ -19,6 +24,10 @@ module ApplicationHelper
 
   def mend_paths
     [mend_path, hail_path, ice_path, snow_path, bats_path]
+  end
+
+  def parent_paths
+    [exterior_path, interior_path, mend_path, portfolios_path]
   end
 
   def portfolios_paths
