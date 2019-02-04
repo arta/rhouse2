@@ -25,9 +25,9 @@ nav a {
   text-decoration: none;
 }
 
-// No anchor inside li.current.view
-// i.e. when .current used as a bread-crumb in the nav
-// courtesty of link_to_unless _current(), current_view?() helpers
+// No anchor inside li.current.view. Courtesty of Rails' and my own adapted
+// link_to_unless _current(), current_view?() helpers.
+// Use for state contingent styling, i.e. a "bread-crumb" and hover
 nav li.current a,
 nav li.current.view { color: #e60000; }
 
