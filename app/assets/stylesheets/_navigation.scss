@@ -25,8 +25,11 @@ nav a {
   text-decoration: none;
 }
 
-nav li.current, // no a inside li.current; link_to_unless _current(), current?()
-nav li.current a { color: #e60000; }
+// No anchor inside li.current.showing
+// i.e. when .current serves as a bread-crumb in the nav
+// courtesty of link_to_unless _current(), current?() helpers
+nav li.current a,
+nav li.current.showing { color: #e60000; }
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
