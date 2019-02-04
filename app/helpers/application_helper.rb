@@ -1,15 +1,15 @@
 module ApplicationHelper
-  # Return CSS class 'current <showing>' (& implicit true), or false for nav
+  # Return CSS class 'current <showing>'/true or nil/false for nav items styling
   def current?(link_paths)
-    if link_paths.is_a? Array
+    if link_paths.is_a? String
+      path = link_paths
+      'current showing' if current_page?(path)
+    elsif link_paths.is_a? Array
       if link_paths.any?{ |path| current_page?(path) && path.in?(parent_paths) }
         'current showing'
       elsif link_paths.any?{ |path| current_page?(path) }
         'current'
       end
-    elsif link_paths.is_a? String
-      path = link_paths
-      'current showing' if current_page?(path)
     end
   end
 
