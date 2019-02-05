@@ -26,9 +26,12 @@
 // adele:                   700                             1700
 
 @media (min-width: 768px) {
-  .griddle.portfolio { grid-template-columns: 1fr 1fr; }
+  section.portfolio { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 1200px) {
-  .griddle.portfolio { grid-template-columns: 1fr 1fr 1fr; }
+  section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
+}
+
+@media (min-width: 1440px) {
 }
