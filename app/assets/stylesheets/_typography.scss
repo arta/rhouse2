@@ -11,14 +11,16 @@
   src: font-url('telegrafico.ttf') format('truetype');
 }
 
-h1, h2, h3, h4 {
+h1 {
   color: black;
   font-family: 'Archistico Bold';
 }
 h1 { font-size: 380%; }
-h2 { font-size: 180%; }
+h2 { font-size: 130%; }
+// h2, h3, h4 { font-family: 'Archistico Bold'; }
 
 header h4 {
+  font-family: 'Archistico Bold';
   font-size: 18px;
   margin: .4rem 0;
 }
