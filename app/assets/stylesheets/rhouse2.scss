@@ -32,9 +32,10 @@ span.tall { line-height: 2.5; }
 
 blockquote { margin-bottom: 3rem; }
 
-.tile-wall {
-  display: flex;
-  flex-wrap: wrap;
+.galery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: space-around;
 }
 
 .flexrow { display: flex; }
