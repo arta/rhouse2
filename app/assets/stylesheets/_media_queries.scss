@@ -9,6 +9,21 @@
 //		1024										1024
 //		1200				1199
 //		1440
+//
+// https://www.websitedimensions.com/
+// Get started with:
+// smartphones:   <=  768 px
+// tablets:       >=  768 px
+// medium devices >=  992 px
+// large devices  >= 1200 px
+//
+// Website CSS breakpoints:
+// bbc:                 600                 1008 1280
+// cnn:                 640     768     960 1024
+// apple:                   736 768         1068       1440       2100
+// mercedes-benz:               768              1280
+// microsoft:       540             898 992
+// adele:                   700                             1700
 
 @media (min-width: 768px) {
   .griddle.portfolio { grid-template-columns: 1fr 1fr; }
