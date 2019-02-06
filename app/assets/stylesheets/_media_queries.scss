@@ -26,12 +26,16 @@
 // adele:                   700                             1700
 
 @media (min-width: 768px) {
+  main { max-width: 768px; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 1200px) {
+  main { max-width: 991px; }
+  .griddle { grid-template-columns: 2fr 1fr; }
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (min-width: 1440px) {
+  main { max-width: 1280px; }
 }

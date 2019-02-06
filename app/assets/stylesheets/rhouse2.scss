@@ -26,11 +26,23 @@ li.roofing-supplier {
 }
 
 main {
-  display: grid;
+  font-size: 120%;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 span.tall { line-height: 2.5; }
 
+article {
+  margin: 0 auto;
+  max-width: 768px;
+}
+
 blockquote { margin-bottom: 3rem; }
+
+.griddle {
+  display: grid;
+  grid-gap: 2rem;
+}
 
 .galery {
   display: grid;
