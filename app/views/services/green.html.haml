@@ -48,16 +48,15 @@
     - allow = 'accelerometer; autoplay; encrypted-media; gyroscope;            |
       picture-in-picture'                                                      |
 
-    %iframe{ width: 560, height: 315,
-      src: "https://www.youtube-nocookie.com/embed/WFgpz8V3CmU",
-      frameborder: 0, allow: allow, allowfullscreen: true }
+    .flexrow.justify-content--space-around
+      %iframe{ width: 560, height: 315,
+        src: "https://www.youtube-nocookie.com/embed/WFgpz8V3CmU",
+        frameborder: 0, allow: allow, allowfullscreen: true }
 
   %aside
-    %figure.float-right= image_tag 'greenroof_residential1_small.jpg'
-
     %h3 Advantages of Roof Gardens
-
-    %ul
+    %figure.in-article-right.ml--1rem= image_tag 'greenroof_residential1_small.jpg'
+    %ul.aside
       %li Reduces urban heat island effects
       %li Storm water run-off management
       %li Adds valuable/useable space providing economic benefits

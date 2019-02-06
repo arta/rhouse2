@@ -19,9 +19,15 @@ header {
 
 li { margin-bottom: 1rem; }
 
+ul.aside { padding-left: 1rem; }
+ul.roofing-suppliers {
+  list-style-type: none;
+  padding-left: 0;
+}
 li.roofing-supplier {
   align-items: center;
   display: flex;
+  list-style-type: none;
   margin: 1.5rem 0;
 }
 
@@ -37,6 +43,16 @@ article { margin: 0 auto; }
 
 blockquote { margin-bottom: 3rem; }
 
+aside {
+  align-self: baseline;
+  background-color: whitesmoke;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-top: 3rem;
+  padding: 1.5rem;
+}
+aside > :first-child { margin-top: 0; }
+
 .griddle {
   display: grid;
   grid-gap: 2rem;
@@ -49,6 +65,7 @@ blockquote { margin-bottom: 3rem; }
 }
 
 .flexrow { display: flex; }
+.flexcol { display: flex; flex-direction: column; }
 .justify-content--space-around { justify-content: space-around; }
 .align-items--center { align-items: center; }
 .push { margin-left: auto; }
@@ -60,12 +77,12 @@ section.portfolio {
 }
 
 figure { margin: 0; }
-figure.in-article-right {
+.in-article-right {
   display: inline;
   float: right;
   margin: .3rem 0 0 2rem;
 }
-figure.in-article-left {
+.in-article-left {
   display: inline;
   float: left;
   margin: .3rem 2rem 0 0;

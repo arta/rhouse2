@@ -35,6 +35,8 @@ mark.rh2 {
   color: #444;
   color: inherit;
   font-style: italic;
-  // font-family: 'Archistico Bold';
-  // font-weight: bold;
+  white-space: nowrap;
 }
+
+aside h3 { font-size: 100%; }
+aside p, aside li { font-size: 90%; }
