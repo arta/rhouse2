@@ -21,4 +21,4 @@
       - if lookup_context.exists?('nav_regional', controller_name, true)
         = render 'nav_regional'
     %main
-      = yield
+      .container= yield
