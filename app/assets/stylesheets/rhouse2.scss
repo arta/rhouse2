@@ -45,17 +45,20 @@ blockquote { margin-bottom: 3rem; }
 
 aside {
   align-self: baseline;
-  background-color: whitesmoke;
-  border: 1px solid lightgrey;
-  border-radius: 5px;
+  background-color: #fbfbfb;
+  // border: 1px solid lightgrey;
+  border-left: 1.5rem solid #eee;
+  // border-radius: 5px;
   margin-top: 3rem;
   padding: 1.5rem;
+  padding-bottom: 3rem;
 }
-aside > :first-child { margin-top: 0; }
+// aside > :first-child { margin-top: 0; }
 
 .griddle {
   display: grid;
-  grid-gap: 2rem;
+  grid-column-gap: 3rem;
+  grid-row-gap: 1rem;
 }
 
 .galery {
