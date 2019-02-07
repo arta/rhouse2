@@ -25,6 +25,10 @@
 // microsoft:       540             898 992
 // adele:                   700                             1700
 
+@media (min-width: 575px) {
+  .flexrow.footer { justify-content: space-between; }
+}
+
 @media (min-width: 768px) {
   .container { max-width: 768px; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
