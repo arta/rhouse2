@@ -28,6 +28,8 @@
 @media (min-width: 768px) {
   .container { max-width: 768px; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
+  .copyright { margin-left: 2rem; }
+  nav.footer { margin-right: 2rem; }
 }
 
 @media (min-width: 1200px) {

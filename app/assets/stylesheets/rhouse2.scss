@@ -38,6 +38,7 @@ main {
   margin: 0 auto;
   padding: 0 2rem;
 }
+
 span.tall { line-height: 2.5; }
 
 article { margin: 0 auto; }
@@ -68,7 +69,6 @@ aside {
 .flexcol { display: flex; flex-direction: column; }
 .justify-content--space-around { justify-content: space-around; }
 .align-items--center { align-items: center; }
-.push { margin-left: auto; }
 
 section.portfolio {
   display: grid;
@@ -92,3 +92,23 @@ img.portfolio {
   height: auto;
   width: 100%;
 }
+
+footer {
+  font-family: 'Monteserrat', sans-serif;
+  padding: 3rem 0;
+}
+.flexrow.footer {
+  border-top: 1px lightgrey solid;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+}
+.copyright {
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+}
+nav.footer {
+  font-family: inherit;
+  font-size: 100%;
+}
+nav.footer li:hover { border-color: transparent; }
