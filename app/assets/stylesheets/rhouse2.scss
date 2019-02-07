@@ -100,11 +100,13 @@ img.portfolio {
 }
 
 footer {
+  background-color: #333;
+  color: whitesmoke;
   font-family: 'Monteserrat', sans-serif;
   padding: 3rem 0;
 }
 .flexrow.footer {
-  border-top: 1px lightgrey solid;
+  // border-top: 1px lightgrey solid;
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
@@ -117,4 +119,5 @@ nav.footer {
   font-family: inherit;
   font-size: 100%;
 }
+nav.footer a { color: whitesmoke; }
 nav.footer li:hover { border-color: transparent; }
