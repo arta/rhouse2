@@ -1,12 +1,17 @@
+html { height: 100vh; }
 body {
   color: #333;
+  display: flex;
+  flex-direction: column;
   font-family: 'Monteserrat', sans-serif;
+  height: 100vh;
   line-height: 1.5;
 }
 header {
   align-items: center;
   display: flex;
   flex-direction: column;
+  flex-shrink: 0;
   font-family: 'Telegrafico';
   text-align: center;
 }
@@ -32,6 +37,7 @@ li.roofing-supplier {
 }
 
 main {
+  flex-grow: 1;
   font-size: 120%;
 }
 .container {
