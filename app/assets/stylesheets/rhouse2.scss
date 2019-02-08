@@ -1,11 +1,20 @@
-html { height: 100vh; }
+html {
+  // font-size: 5vmin;
+  // font-size: 100%;
+  font-size: 110%;
+  height: 100vh;
+}
+
+body { font-size: 16px; }
+p { font-size: 120%; line-height: 1.5; }
+
 body {
   color: #333;
   display: flex;
   flex-direction: column;
   font-family: 'Monteserrat', sans-serif;
   height: 100vh;
-  line-height: 1.5;
+  // line-height: 1.5;
 }
 header {
   align-items: center;
@@ -36,10 +45,7 @@ li.roofing-supplier {
   margin: 1.5rem 0;
 }
 
-main {
-  flex-grow: 1;
-  font-size: 120%;
-}
+main { flex-grow: 1; }
 .container {
   margin: 0 auto;
   padding: 0 2rem;
@@ -117,7 +123,7 @@ footer {
 }
 nav.footer {
   font-family: inherit;
-  font-size: 100%;
+  font-size: 90%;
 }
 nav.footer a { color: whitesmoke; }
 nav.footer li:hover { border-color: transparent; }
