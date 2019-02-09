@@ -25,6 +25,21 @@
 // microsoft:       540             898 992
 // adele:                   700                             1700
 
+@media (max-width: 375px) {
+  h1 { font-size: calc(16px + (48 - 22) * (100vw - 150px)/(335 - 150)); }
+}
+
+@media (min-width: 540px) {
+  .in-article-left {
+    float: left;
+    margin: .3rem 2rem 0 0;
+  }
+  .in-article-right { 
+    float: right;
+    margin: .3rem 0 0 2rem;
+  }
+}
+
 @media (min-width: 640px) {
   .flexrow.footer { justify-content: space-between; }
 }

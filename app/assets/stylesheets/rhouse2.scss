@@ -81,21 +81,16 @@ section.portfolio {
 }
 
 figure { margin: 0; }
+.in-article-left,
 .in-article-right {
   display: inline;
-  float: right;
-  margin: .3rem 0 0 2rem;
+  margin: .3rem auto 0 auto;
 }
 .in-article-left img,
 .in-article-right img,
 .roofing-supplier img {
   max-width: 600px;
   width: 100%;
-}
-.in-article-left {
-  display: inline;
-  float: left;
-  margin: .3rem 2rem 0 0;
 }
 .video-wrapper {
 	position: relative;
