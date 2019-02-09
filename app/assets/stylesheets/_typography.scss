@@ -7,6 +7,10 @@
   src: font-url('Archistico_Simple.ttf') format('truetype');
 }
 @font-face {
+  font-family: 'Chaparral Pro Bold';
+  src: font-url('ChaparralPro-Bold.otf') format('truetype');
+}
+@font-face {
   font-family: 'Telegrafico';
   src: font-url('telegrafico.ttf') format('truetype');
 }
@@ -14,19 +18,29 @@
 h1 {
   color: black;
   font-family: 'Archistico Bold';
+  font-size: 300%;
 }
-h1 { font-size: 300%; }
-h2 { font-size: 110%; }
+h2 {
+  color: #555;
+  font-size: 150%;
+}
 
 header h4 {
-  font-family: 'Archistico Bold';
+  font-family: 'Chaparral Pro';
   font-size: 130%;
+  font-weight: bold;
   margin: .4rem 0;
 }
 header h5 {
+  font-family: 'Chaparral Pro';
   font-size: 120%;
   font-weight: normal;
   margin: .8rem 0;
+}
+
+p {
+  font-size: 140%;
+  line-height: 1.5;
 }
 
 mark.rh2 {
@@ -37,5 +51,4 @@ mark.rh2 {
   white-space: nowrap;
 }
 
-aside h3 { font-size: 96%; }
-aside p, aside li { font-size: 86%; }
+aside p, aside li { font-size: 125%; }
