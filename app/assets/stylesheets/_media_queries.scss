@@ -60,6 +60,7 @@
 }
 
 @media (min-width: 1440px) {
+  aside { border-left: 1.5rem solid #eee; }
   li.roofing-supplier { flex-wrap: nowrap; }
   .container { max-width: 1280px; }
 }
