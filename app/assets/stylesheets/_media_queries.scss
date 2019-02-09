@@ -25,17 +25,7 @@
 // microsoft:       540             898 992
 // adele:                   700                             1700
 
-@media(min-width:60rem){html{font-size: 90%;}}
-
-@media (min-width: 400px) {
-  // html {font-size: 4vmin;}
-}
-@media (min-width: 500px) {
-  // html {font-size: 3vmin;}
-}
-
 @media (min-width: 640px) {
-  // html {font-size: 1.4vmax;}
   .flexrow.footer { justify-content: space-between; }
 }
 
@@ -44,9 +34,6 @@
   section.portfolio { grid-template-columns: 1fr 1fr; }
   .copyright { margin-left: 2rem; }
   nav.footer { margin-right: 2rem; }
-}
-@media (min-width: 992px) {
-  // html {font-size: 19px;}
 }
 
 @media (min-width: 1200px) {
