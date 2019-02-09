@@ -27,14 +27,30 @@ li { margin-bottom: 1rem; }
 
 ul.aside { padding-left: 1rem; }
 ul.roofing-suppliers {
+  font-size: 90%;
   list-style-type: none;
   padding-left: 0;
 }
 li.roofing-supplier {
   align-items: center;
   display: flex;
-  list-style-type: none;
-  margin: 1.5rem 0;
+  flex-wrap: wrap;
+  margin: 2.2rem 0;
+}
+li.roofing-supplier.carlisle img {
+  min-width: 100px;
+  max-width: 125px;
+  width: 100%;
+}
+li.roofing-supplier.certainteed img {
+  min-width: 170px;
+  max-width: 237px;
+  width: 100%;
+}
+li.roofing-supplier.gaf img {
+  min-width: 70px;
+  max-width: 110px;
+  width: 100%;
 }
 
 main { flex-grow: 1; }
@@ -105,8 +121,6 @@ figure { margin: 0; }
 	width: 100%;
 	height: 100%;
 }
-
-.roofing-supplier-logo { max-width: 250px; width: 100%; }
 
 img.portfolio {
   height: auto;

@@ -34,13 +34,14 @@
     float: left;
     margin: .3rem 2rem 0 0;
   }
-  .in-article-right { 
+  .in-article-right {
     float: right;
     margin: .3rem 0 0 2rem;
   }
 }
 
 @media (min-width: 640px) {
+  li.roofing-supplier { flex-wrap: nowrap; }
   .flexrow.footer { justify-content: space-between; }
 }
 
@@ -54,9 +55,11 @@
 @media (min-width: 1200px) {
   .container { max-width: 991px; }
   .griddle { grid-template-columns: 2fr 1fr; }
+  li.roofing-supplier { flex-wrap: wrap; }
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
 }
 
 @media (min-width: 1440px) {
+  li.roofing-supplier { flex-wrap: nowrap; }
   .container { max-width: 1280px; }
 }
