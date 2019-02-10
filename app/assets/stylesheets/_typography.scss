@@ -1,14 +1,10 @@
 @font-face {
-  font-family: 'Archistico Bold';
-  src: font-url('Archistico_Bold.ttf') format('truetype');
-}
-@font-face {
-  font-family: 'Archistico Simple';
-  src: font-url('Archistico_Simple.ttf') format('truetype');
-}
-@font-face {
   font-family: 'Chaparral Pro Bold';
   src: font-url('ChaparralPro-Bold.otf') format('truetype');
+}
+@font-face {
+  font-family: 'MyriadPro-Regular';
+  src: font-url('MyriadPro-Regular.otf') format('truetype');
 }
 @font-face {
   font-family: 'Telegrafico';
@@ -16,13 +12,13 @@
 }
 
 h1 {
-  color: black;
-  font-family: 'Archistico Bold';
+  color: #666;
+  font-family: 'Chaparral Pro';
   font-size: 300%;
 }
 h2 {
   color: #555;
-  font-size: 150%;
+  font-size: 160%;
 }
 
 header h4 {
@@ -51,4 +47,4 @@ mark.rh2 {
   white-space: nowrap;
 }
 
-aside p, aside li { font-size: 125%; }
+aside p, aside li { font-size: 115%; }
