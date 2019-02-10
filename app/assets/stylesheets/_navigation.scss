@@ -4,13 +4,13 @@ nav {
   flex-direction: column;
   font-family: 'Telegrafico';
   flex-shrink: 0;
-  font-size: 126%;
   margin: 1rem 0;
 }
 
 nav ul {
   display: flex;
   flex-wrap: wrap;
+  line-height: 1;
   list-style-type: none;
   margin: 0;
   padding-left: 0;
