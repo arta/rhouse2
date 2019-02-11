@@ -1,11 +1,14 @@
 nav {
-  align-items: center;
   display: flex;
-  flex-direction: column;
   font-family: 'Telegrafico';
   flex-shrink: 0;
-  margin: 1rem 0;
 }
+nav.header {
+  align-items: flex-end;
+  flex-direction: column;
+  margin: 0 0 1rem 0;
+}
+nav.footer { font-family: inherit; }
 
 nav ul {
   display: flex;
@@ -15,17 +18,23 @@ nav ul {
   margin: 0;
   padding-left: 0;
 }
+
 nav li {
-  border: 1px transparent solid;
-  border-radius: 3px;
-  padding: .3rem;
-  margin: .1rem;
+  padding: .4rem;
+  margin: 0;
   white-space: nowrap;
 }
-nav a {
-  color: #333;
-  text-decoration: none;
+nav.header li {
+  border: 1px transparent solid;
+  border-radius: 3px;
+  margin-right: 1.2rem;
 }
+ul.nav.regional li { margin-right: .4rem; }
+nav.header li:last-child { margin-right: 0; }
+
+nav a { text-decoration: none; }
+nav.header a { color: #333; }
+nav.footer a { color: whitesmoke; }
 
 // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // link_to_unless _current(), current_view?() helpers.
@@ -38,8 +47,8 @@ nav li.current.view { color: #e60000; }
 // li                               black         border
 // li.current                        red          border
 // li.current.view                   red            -
-
+// ------------------------------------------------------
 // Hover ON:
-nav li:hover { border-color: lightgrey; }
+nav.header li:hover { border-color: lightgrey; }
 // Hover OFF:
-nav li.current.view:hover { border-color: transparent; }
+nav.header li.current.view:hover { border-color: transparent; }

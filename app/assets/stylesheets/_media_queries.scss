@@ -48,7 +48,7 @@
 @media (min-width: 768px) {
   .container { max-width: 768px; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
-  .copyright { margin-left: 2rem; }
+  p.footer { margin-left: 2rem; }
   nav.footer { margin-right: 2rem; }
 }
 

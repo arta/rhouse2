@@ -8,20 +8,28 @@ body {
   font-size: 16px;
   height: 100vh;
 }
-header {
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+.rh2-logo-headlines {
   align-items: center;
   display: flex;
-  flex-direction: column;
   flex-shrink: 0;
-  font-family: 'Telegrafico';
-  text-align: center;
 }
-.header__responsive-logo {
+.rh2-logo-responsive {
   height: 100%;
-  max-height: 126px;
-  max-width: 516px;
+  max-height: 80px;
+  max-width: 280px;
   width: 100%;
-  margin: .4rem 0 1.5rem 0;
+  // max-height: 126px;
+  // max-width: 516px;
+}
+.rh2-headlines {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
 }
 
 li { margin-bottom: 1rem; }
@@ -129,6 +137,10 @@ img.portfolio {
   width: 100%;
 }
 
+// declaring font-size here as % does not work
+// p & nav font-sizes differ per inheritance cascade
+// is % the problem?
+// TODO: convert all (relative) font sizes to rem
 footer {
   background-color: #333;
   color: whitesmoke;
@@ -141,11 +153,9 @@ footer {
   flex-wrap: wrap-reverse;
   justify-content: center;
 }
-p.footer.copyright {
+p.footer, nav.footer {
   align-items: center;
   display: flex;
-  white-space: nowrap;
+  margin: 0;
 }
-nav.footer { font-family: inherit; }
-nav.footer li:hover { border-color: transparent; }
-nav.footer a { color: whitesmoke; }
+p.footer { white-space: nowrap; }

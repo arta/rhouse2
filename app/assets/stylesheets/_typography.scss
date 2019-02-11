@@ -20,18 +20,17 @@ h2 {
   color: #555;
   font-size: 160%;
 }
-
-header h4 {
+header h4, header h5 {
   font-family: 'Chaparral Pro';
+  margin: .3rem 0;
+}
+header h4 {
+  color: #444;
   font-size: 130%;
-  font-weight: bold;
-  margin: .4rem 0;
 }
 header h5 {
-  font-family: 'Chaparral Pro';
   font-size: 120%;
   font-weight: normal;
-  margin: .8rem 0;
 }
 
 p, ul {
