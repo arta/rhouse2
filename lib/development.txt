@@ -1,4 +1,15 @@
 ################################################################################
+2-11-19: #######################################################################
+• Custom font:
+: https://blog.miragestudio7.com/architecture-fonts-download-free-architect-handwriting-font/3339/
+: love these, figure out where to implement some
+  : thinking portolios' figcaption tags?
+
+################################################################################
+
+
+
+################################################################################
 2-4-19: ########################################################################
 • States, specifically, styling css classes for nav items states;
 : spent quite a lot of time on iterations figuring it out a solution that
