@@ -1,0 +1,14 @@
+.top-bar
+  .top-bar-left
+    .rh2-logo-headlines
+      .rh2-logo
+        = image_tag 'logo-RH2-plain-squished.jpg',
+          class: 'rh2-logo-responsive'
+      .rh2-headlines
+        %h4 Your Home Improvement Specialist
+        %h5 We Will Treat it Like Our House Too!
+  .top-bar-right
+    %nav.header
+      = render 'nav_global'
+      - if lookup_context.exists?('nav_regional', controller_name, true)
+        = render 'nav_regional'
