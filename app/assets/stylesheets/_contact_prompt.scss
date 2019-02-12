@@ -1,0 +1,28 @@
+.contact-prompt {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.3rem;
+  margin: 0 auto;
+}
+i.fa-phone {
+  color: #e60000;
+  margin-right: .3rem;
+}
+span.phone, span.gc-cs-link {
+  color: black;
+  cursor: auto;
+  text-decoration: none;
+}
+span.phone { margin-right: .7rem; }
+.button.contact {
+  color: white;
+  background-color: #e60000;
+  border-radius: 7px 25px 25px 7px;
+  font-family: 'Telegrafico';
+  padding: .1rem 1rem .1rem .6rem;
+  padding: 1px 14px 1px 9px;
+  text-decoration: none;
+}
+.button.contact:hover { background-color: darken(#e60000, 4%); }

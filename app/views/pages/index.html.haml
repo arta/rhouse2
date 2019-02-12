@@ -32,15 +32,17 @@
       %h3
         %em "Remodeling Wisconsin"
 
-  %aside
-    %h3 When you file A CLAIM, call #{rh2}
-    %p
-      If you receive damage to the exterior of your home due to hail, wind,
-      etc., give us a call! Our experienced, trained professionals can assess
-      the damage and work with your insurance company on your behalf to ensure
-      you are treated fairly.
-    .flexcol.align-items--center.text-center
-      %strong #{rh2} can help ...
-      %strong Call us 24/7 for emergency repair
-      %br
-      %strong 608-445-6511
+  .grid-item
+    = render 'contact_prompt'
+    %aside
+      %h3 When you file A CLAIM, call #{rh2}
+      %p
+        If you receive damage to the exterior of your home due to hail, wind,
+        etc., give us a call! Our experienced, trained professionals can assess
+        the damage and work with your insurance company on your behalf to ensure
+        you are treated fairly.
+      .flexcol.align-items--center.text-center
+        %strong #{rh2} can help ...
+        %strong Call us 24/7 for emergency repair
+        %br
+        %strong 608-445-6511
