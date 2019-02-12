@@ -37,6 +37,7 @@ span.phone { margin-right: .7rem; }
   padding: .1rem 1rem .1rem .6rem;
   padding: 1px 14px 1px 9px;
   text-decoration: none;
+  transition: background-color, .3s;
 }
 
-.button.contact:hover { background-color: darken(#e60000, 4%); }
+.button.contact:hover { background-color: darken(#e60000, 5%); }

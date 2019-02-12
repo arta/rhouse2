@@ -4,9 +4,9 @@ nav {
   flex-shrink: 0;
 }
 nav.header {
-  align-items: flex-end;
+  align-items: center;
   flex-direction: column;
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 nav.footer { font-family: inherit; }
 
@@ -28,9 +28,17 @@ nav.header li {
   border: 1px transparent solid;
   border-radius: 3px;
   margin-right: 1.2rem;
+  transition: background-color, .6s;
+}
+ul.nav.regional {
+  font-size: 134%;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 ul.nav.regional li { margin-right: .4rem; }
 nav.header li:last-child { margin-right: 0; }
+li.current, .nav.regional { background-color: whitesmoke; }
 
 nav a { text-decoration: none; }
 nav.header a { color: #333; }
@@ -49,6 +57,12 @@ nav li.current.view { color: #e60000; }
 // li.current.view                   red            -
 // ------------------------------------------------------
 // Hover ON:
-nav.header li:hover { border-color: lightgrey; }
+nav.header li:hover {
+  background-color: lightgrey;
+  border-color: lightgrey;
+}
 // Hover OFF:
-nav.header li.current.view:hover { border-color: transparent; }
+nav.header li.current.view:hover {
+  background-color: whitesmoke;
+  border-color: transparent;
+}
