@@ -1,21 +1,34 @@
+.contact-prompt-heading {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
 .contact-prompt {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   font-size: 1.3rem;
-  margin: 0 auto;
 }
+
+h1 + p.contact-prompt { margin: 0; }
+
 i.fa-phone {
   color: #e60000;
   margin-right: .3rem;
 }
+
 span.phone, span.gc-cs-link {
   color: black;
   cursor: auto;
   text-decoration: none;
 }
+
 span.phone { margin-right: .7rem; }
+
 .button.contact {
   color: white;
   background-color: #e60000;
@@ -25,4 +38,5 @@ span.phone { margin-right: .7rem; }
   padding: 1px 14px 1px 9px;
   text-decoration: none;
 }
+
 .button.contact:hover { background-color: darken(#e60000, 4%); }

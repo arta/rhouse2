@@ -19,13 +19,15 @@
       tri-tip drumstick ham corned beef cupim bacon. Flank buffalo ground round,
       pig beef ribs bresaola doner. Short loin sirloin cow kielbasa.
 
-  %aside
-    %h3 We arrive on time, snow or shine.
-    %figure.in-article-left= image_tag 'snow_removal_1.jpg'
-    %p
-      Our clients agree that #{rh2} has the best rounded, dressed, and
-      suntanned crew in Madison.
-    %p Please call us even in the summer.
-    .flexrow.align-items--center
-      %h3 We love to shovel!
-      %p.push (608) 445-6511
+  .grid-item
+    = render 'contact_prompt_heading'
+    %aside
+      %h3 We arrive on time, snow or shine.
+      %figure.in-article-left= image_tag 'snow_removal_1.jpg'
+      %p
+        Our clients agree that #{rh2} has the best rounded, dressed, and
+        suntanned crew in Madison.
+      %p Please call us even in the summer.
+      .flexrow.align-items--center
+        %h3 We love to shovel!
+        %p.push (608) 445-6511
