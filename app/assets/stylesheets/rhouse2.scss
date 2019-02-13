@@ -70,12 +70,14 @@ main {
 
 .container {
   flex: 1 0 auto;
-  margin: 2rem auto; // 0 for top to bottom
+  margin: 2rem auto 3rem auto; // 0 auto; for edge to edge
   padding: 1px 2rem;
 }
 
 main .container { background-color: #dfdfdf; }
 footer .container { margin: 1rem auto; }
+
+article { margin-bottom: 2rem; }
 
 span.tall { line-height: 2.5; }
 
@@ -85,7 +87,8 @@ aside {
   align-self: baseline;
   background-color: #efefef;
   border-left: .5rem solid #d0d0d0;
-  padding: 1rem;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem 2rem 1rem;
 }
 aside li { margin-bottom: .8rem; }
 
