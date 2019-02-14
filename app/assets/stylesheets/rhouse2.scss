@@ -75,6 +75,8 @@ main {
 }
 
 main .container { background-color: #dfdfdf; } // indiv. portfolio: #4a, #15
+.container.pantheon { flex-grow: 0; }
+
 footer .container { margin: 1rem auto; }
 
 article { margin-bottom: 2rem; }
