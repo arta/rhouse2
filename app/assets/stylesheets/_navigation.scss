@@ -89,7 +89,7 @@ img.nav {
   top: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  transition: .5s ease-in-out;
+  transition: .4s ease-in-out;
   width: 100%;
   backface-visibility: hidden;
   display: flex;
@@ -97,10 +97,14 @@ img.nav {
   align-items: center;
 }
 .overlay-text {
-  color: white;
+  border: 1px solid whitesmoke;
+  color: whitesmoke;
   font-size: 160%;
+  background-color: #333;
+  padding: 0 8px 1px 8px;
+  border-radius: 7px;
 }
 figure.nav:hover .overlay {
-  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  background: rgba(0, 0, 0, 0.3); /* Black see-through */
   opacity: 1;
 }
