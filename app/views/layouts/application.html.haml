@@ -18,6 +18,6 @@
     %header
       = render 'header'
     %main
-      .container{ class: "#{yield :main_container_class}" }= yield
+      .container{ class: (yield :main_container_class) }= yield
     %footer
       .container= render 'footer'
