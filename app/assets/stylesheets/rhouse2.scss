@@ -104,11 +104,8 @@ aside li { margin-bottom: .8rem; }
   grid-row-gap: 1rem;
 }
 
-.galery {
+nav.pantheon {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-nav.galery {
   grid-template-columns: 1fr;
   gap: 2rem;
 }
