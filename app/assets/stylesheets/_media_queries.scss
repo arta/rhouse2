@@ -38,7 +38,7 @@
     float: right;
     margin: .3rem 0 0 1.3rem;
   }
-  nav.galery { grid-template-columns: 1fr 1fr; }
+  nav.pantheon { grid-template-columns: 1fr 1fr; }
 }
 
 @media (min-width: 640px) {
@@ -62,7 +62,7 @@
     margin: 0 auto;
   }
   li.roofing-supplier { flex-wrap: wrap; }
-  nav.galery,
+  nav.pantheon,
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
 }
 
