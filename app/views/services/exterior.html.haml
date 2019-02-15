@@ -5,26 +5,32 @@
 
   %nav.galery
     %figure.nav
-      = image_tag 'nav-services-roofing.jpg', class: 'nav'
-      .overlay
-        .overlay-text Roofing
+      = link_to roofing_path do
+        = image_tag 'nav-services-roofing.jpg', class: 'nav'
+        .overlay
+          .overlay-text Roofing
     %figure.nav
-      = image_tag 'nav-services-siding.jpg', class: 'nav'
-      .overlay
-        .overlay-text Siding
+      = link_to siding_path do
+        = image_tag 'nav-services-siding.jpg', class: 'nav'
+        .overlay
+          .overlay-text Siding
     %figure.nav
-      = image_tag 'nav-services-gutters.jpg', class: 'nav'
-      .overlay
-        .overlay-text Gutters
+      = link_to gutters_path do
+        = image_tag 'nav-services-gutters.jpg', class: 'nav'
+        .overlay
+          .overlay-text Gutters
     %figure.nav
-      = image_tag 'nav-services-green.jpg', class: 'nav'
-      .overlay
-        .overlay-text Green roofs
+      = link_to green_path do
+        = image_tag 'nav-services-green.jpg', class: 'nav'
+        .overlay
+          .overlay-text Green roofs
     %figure.nav
-      = image_tag 'nav-services-stone.jpg', class: 'nav'
-      .overlay
-        .overlay-text Cultured stone
+      = link_to stone_path do
+        = image_tag 'nav-services-stone.jpg', class: 'nav'
+        .overlay
+          .overlay-text Cultured stone
     %figure.nav
-      = image_tag 'nav-services-decks.jpg', class: 'nav'
-      .overlay
-        .overlay-text Decks
+      = link_to decks_path do
+        = image_tag 'nav-services-decks.jpg', class: 'nav'
+        .overlay
+          .overlay-text Decks
