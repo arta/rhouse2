@@ -133,6 +133,11 @@ figure { margin: 0; }
   max-width: 600px;
   width: 100%;
 }
+aside .in-article-left img,
+aside .in-article-right img {
+  max-width: 340px;
+  width: 100%;
+}
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
