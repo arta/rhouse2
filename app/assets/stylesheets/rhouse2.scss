@@ -108,7 +108,10 @@ aside li { margin-bottom: .8rem; }
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-nav.galery { gap: 2rem; }
+nav.galery {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
 
 .flexrow { display: flex; }
 .flexcol { display: flex; flex-direction: column; }
