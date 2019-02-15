@@ -4,7 +4,23 @@
   = render 'contact_prompt_heading', { h1: 'Other Services' }
 
   %nav.pantheon
-    %figure= image_tag 'nav-services-hail.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-ice-dams.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-snow-removal.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-bat-removal.jpg', class: 'nav'
+    %figure.nav
+      = link_to hail_path do
+        = image_tag 'nav-services-hail.jpg', class: 'nav'
+        .overlay
+          .overlay-text Hail Damage
+    %figure.nav
+      = link_to ice_path do
+        = image_tag 'nav-services-ice-dams.jpg', class: 'nav'
+        .overlay
+          .overlay-text Ice Dams
+    %figure.nav
+      = link_to snow_path do
+        = image_tag 'nav-services-snow-removal.jpg', class: 'nav'
+        .overlay
+          .overlay-text Snow Removal
+    %figure.nav
+      = link_to bats_path do
+        = image_tag 'nav-services-bat-removal.jpg', class: 'nav'
+        .overlay
+          .overlay-text Bat Removal
