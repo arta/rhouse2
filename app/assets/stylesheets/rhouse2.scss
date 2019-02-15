@@ -74,7 +74,10 @@ main {
   padding: 1px 2rem;
 }
 
-main .container { background-color: #dfdfdf; } // indiv. portfolio: #4a, #15
+main .container {
+  background-color: #dfdfdf; // indiv. portfolio: #4a, #15
+  border-radius: 5px;
+}
 .container.pantheon { flex-grow: 0; }
 
 footer .container { margin: 1rem auto; }
@@ -89,6 +92,7 @@ aside {
   align-self: baseline;
   background-color: #efefef;
   border-left: .5rem solid #d0d0d0;
+  border-radius: 5px;
   margin-bottom: 3rem;
   padding: 1rem 1rem 2rem 1rem;
 }
