@@ -20,5 +20,6 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
         dolore eu fugiat nulla pariatur.
       %figure.in-article-left= image_tag 'decks_page.jpg'
-      -# floating figure as last element doesn't play nice in a grid
+      -# prevent vertical shrink of aside with too little text
+      -# for the aside to envelope the floated figure
       .clearfix
