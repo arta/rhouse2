@@ -4,7 +4,23 @@
   = render 'contact_prompt_heading', { h1: 'Interior Services' }
 
   %nav.pantheon
-    %figure= image_tag 'nav-services-kitchens.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-bathrooms.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-flooring.jpg', class: 'nav'
-    %figure= image_tag 'nav-services-windows.jpg', class: 'nav'
+    %figure.nav
+      = link_to kitchens_path do
+        = image_tag 'nav-services-kitchens.jpg', class: 'nav'
+        .overlay
+          .overlay-text Kitchens
+    %figure.nav
+      = link_to bathrooms_path do
+        = image_tag 'nav-services-bathrooms.jpg', class: 'nav'
+        .overlay
+          .overlay-text Bathrooms
+    %figure.nav
+      = link_to flooring_path do
+        = image_tag 'nav-services-flooring.jpg', class: 'nav'
+        .overlay
+          .overlay-text Flooring
+    %figure.nav
+      = link_to windows_path do
+        = image_tag 'nav-services-windows.jpg', class: 'nav'
+        .overlay
+          .overlay-text Windows
