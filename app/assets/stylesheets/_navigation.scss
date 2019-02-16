@@ -43,6 +43,7 @@ li.current, .nav.regional { background-color: whitesmoke; }
 nav a { text-decoration: none; }
 nav.header a { color: #333; }
 nav.footer a { color: whitesmoke; }
+nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
 
 // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // link_to_unless _current(), current_view?() helpers.
