@@ -2,8 +2,9 @@
   .top-bar-left
     .rh2-logo-headlines
       .rh2-logo
-        = image_tag 'logo-RH2-plain-squished.jpg',
-          class: 'rh2-logo-responsive'
+        = link_to root_path do
+          = image_tag 'logo-RH2-plain-squished.jpg',
+            class: 'rh2-logo-responsive'
       .rh2-headlines
         %h4 Your Home Improvement Specialist
         %h5 We Will Treat it Like Our House Too!

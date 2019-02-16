@@ -83,3 +83,13 @@
   li.roofing-supplier { flex-wrap: nowrap; }
   .container { max-width: 1280px; }
 }
+
+@media (max-width: 1700px) {
+  .top-bar { padding: 1rem 2rem; }
+  .rh2-logo-headlines {
+    flex-direction: column;
+    text-align: center;
+  }
+  .rh2-headlines { margin-top: .5rem; }
+  .top-bar-right { margin-top: 1rem; }
+}

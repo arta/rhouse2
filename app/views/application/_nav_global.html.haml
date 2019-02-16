@@ -1,6 +1,13 @@
 %ul.nav
-  %li{ class: current_view?(root_path) }
-    = link_to_unless_current 'Home', root_path
+  -# %li{ class: current_view?(root_path) }
+  -#   - if current_page?(root_path)
+  -#     %i.fas.fa-home
+  -#   - else
+  -#     = link_to root_path do
+  -#       %i.fas.fa-home
+  -#
+  -# %li{ class: current_view?(root_path) }
+  -#   = link_to_unless_current 'Home', root_path
 
   %li{ class: current_view?(exterior_paths) }
     = link_to_unless current_view?(exterior_path),
