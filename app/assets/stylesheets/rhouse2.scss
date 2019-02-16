@@ -80,6 +80,12 @@ main .container {
 }
 .container.pantheon { flex-grow: 0; }
 
+main.pantheon.portfolios { background-color: #909090; }
+main.portfolio { background-color: #3e3e3e; }
+
+.container.pantheon.portfolios { background-color: #cbcbcb; }
+.container.portfolio { background-color: #1f1f1f; }
+
 footer .container { margin: 1rem auto; }
 
 article { margin-bottom: 2rem; }
