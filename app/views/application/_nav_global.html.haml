@@ -1,4 +1,4 @@
-%ul.nav
+%ul.nav.xlarge
   -# %li{ class: current_view?(root_path) }
   -#   - if current_page?(root_path)
   -#     %i.fas.fa-home
@@ -24,6 +24,84 @@
   %li{ class: current_view?(portfolios_paths) }
     = link_to_unless current_view?(portfolios_path),
       'Portfolios', portfolios_path
+
+  %li{ class: current_view?(testimonials_path) }
+    = link_to_unless_current 'Testimonials', testimonials_path
+
+
+%ul.nav.large.menu.vertical.medium-horizontal{ data: { responsive_menu: 'accordion medium-dropdown'} }
+  %li{ class: current_view?(services_paths) }
+    = link_to 'Services', '#'
+    %ul.menu.vertical
+      %li{ class: current_view?(exterior_paths) }
+        = link_to 'Exterior', exterior_path
+        %ul.menu.vertical
+          %li{ class: current_view?(roofing_path) }
+            = link_to_unless_current 'Roofing', roofing_path
+
+          %li{ class: current_view?(siding_path) }
+            = link_to_unless_current 'Siding', siding_path
+
+          %li{ class: current_view?(gutters_path) }
+            = link_to_unless_current 'Gutters', gutters_path
+
+          %li{ class: current_view?(green_path) }
+            = link_to_unless_current 'Green roofs', green_path
+
+          %li{ class: current_view?(stone_path) }
+            = link_to_unless_current 'Cultured stone', stone_path
+
+          %li{ class: current_view?(decks_path) }
+            = link_to_unless_current 'Decks', decks_path
+      %li{ class: current_view?(interior_paths) }
+        = link_to 'Interior', interior_path
+        %ul.menu.vertical
+          %li{ class: current_view?(kitchens_path) }
+            = link_to_unless_current 'Kitchens', kitchens_path
+
+          %li{ class: current_view?(bathrooms_path) }
+            = link_to_unless_current 'Bathrooms', bathrooms_path
+
+          %li{ class: current_view?(flooring_path) }
+            = link_to_unless_current 'Flooring', flooring_path
+
+          %li{ class: current_view?(windows_path) }
+            = link_to_unless_current 'Windows', windows_path
+
+      %li{ class: current_view?(mend_paths) }
+        = link_to 'Other services', mend_path
+        %ul.menu.vertical
+          %li{ class: current_view?(hail_path) }
+            = link_to_unless_current 'Hail damage', hail_path
+
+          %li{ class: current_view?(ice_path) }
+            = link_to_unless_current 'Ice dams', ice_path
+
+          %li{ class: current_view?(snow_path) }
+            = link_to_unless_current 'Snow removal', snow_path
+
+          %li{ class: current_view?(bats_path) }
+            = link_to_unless_current 'Bat removal', bats_path
+
+
+  %li{ class: current_view?(portfolios_paths) }
+    = link_to 'Portfolios', portfolios_path
+    %ul.menu.vertical
+      %li{ class: current_view?(portfolios_roofing_path) }
+        = link_to_unless_current 'Roofing', portfolios_roofing_path
+
+      %li{ class: current_view?(portfolios_siding_path) }
+        = link_to_unless_current 'Siding', portfolios_siding_path
+
+      %li{ class: current_view?(portfolios_decks_path) }
+        = link_to_unless_current 'Decks', portfolios_decks_path
+
+      %li{ class: current_view?(portfolios_flooring_path) }
+        = link_to_unless_current 'Flooring', portfolios_flooring_path
+
+      %li{ class: current_view?(portfolios_windows_path) }
+        = link_to_unless_current 'Windows', portfolios_windows_path
+
 
   %li{ class: current_view?(testimonials_path) }
     = link_to_unless_current 'Testimonials', testimonials_path

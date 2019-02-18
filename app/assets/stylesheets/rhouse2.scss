@@ -9,9 +9,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'MyriadPro-Regular', sans-serif;
-  font-size: 16px;
   height: 100vh;
 }
+.title-bar {
+  justify-content: space-between;
+  padding: .5rem 1rem;
+}
+.title-bar .rh2-logo { max-width: 150px; }
+
 .top-bar {
   align-items: flex-start; // Override F6: center;
   display: flex;

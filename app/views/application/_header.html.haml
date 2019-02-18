@@ -1,4 +1,12 @@
-.top-bar
+.title-bar{ data: { responsive_toggle: 'full-nav', hide_for: 'large' } }
+  .rh2-logo
+    = link_to root_path do
+      = image_tag 'logo-RH2-plain-squished.jpg',
+        class: 'rh2-logo-responsive'
+  -# %button.menu-icon{ data: { toggle: 'full-nav' }, type: 'button' }
+  %button.fas.fa-hard-hat{ data: { toggle: 'full-nav' }, type: 'button' }
+
+.top-bar#full-nav
   .top-bar-left
     .rh2-logo-headlines
       .rh2-logo

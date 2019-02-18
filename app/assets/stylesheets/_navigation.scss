@@ -10,6 +10,16 @@ nav.header {
 }
 nav.footer { font-family: inherit; }
 
+button.menu-icon:hover { background-color: lightgrey; }
+button.fa-hard-hat {
+  border: 1px transparent solid;
+  border-radius: 3px;
+  font-size: 2rem;
+  padding: 6px;
+  transition: background-color, .6s;
+}
+button.fa-hard-hat:hover { background-color: lightgrey; }
+
 nav ul {
   display: flex;
   flex-wrap: wrap;
@@ -20,7 +30,7 @@ nav ul {
 }
 
 nav li {
-  padding: .4rem;
+  padding: .6rem;
   margin: 0;
   white-space: nowrap;
 }
@@ -30,8 +40,10 @@ nav.header li {
   margin-right: 1.2rem;
   transition: background-color, .6s;
 }
+ul.nav.large,
+ul.nav.xlarge,
+ul.nav.regional { display: none; }
 ul.nav.regional {
-  font-size: 134%;
   justify-content: center;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -45,11 +57,17 @@ nav.header a { color: #333; }
 nav.footer a { color: whitesmoke; }
 nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
 
+.dropdown.menu li.is-active.current > a { color: #e60000; }
+.dropdown .is-dropdown-submenu .opens-left > a { padding-left: 1rem; }
+
 // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // link_to_unless _current(), current_view?() helpers.
 // Use for state contingent styling, i.e. a "bread-crumb" and hover
-nav li.current a,
-nav li.current.view { color: #e60000; }
+// Must do children to prevent malformatting of nested navs manus
+ul.nav > li.current > a,
+ul.nav > li.current.view,
+ul.menu > li.current > a,
+ul.menu > li.current.view  { color: #e60000; }
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
