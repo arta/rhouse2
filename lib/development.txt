@@ -1,4 +1,45 @@
 ################################################################################
+2-17-19: #######################################################################
+• Foundation's elusive silent box-sizing normalize/reset:
+: huh, this one took a while ..
+: Foundation applies this silently in _global.scss
+  : but does not disclose, does not provide API to change/unset in their
+  : overrides file (say, under 1. Global).
+  : Grrr ...
+  : Took me several hours to find out why is my .griddle squished narrower
+  : after implementing Foundation.
+
+      html {
+        box-sizing: border-box;
+      }
+      *, *:before, *:after {
+        box-sizing: inherit;
+      }
+
+: It can be found here:
+
+  https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+
+  with this comment:
+
+  /* apply a natural box layout model to all elements, but allowing components
+    to change */
+
+: Interestingly, normalize.css doesn't reset this, hm ..
+
+: While I visually prefer the original setting by browsers (Chrome, Safari):
+
+      box-sizing: content-box;
+
+  because my .griddle was wider (to my liking), I will stick with (and
+  start applying in future projects) this reset, esp. after reading:
+  https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+################################################################################
+
+
+
+################################################################################
 2-11-19: #######################################################################
 • Custom font:
 : https://blog.miragestudio7.com/architecture-fonts-download-free-architect-handwriting-font/3339/
