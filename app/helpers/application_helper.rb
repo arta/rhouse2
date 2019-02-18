@@ -7,6 +7,9 @@ module ApplicationHelper
     elsif link_paths.is_a? Array
       if link_paths.any?{ |path| current_page?(path) && path.in?(parent_paths) }
         'current view'
+      elsif link_paths.any?{ |path| current_page?(path) } && link_paths.size > 10
+        # this is one of services_paths on ul.nav.large.menu
+        'current view'
       elsif link_paths.any?{ |path| current_page?(path) }
         'current'
       end
@@ -33,5 +36,9 @@ module ApplicationHelper
   def portfolios_paths
     [portfolios_path, portfolios_roofing_path, portfolios_siding_path,
       portfolios_decks_path, portfolios_flooring_path, portfolios_windows_path]
+  end
+
+  def services_paths
+    exterior_paths + interior_paths + mend_paths
   end
 end

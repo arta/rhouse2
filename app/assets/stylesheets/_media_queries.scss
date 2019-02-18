@@ -55,6 +55,10 @@
   nav.footer { margin-right: 2rem; }
 }
 
+@media (min-width: 1024px) {
+  ul.nav.large { display: flex; }
+}
+
 @media (min-width: 1200px) {
   .h1-spacer { display: none; }
   .container { max-width: 991px; }
@@ -69,8 +73,9 @@
 }
 
 @media (min-width: 1440px) {
+  ul.nav.large { display: none; }
+  ul.nav.xlarge, ul.nav.regional { display: flex; }
   .h1-spacer { display: block; }
-  aside { border-left: 1.5rem solid #eee; }
   aside { border-left: 1.5rem solid #d0d0d0; }
   aside .in-article-left {
     float: left;
@@ -92,4 +97,8 @@
   }
   .rh2-headlines { margin-top: .5rem; }
   .top-bar-right { margin-top: 1rem; }
+}
+
+@media (min-width: 1700px) {
+  .rh2-headlines { margin-left: 1.5rem; }
 }

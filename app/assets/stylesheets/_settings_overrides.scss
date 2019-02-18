@@ -5,6 +5,8 @@
 //
 //   1. Global
 //
+//   2. Breakpoints
+//
 //   4. Base Typography
 //
 //  18. Dropdown Menu
@@ -20,9 +22,9 @@
 // 1. Global
 // ---------
 
-// $global-font-size: 100%;
-// $global-width: rem-calc(1200);
-// $global-lineheight: 1.5;
+$global-font-size: 100%;
+$global-width: rem-calc(1200);
+$global-lineheight: 1.15;
 $foundation-palette: (
   primary: #1779ba,
   secondary: #767676,
@@ -30,11 +32,11 @@ $foundation-palette: (
   warning: #ffae00,
   alert: #cc4b37,
 );
-$medium-gray: #cacaca; // %figure
-$black: #0a0a0a; // %figure
-$white: #fefefe; // %figure
-$global-menu-padding: 0.7rem 1rem; // %figure
-$global-menu-nested-margin: 1rem; // %figure
+$medium-gray: #cacaca;
+$black: #0a0a0a;
+$white: #fefefe;
+$global-menu-padding: 0;///0.7rem 1rem;
+$global-menu-nested-margin: 1rem;
 
 // To access $primary-color in here, do either:
 // $primary-color: map-get($foundation-palette, primary);
@@ -45,6 +47,18 @@ $global-menu-nested-margin: 1rem; // %figure
 // @import 'util/util'; // done above
 @include add-foundation-colors;
 
+// 2. Breakpoints
+// --------------
+
+$breakpoints: (
+  small: 0,
+  medium: 640px,
+  large: 1024px,
+  xlarge: 1200px,
+  xxlarge: 1440px,
+);
+$breakpoint-classes: (small medium large xlarge);
+
 // 4. Base Typography
 // ------------------
 
@@ -54,7 +68,7 @@ $anchor-color: $primary-color;
 // -----------------
 
 $dropdownmenu-arrows: true;
-$dropdownmenu-arrow-color: $anchor-color;
+$dropdownmenu-arrow-color: #333;//$anchor-color;
 $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
@@ -64,7 +78,7 @@ $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
 $dropdownmenu-border: 1px solid $medium-gray;
-$dropdown-menu-item-color-active: get-color(primary);
+$dropdown-menu-item-color-active: #333;//get-color(primary);
 $dropdown-menu-item-background-active: transparent;
 
 // 23. Menu
@@ -74,8 +88,8 @@ $menu-margin: 0;
 $menu-nested-margin: $global-menu-nested-margin;
 $menu-items-padding: $global-menu-padding;
 $menu-simple-margin: 1rem;
-$menu-item-color-active: $white;
-$menu-item-background-active: get-color(primary);
+$menu-item-color-active: #333;//$white;
+$menu-item-background-active: transparent;//get-color(primary);
 $menu-icon-spacing: 0.25rem;
 $menu-state-back-compat: true;
 $menu-centered-back-compat: true;
@@ -84,19 +98,19 @@ $menu-icons-back-compat: true;
 // 53. Title Bar
 // -------------
 
-$titlebar-background: $black;
-$titlebar-color: $white;
+$titlebar-background: white; //$black;
+$titlebar-color: #333; //$white;
 $titlebar-padding: 0.5rem;
 $titlebar-text-font-weight: bold;
-$titlebar-icon-color: $white;
-$titlebar-icon-color-hover: $medium-gray;
+$titlebar-icon-color: #333; //$white;
+$titlebar-icon-color-hover: #333; //$medium-gray;
 $titlebar-icon-spacing: 0.25rem;
 
 // 55. Top Bar
 // -----------
 
 // $topbar-padding: 0.5rem;
-$topbar-background: #fff; //$light-gray;
+$topbar-background: white; //$light-gray;
 // $topbar-submenu-background: $topbar-background;
 // $topbar-title-spacing: 0.5rem 1rem 0.5rem 0;
 // $topbar-input-width: 200px;
