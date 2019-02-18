@@ -1,3 +1,9 @@
+// https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+// Foundation applies this silently in _global.scss (see dev't notes),
+// but I'll have it here "re-declared" anyway, as a reminder
+
 body {
   color: #444;
   display: flex;
