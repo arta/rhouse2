@@ -1,4 +1,4 @@
-%ul.nav.xlarge
+%ul.nav.xlarge.menu
   -# %li{ class: current_view?(root_path) }
   -#   - if current_page?(root_path)
   -#     %i.fas.fa-home
@@ -11,25 +11,29 @@
 
   %li{ class: current_view?(exterior_paths) }
     = link_to_unless current_view?(exterior_path),
-      'Exterior', exterior_path
+      'Exterior', exterior_path do
+      %span Exterior
 
   %li{ class: current_view?(interior_paths) }
     = link_to_unless current_view?(interior_path),
-      'Interior', interior_path
+      'Interior', interior_path do
+      %span Interior
 
   %li{ class: current_view?(mend_paths) }
     = link_to_unless current_view?(mend_path),
-      'Other services', mend_path
+      'Other services', mend_path do
+      %span Other services
 
   %li{ class: current_view?(portfolios_paths) }
     = link_to_unless current_view?(portfolios_path),
-      'Portfolios', portfolios_path
+      'Portfolios', portfolios_path do
+      %span Portfolios
 
   %li{ class: current_view?(testimonials_path) }
-    = link_to_unless_current 'Testimonials', testimonials_path
+    = link_to_unless_current 'Testimonials', testimonials_path do
+      %span Testimonials
 
-
-%ul.nav.large.menu.vertical.medium-horizontal{ data: { responsive_menu: 'accordion medium-dropdown'} }
+%ul.nav.large.menu.vertical.medium-horizontal{ data: { responsive_menu: 'drilldown medium-dropdown'} }
   %li{ class: current_view?(services_paths) }
     = link_to 'Services', '#'
     %ul.menu.vertical
@@ -37,71 +41,91 @@
         = link_to 'Exterior', exterior_path
         %ul.menu.vertical
           %li{ class: current_view?(roofing_path) }
-            = link_to_unless_current 'Roofing', roofing_path
+            = link_to_unless_current 'Roofing', roofing_path do
+              %span Roofing
 
           %li{ class: current_view?(siding_path) }
-            = link_to_unless_current 'Siding', siding_path
+            = link_to_unless_current 'Siding', siding_path do
+              %span Siding
 
           %li{ class: current_view?(gutters_path) }
-            = link_to_unless_current 'Gutters', gutters_path
+            = link_to_unless_current 'Gutters', gutters_path do
+              %span Gutters
 
           %li{ class: current_view?(green_path) }
-            = link_to_unless_current 'Green roofs', green_path
+            = link_to_unless_current 'Green roofs', green_path do
+              %span Greer roofs
 
           %li{ class: current_view?(stone_path) }
-            = link_to_unless_current 'Cultured stone', stone_path
+            = link_to_unless_current 'Cultured stone', stone_path do
+              %span Cultured stone
 
           %li{ class: current_view?(decks_path) }
-            = link_to_unless_current 'Decks', decks_path
+            = link_to_unless_current 'Decks', decks_path do
+              %span Decks
       %li{ class: current_view?(interior_paths) }
         = link_to 'Interior', interior_path
         %ul.menu.vertical
           %li{ class: current_view?(kitchens_path) }
-            = link_to_unless_current 'Kitchens', kitchens_path
+            = link_to_unless_current 'Kitchens', kitchens_path do
+              %span Kitchens
 
           %li{ class: current_view?(bathrooms_path) }
-            = link_to_unless_current 'Bathrooms', bathrooms_path
+            = link_to_unless_current 'Bathrooms', bathrooms_path do
+              %span Bathrooms
 
           %li{ class: current_view?(flooring_path) }
-            = link_to_unless_current 'Flooring', flooring_path
+            = link_to_unless_current 'Flooring', flooring_path do
+              %span Flooring
 
           %li{ class: current_view?(windows_path) }
-            = link_to_unless_current 'Windows', windows_path
+            = link_to_unless_current 'Windows', windows_path do
+              %span Windows
 
       %li{ class: current_view?(mend_paths) }
         = link_to 'Other services', mend_path
         %ul.menu.vertical
           %li{ class: current_view?(hail_path) }
-            = link_to_unless_current 'Hail damage', hail_path
+            = link_to_unless_current 'Hail damage', hail_path do
+              %span Hail damage
 
           %li{ class: current_view?(ice_path) }
-            = link_to_unless_current 'Ice dams', ice_path
+            = link_to_unless_current 'Ice dams', ice_path do
+              %span Ice dams
 
           %li{ class: current_view?(snow_path) }
-            = link_to_unless_current 'Snow removal', snow_path
+            = link_to_unless_current 'Snow removal', snow_path do
+              %span Snow removal
 
           %li{ class: current_view?(bats_path) }
-            = link_to_unless_current 'Bat removal', bats_path
+            = link_to_unless_current 'Bat removal', bats_path do
+              %span Bat removal
 
 
   %li{ class: current_view?(portfolios_paths) }
     = link_to 'Portfolios', portfolios_path
     %ul.menu.vertical
       %li{ class: current_view?(portfolios_roofing_path) }
-        = link_to_unless_current 'Roofing', portfolios_roofing_path
+        = link_to_unless_current 'Roofing', portfolios_roofing_path do
+          %span Roofing
 
       %li{ class: current_view?(portfolios_siding_path) }
-        = link_to_unless_current 'Siding', portfolios_siding_path
+        = link_to_unless_current 'Siding', portfolios_siding_path do
+          %span Siding
 
       %li{ class: current_view?(portfolios_decks_path) }
-        = link_to_unless_current 'Decks', portfolios_decks_path
+        = link_to_unless_current 'Decks', portfolios_decks_path do
+          %span Decks
 
       %li{ class: current_view?(portfolios_flooring_path) }
-        = link_to_unless_current 'Flooring', portfolios_flooring_path
+        = link_to_unless_current 'Flooring', portfolios_flooring_path do
+          %span Flooring
 
       %li{ class: current_view?(portfolios_windows_path) }
-        = link_to_unless_current 'Windows', portfolios_windows_path
+        = link_to_unless_current 'Windows', portfolios_windows_path do
+          %span Windows
 
 
   %li{ class: current_view?(testimonials_path) }
-    = link_to_unless_current 'Testimonials', testimonials_path
+    = link_to_unless_current 'Testimonials', testimonials_path do
+      %span Testimonials
