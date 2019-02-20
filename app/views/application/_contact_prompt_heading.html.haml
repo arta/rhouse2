@@ -1,7 +1,7 @@
 .contact-prompt-heading
   - if local_assigns[:h1]
     %h1= local_assigns[:h1]
-    .push= render 'contact_prompt'
+    = render 'contact_prompt'
   - else
     .h1-spacer &nbsp;
     = render 'contact_prompt'
