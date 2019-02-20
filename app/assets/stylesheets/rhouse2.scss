@@ -29,7 +29,7 @@ body {
 }
 .rh2-logo-headlines {
   align-items: center;
-  display: flex;
+  display: none;//flex;
   flex-shrink: 0;
 }
 .rh2-logo-responsive {
@@ -45,7 +45,7 @@ body {
   flex-direction: column;
 }
 
-li { margin-bottom: 1rem; }
+main li { margin-bottom: 1rem; }
 
 ul.aside { padding-left: 1rem; }
 ul.roofing-suppliers {
@@ -197,6 +197,6 @@ footer {
 p.footer, nav.footer {
   align-items: center;
   display: flex;
-  margin: 0;
+  margin: 0 0 .5rem 0;
 }
 p.footer { white-space: nowrap; }

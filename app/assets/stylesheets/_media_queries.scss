@@ -45,17 +45,17 @@
 
 @media (min-width: 640px) {
   li.roofing-supplier { flex-wrap: nowrap; }
-  .flexrow.footer { justify-content: space-between; }
 }
 
 @media (min-width: 768px) {
   .container { max-width: 768px; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
-  p.footer { margin-left: 2rem; }
-  nav.footer { margin-right: 2rem; }
+  .flexrow.footer { flex-wrap: nowrap; justify-content: space-between; }
+  p.footer, nav.footer { margin-bottom: 0; }
 }
 
 @media (min-width: 1024px) {
+  .rh2-logo-headlines,
   ul.nav.large { display: flex; }
 }
 
@@ -72,9 +72,21 @@
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
 }
 
+@media (min-width: 1280px) {
+  nav.header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  ul.menu.large { display: none; }
+  ul.menu.xlarge {
+    display: flex;
+    margin: 0 1.4rem;
+  }
+  ul.menu.regional { display: inline-flex; }
+}
+
 @media (min-width: 1440px) {
-  ul.nav.large { display: none; }
-  ul.nav.xlarge, ul.nav.regional { display: flex; }
   .h1-spacer { display: block; }
   aside { border-left: 1.5rem solid #d0d0d0; }
   aside .in-article-left {

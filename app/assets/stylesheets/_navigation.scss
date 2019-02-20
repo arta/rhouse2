@@ -1,74 +1,11 @@
-nav {
-  display: flex;
-  font-family: 'Telegrafico';
-  flex-shrink: 0;
-}
-nav.header {
-  align-items: center;
-  flex-direction: column;
-  margin: 0;
-}
-nav.footer { font-family: inherit; }
-
-button.menu-icon:hover { background-color: lightgrey; }
-button.fa-hard-hat {
-  border: 1px transparent solid;
-  border-radius: 3px;
-  font-size: 2rem;
-  padding: 6px;
-  transition: background-color, .6s;
-}
-button.fa-hard-hat:hover { background-color: lightgrey; }
-
-nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  line-height: 1;
-  list-style-type: none;
-  margin: 0;
-  padding-left: 0;
-}
-
-nav li {
-  padding: .6rem;
-  margin: 0;
-  white-space: nowrap;
-}
-nav.header li {
-  border: 1px transparent solid;
-  border-radius: 3px;
-  margin-right: 1.2rem;
-  transition: background-color, .6s;
-}
-ul.nav.large,
-ul.nav.xlarge,
-ul.nav.regional { display: none; }
-ul.nav.regional {
-  justify-content: center;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-ul.nav.regional li { margin-right: .4rem; }
-nav.header li:last-child { margin-right: 0; }
-li.current, .nav.regional { background-color: whitesmoke; }
-
-nav a { text-decoration: none; }
+nav { font-family: 'Telegrafico'; }
+nav li { white-space: nowrap; }
 nav.header a { color: #333; }
-nav.footer a { color: whitesmoke; }
-nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
 
-.dropdown.menu li.is-active.current > a { color: #e60000; }
-.dropdown .is-dropdown-submenu .opens-left > a { padding-left: 1rem; }
-
-// No anchor inside li.current.view. Courtesty of Rails' and my own adapted
-// link_to_unless _current(), current_view?() helpers.
-// Use for state contingent styling, i.e. a "bread-crumb" and hover
-// Must do children to prevent malformatting of nested navs manus
-ul.nav > li.current > a,
-ul.nav > li.current.view,
-ul.menu > li.current > a,
-ul.menu > li.current.view  { color: #e60000; }
-
+nav.header li {
+  border-radius: 3px;
+  transition: background-color, .6s;
+}
 // nav element                      idle          :hover
 // ------------------------------------------------------
 // li                               black         border
@@ -85,6 +22,33 @@ nav.header li.current.view:hover {
   background-color: whitesmoke;
   border-color: transparent;
 }
+
+ul.menu.xlarge,
+ul.menu.regional { display: none; }
+
+li.current, .nav.regional { background-color: whitesmoke; }
+// // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
+// // link_to_unless _current(), current_view?() helpers.
+// // Use for state contingent styling, i.e. a "bread-crumb" and hover
+// // Must do children to prevent malformatting of nested navs manus
+ul.menu > li.current > a,
+ul.menu > li.current.view { color: #e60000; }
+ul.menu > li.current.view span {
+  display: block;
+  line-height: 1;
+  padding: $global-menu-padding;
+}
+
+button.menu-icon:hover { background-color: lightgrey; }
+button.fa-hard-hat {
+  color: #e60000;
+  border: 1px transparent solid;
+  border-radius: 3px;
+  font-size: 2rem;
+  padding: 6px;
+  transition: background-color, .6s;
+}
+button.fa-hard-hat:hover { background-color: lightgrey; }
 
 figure.nav {
   border: 3px solid #aaa;
@@ -126,4 +90,13 @@ img.nav {
 figure.nav:hover .overlay {
   background: rgba(0, 0, 0, 0.3); /* Black see-through */
   opacity: 1;
+}
+
+nav.footer { font-family: inherit; }
+nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
+nav.footer a { color: whitesmoke; }
+nav.footer span {
+  display: block;
+  line-height: 1;
+  padding: .7rem 0;
 }
