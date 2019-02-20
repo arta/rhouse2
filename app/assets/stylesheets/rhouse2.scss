@@ -11,6 +11,12 @@ body {
   font-family: 'MyriadPro-Regular', sans-serif;
   height: 100vh;
 }
+
+header {
+  box-shadow: 2px 2px 4px #aaa;
+  z-index: 1;
+}
+
 .title-bar {
   justify-content: space-between;
   padding: .5rem 1rem;
