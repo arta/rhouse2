@@ -1,6 +1,9 @@
 .griddle
   %article
-    %h1 Ice Dams
+    .small-heading
+      = render 'contact_prompt_heading', { h1: 'Ice Dams' }
+    .xlarge-heading
+      %h1 Ice Dams
     %h2 Ice Dam Signs
     %p
       Does your house look like this one in the winter? I drive down the road
@@ -30,7 +33,7 @@
     %p Please call us at (608) 445-6511
 
   .grid-item
-    = render 'contact_prompt_heading'    
+    = render 'contact_prompt_heading'
     %aside
       %h3 We'll remove the snow for you!!
       %figure.in-article-right= image_tag 'ice_dam-aside.jpg'
