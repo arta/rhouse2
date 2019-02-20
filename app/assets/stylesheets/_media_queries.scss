@@ -48,6 +48,8 @@
 }
 
 @media (min-width: 768px) {
+  img.rh2-logo-responsive { min-height: 68.4px; }
+  main { margin-top: 100px; }
   .container { max-width: 90%; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
   .flexrow.footer { flex-wrap: nowrap; justify-content: space-between; }
@@ -112,6 +114,7 @@
     margin: 0 1.4rem;
   }
   ul.menu.regional { display: inline-flex; }
+  main { margin-top: 173px; }
 }
 
 @media (min-width: 1440px) {
@@ -141,4 +144,5 @@
 @media (min-width: 1700px) {
   .rh2-logo-headlines { padding: .7rem 0; }
   .rh2-headlines { margin-left: 1.5rem; }
+  main { margin-top: 123px; }
 }
