@@ -59,6 +59,8 @@
 }
 
 @media (min-width: 898px) {
+  .about .contact-prompt-heading,
+  .small-heading .contact-prompt-heading,
   .pantheon .contact-prompt-heading,
   .portfolio .contact-prompt-heading {
     flex-direction: row;
@@ -87,6 +89,8 @@
 }
 
 @media (min-width: 1200px) {
+  .small-heading { display: none; }
+  .xlarge-heading { display: block; }
   .h1-spacer { display: block; }
   .grid-item .contact-prompt-heading {
     flex-direction: row;
