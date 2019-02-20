@@ -48,7 +48,7 @@
 }
 
 @media (min-width: 768px) {
-  .container { max-width: 768px; }
+  .container { max-width: 90%; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
   .flexrow.footer { flex-wrap: nowrap; justify-content: space-between; }
   p.footer, nav.footer { margin-bottom: 0; }
@@ -61,7 +61,6 @@
 
 @media (min-width: 1200px) {
   .h1-spacer { display: none; }
-  .container { max-width: 991px; }
   .griddle { grid-template-columns: 2fr 1fr; }
   aside .in-article-left, aside .in-article-right {
     float: none;
