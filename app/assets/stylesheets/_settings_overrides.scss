@@ -9,6 +9,8 @@
 //
 //   4. Base Typography
 //
+//   8. Accordion Menu
+//
 //  18. Dropdown Menu
 //
 //  23. Menu
@@ -35,7 +37,7 @@ $foundation-palette: (
 $medium-gray: #cacaca;
 $black: #0a0a0a;
 $white: #fefefe;
-$global-menu-padding: 0;///0.7rem 1rem;
+$global-menu-padding: 0.7rem 1.2rem;//0 1rem;//0.7rem 1rem;
 $global-menu-nested-margin: 1rem;
 
 // To access $primary-color in here, do either:
@@ -62,7 +64,37 @@ $breakpoint-classes: (small medium large xlarge);
 // 4. Base Typography
 // ------------------
 
-$anchor-color: $primary-color;
+$anchor-color: #333;//$primary-color;
+$anchor-color-hover: scale-color($anchor-color, $lightness: -14%);
+
+// 8. Accordion Menu
+// -----------------
+
+$accordionmenu-padding: $global-menu-padding;
+$accordionmenu-nested-margin: $global-menu-nested-margin;
+$accordionmenu-submenu-padding: $accordionmenu-padding;
+$accordionmenu-arrows: true;
+$accordionmenu-arrow-color: #333;//$primary-color;
+$accordionmenu-item-background: null;
+$accordionmenu-border: null;
+$accordionmenu-submenu-toggle-background: null;
+$accordion-submenu-toggle-border: $accordionmenu-border;
+$accordionmenu-submenu-toggle-width: 40px;
+$accordionmenu-submenu-toggle-height: $accordionmenu-submenu-toggle-width;
+$accordionmenu-arrow-size: 6px;
+
+// 16. Drilldown
+// -------------
+
+$drilldown-transition: transform 0.15s linear;
+$drilldown-arrows: true;
+$drilldown-padding: $global-menu-padding;
+$drilldown-nested-margin: 0;
+$drilldown-background: transparent;//$white;
+$drilldown-submenu-padding: $drilldown-padding;
+$drilldown-submenu-background: $white;
+$drilldown-arrow-color: #333;//$primary-color;
+$drilldown-arrow-size: 6px;
 
 // 18. Dropdown Menu
 // -----------------
@@ -73,7 +105,7 @@ $dropdownmenu-arrow-size: 6px;
 $dropdownmenu-arrow-padding: 1.5rem;
 $dropdownmenu-min-width: 200px;
 $dropdownmenu-background: null;
-$dropdownmenu-submenu-background: $white;
+$dropdownmenu-submenu-background: transparent;//$white;
 $dropdownmenu-padding: $global-menu-padding;
 $dropdownmenu-nested-margin: 0;
 $dropdownmenu-submenu-padding: $dropdownmenu-padding;
