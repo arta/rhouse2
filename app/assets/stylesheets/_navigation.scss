@@ -26,7 +26,7 @@ nav.header li.current.view:hover {
 ul.menu.xlarge,
 ul.menu.regional { display: none; }
 
-li.current, .nav.regional { background-color: whitesmoke; }
+li.current, .menu.regional { background-color: whitesmoke; }
 // // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // // link_to_unless _current(), current_view?() helpers.
 // // Use for state contingent styling, i.e. a "bread-crumb" and hover

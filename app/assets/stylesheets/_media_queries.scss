@@ -64,9 +64,21 @@
   h1 + p.contact-prompt { margin: 0; }
 }
 
-@media (min-width: 1024px) {
-  .rh2-logo-headlines,
-  ul.nav.large { display: flex; }
+@media (min-width: 768px) {
+  .rh2-logo-headlines { display: flex; }
+  .rh2-headlines { display: none; }
+  ul.menu.large {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-left: 1rem;
+  }
+}
+
+@media (max-width: 898px) {
+  .top-bar { padding: 1rem; }
+}
+@media (min-width: 898px) {
+  .top-bar { padding: 1rem 2rem; }
 }
 
 @media (min-width: 1200px) {
@@ -87,6 +99,7 @@
 }
 
 @media (min-width: 1280px) {
+  .rh2-headlines { display: flex; }
   nav.header {
     align-items: center;
     display: flex;
@@ -116,7 +129,6 @@
 }
 
 @media (max-width: 1700px) {
-  .top-bar { padding: 1rem 2rem; }
   .rh2-logo-headlines {
     flex-direction: column;
     text-align: center;
