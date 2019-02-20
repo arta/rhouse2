@@ -60,6 +60,7 @@
 
 @media (min-width: 898px) {
   .about .contact-prompt-heading,
+  .testimonials .contact-prompt-heading,
   .small-heading .contact-prompt-heading,
   .pantheon .contact-prompt-heading,
   .portfolio .contact-prompt-heading {
@@ -90,6 +91,7 @@
 
 @media (max-width: 1200px) {
   .about .contact-prompt-heading,
+  .testimonials .contact-prompt-heading,
   .small-heading .contact-prompt-heading {
     i.fa-phone { color: #aaa; }
     .button.contact { background-color: #aaa; }
