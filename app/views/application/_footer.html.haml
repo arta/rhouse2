@@ -3,11 +3,23 @@
     R House 2 © 2005 -
     = Date.today.year
   %nav.footer
-    %ul.menu
+    %ul.menu.footer.small
+      .flexrow
+        %li
+          = link_to root_path do
+            %i.fas.fa-home
+      .flexrow
+        %li= link_to 'About us', about_path
+        %span= "|"
+        %li= link_to 'Contact us', contact_path
+        %span= "|"
+        %li= link_to 'Testimonials', testimonials_path
+
+    %ul.menu.footer.medium
       %li
         = link_to root_path do
           %i.fas.fa-home
-      %span= "|"
+      -# %span= "|"
       %li= link_to 'About us', about_path
       %span= "|"
       %li= link_to 'Contact us', contact_path

@@ -52,6 +52,8 @@
   main { margin-top: 100px; }
   .container { max-width: 90%; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
+  nav.footer .menu.small { display: none; }
+  nav.footer .menu.medium { display: flex; }
   .flexrow.footer { flex-wrap: nowrap; justify-content: space-between; }
   p.footer, nav.footer { margin-bottom: 0; }
 }
