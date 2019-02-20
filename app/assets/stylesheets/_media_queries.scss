@@ -88,6 +88,14 @@
   .top-bar { padding: 1rem 2rem; }
 }
 
+@media (max-width: 1200px) {
+  .about .contact-prompt-heading,
+  .small-heading .contact-prompt-heading {
+    i.fa-phone { color: #aaa; }
+    .button.contact { background-color: #aaa; }
+  }
+}
+
 @media (min-width: 1200px) {
   .small-heading { display: none; }
   .xlarge-heading { display: block; }
