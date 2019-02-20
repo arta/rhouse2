@@ -21,6 +21,11 @@ i.fa-phone {
   margin-right: .3rem;
 }
 
+i.fa-phone + a {
+  text-decoration: none;
+  color: #333;
+}
+
 span.phone, span.gc-cs-link {
   color: black;
   cursor: auto;
@@ -40,4 +45,4 @@ span.phone { margin-right: .7rem; }
   transition: background-color, .3s;
 }
 
-.button.contact:hover { background-color: darken(#e60000, 5%); }
+.button.contact:hover { background-color: darken(#e60000, 6%); }

@@ -93,6 +93,7 @@
   .small-heading .contact-prompt-heading {
     i.fa-phone { color: #aaa; }
     .button.contact { background-color: #aaa; }
+    .button.contact:hover { background-color: darken(#aaa, 9%); }
   }
 }
 
