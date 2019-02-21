@@ -17,6 +17,9 @@
   %body
     %header
       = render 'header'
+
+    %section= render 'hero' if current_page?(root_path)
+
     %main{ class: (yield :main_class) }
       .container{ class: (yield :main_container_class) }= yield
     %footer
