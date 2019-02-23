@@ -1,4 +1,80 @@
 ################################################################################
+2-23-19: #######################################################################
+• Prune images from Git repo history:
+: Install the tools, BFG & its dependency Java
+
+    sites $ brew cask install java            # a huge download
+    sites $ brew install bfg
+
+: Follow instructions at https://rtyley.github.io/bfg-repo-cleaner/:
+
+    sites $ bfg                               # list typical commands/tasks
+
+  : note the comment on this option:
+
+    --no-blob-protection    allow the BFG to modify even your *latest* commit.
+                            Not recommended: you should have already ensured
+                            your latest commit is clean.
+
+  : 1. ok then, first, delete undesired files (all the .jpg)
+  : 2. and do a clean commit (per bfg's recommendation above):
+
+    rhouse2 $ git cim 'remove all pics from assets'
+
+  : 3. push the clean commit up (to the origin, [staging]):
+
+    rhouse2 $ git push
+    rhouse2 $ git push staging [branch_name:master]     # needed ?
+
+  : 4. purge the .jpg files from git history:
+
+    rhouse2 $ cd ..
+    sites $ git clone --mirror http://github.com/arta/rhouse2.git
+    sites $ bfg --delete-files '*.jpg' rhouse2.git
+    sites $ cd rhouse2.git
+    rhouse2.git $ git reflog expire --expire=now --all && git gc --prune=now --a
+    ggressive
+    rhouse2.git $ git push                    # pushing to the origin
+                                              # took a long time
+                                              # pushed to both branches
+
+  : 5. clone a fresh new copy                 # <= very important !!!!!
+                                              # do not use the original copy
+                                              # I did, from Github Desktop,
+                                              # fetched (then pulled (?)) origin
+                                              # !!! => learn about fetch <= !!!
+                                              # then pushed ... a mess yes
+                                              # ... aaand ...
+                                              # Github repo had all commits
+                                              # duplicate (376 v 188) .. and ..
+                                              # I had to redo all of the above
+                                              # to get to 5. anew, and:
+
+      rhouse2.git $ cd ..
+
+    : rename rhouse2 (-> rhouse2-orig), and clone rhouse2 anew:
+
+      sites $ git clone http://github.com/arta/rhouse2.git rhouse2
+
+  : 6. add staging and production:
+
+      sites $ cd rhouse2
+      rhouse2 $ git remote add staging https://git.heroku.com/rhouse2-staging.git
+      rhouse2 $ git remote add production https://git.heroku.com/rhouse2.git
+
+  : 7. push to staging (not production yet)
+
+      rhouse2 $ git push staging
+
+• So, this is a lot of work.
+
+• Do not put pics into repos.
+
+################################################################################
+
+
+
+################################################################################
 2-17-19: #######################################################################
 • Foundation's elusive silent box-sizing normalize/reset:
 : huh, this one took a while ..
