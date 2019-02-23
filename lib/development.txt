@@ -70,6 +70,11 @@
 
 • Do not put pics into repos.
 
+• BTW, it's worth it:
+  : pre-prune (dirty) repo with the pics:         180 MB
+  : post-prune (clean) repo without the pics:       5 MB
+  : 36x smaller now
+
 ################################################################################
 
 
