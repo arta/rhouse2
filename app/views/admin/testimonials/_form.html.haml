@@ -1,0 +1,24 @@
+= form_for @admin_testimonial do |f|
+  - if @admin_testimonial.errors.any?
+    #error_explanation
+      %h2
+        = "#{pluralize(@admin_testimonial.errors.count, "error")} |
+          prohibited this admin_testimonial from being saved:" |
+      %ul
+        - @admin_testimonial.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :body
+    = f.text_area :body
+  .field
+    = f.label :client_signature
+    = f.text_field :client_signature
+  .field
+    = f.label :job_started_at
+    = f.date_select :job_started_at, include_blank: true
+  .field
+    = f.label :job_completed_at
+    = f.date_select :job_completed_at, include_blank: true
+  .actions
+    = f.submit
