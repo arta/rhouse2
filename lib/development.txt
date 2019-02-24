@@ -1,5 +1,6 @@
 ################################################################################
 2-23-19: #######################################################################
+################################################################################
 • Prune images from Git repo history:
 : Install the tools, BFG & its dependency Java
 
@@ -74,6 +75,16 @@
   : pre-prune (dirty) repo with the pics:         180 MB
   : post-prune (clean) repo without the pics:       5 MB
   : 36x smaller now
+
+################################################################################
+• Background gradient:
+
+    main.pantheon.portfolios {
+      background-image: radial-gradient(#7aa0ac, #305059);
+    }
+    main.portfolio {
+      background-image: radial-gradient(#305059, #223b41);
+    }
 
 ################################################################################
 
