@@ -14,9 +14,9 @@
     = f.text_field :client_signature
   .field
     = f.label :job_started_at
-    = f.date_select :job_started_at
+    = f.date_select :job_started_at, include_blank: true
   .field
     = f.label :job_completed_at
-    = f.date_select :job_completed_at
+    = f.date_select :job_completed_at, include_blank: true
   .actions
     = f.submit 'Save'
