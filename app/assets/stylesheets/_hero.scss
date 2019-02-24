@@ -27,11 +27,19 @@
 /* Place text in the middle of the image */
 .hero-text {
   font-size: 125%; // TODO: responsive, fluid
+  grid-area: 1/1;
   margin-top: 50px;
   padding-right: 9vw;
   padding-left: 10vw;
 }
 .hero-text h2 { color: white; }
+
+.hero-overlay {
+  grid-area: 1/1;
+  background-color: #eee;
+  opacity: 0.0;
+  height: 100%;
+}
 
 main.home { margin-top: 0; } // hero comes 1st, no need to offset for header
 
