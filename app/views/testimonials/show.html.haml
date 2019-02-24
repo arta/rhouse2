@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Body:
+  = @testimonial.body
+%p
+  %b Client signature:
+  = @testimonial.client_signature
+%p
+  %b Job started at:
+  = @testimonial.job_started_at
+%p
+  %b Job completed at:
+  = @testimonial.job_completed_at
+
+= link_to 'Edit', edit_testimonial_path(@testimonial)
+\|
+= link_to 'Back', testimonials_path
