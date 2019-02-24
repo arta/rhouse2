@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :testimonials
   root 'pages#index'
 
   get '/about',   to: 'pages#about'
@@ -33,5 +32,9 @@ Rails.application.routes.draw do
   get 'portfolios/decks'
   get 'portfolios/flooring'
 
-  get '/testimonials', to: 'testimonials#index'
+  get 'testimonials', to: 'testimonials#index'
+
+  namespace :admin do
+    resources :testimonials
+  end
 end
