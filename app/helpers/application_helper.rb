@@ -42,6 +42,15 @@ module ApplicationHelper
     exterior_paths + interior_paths + mend_paths
   end
 
+  # Check for _partials (e.g. _nav_regional) in these locations:
+  def path_prefixes
+    if request.fullpath.split('/').second == 'admin'
+      "admin/#{controller_name}"
+    else
+      controller_name
+    end
+  end
+
   # RHouse2 Google Cloud Storage
   # TODO: temporary, move to RH2's permanent location for production
   def gcs(asset_path)

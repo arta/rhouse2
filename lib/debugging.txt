@@ -1,0 +1,65 @@
+################################################################################
+2-25-19: #######################################################################
+• WHAT:
+  ActionView::MissingTemplate at /admin/portfolios
+  Missing partial admin/portfolios/_nav_regional, application/_nav_regional with
+   {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :h
+  tml, :builder, :ruby, :coffee, :jbuilder, :haml]}. Searched in:
+  * "/Users/arta/sites/rhouse2/app/views"
+  * "/Users/arta/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/foundation-rails
+  -6.5.3.0/app/views"
+  * "/Users/arta/.rbenv/versions/2.5.3/lib/ruby/gems/2.5.0/gems/devise-4.6.1/app
+  /views"
+
+• WHEN:
+  : get /admin/portfolios
+  : while checking for existence of a partial before displaying the partial by
+
+    : ../layouts/application.html.haml:
+
+        ...
+        - if lookup_context.exists?('nav_regional', path_prefixes, true)
+          = render 'nav_regional'
+        ...
+
+    : ../application_helper.rb
+
+        ...
+        def path_prefixes
+          [controller_name, "admin/#{controller_name}"]
+        end
+        ...
+
+    : when this works perfectly well in thehouse
+
+• WHY:
+  : kind of a controller name "confusion" here
+  : since _nav_regional exists in /portfolios, then
+  : lookup_context returns true even when run on /admin/portfolios
+  : because the nested admin/portfolios controller_name still is `portfolios`
+    (not ~ `admin::portfolios`)
+  : the helper returns true (the partial exists in /portfolios)
+  : and Rails is looking for the partial in
+    .. admin/portfolios/_nav_regional, application/_nav_regional ..
+  : because it's called from admin/portfolios, but
+  : doesn't find it in neither location and reports error (see WHAT)
+
+• FIX:
+  : with controller name identical in both locations
+  : must check for the partial's existence separately
+  : application_helper.rb:
+
+      ...
+      def path_prefixes
+        if request.fullpath.split('/').second == 'admin'
+          "admin/#{controller_name}"
+        else
+          controller_name
+        end
+      end
+      ...
+
+  : this would not be needed if the nested admin portfolios controller was
+    called something like AdminPortfoliosController (not Admin::Portf...)
+
+################################################################################

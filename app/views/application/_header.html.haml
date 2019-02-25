@@ -19,5 +19,5 @@
   .top-bar-right
     %nav.header
       = render 'nav_global'
-      - if lookup_context.exists?('nav_regional', controller_name, true)
+      - if lookup_context.exists?('nav_regional', path_prefixes, true)
         = render 'nav_regional'
