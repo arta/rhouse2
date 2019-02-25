@@ -8,7 +8,8 @@
 
   .field
     = f.label :service
-    = f.text_field :service
+    = f.select :service, %w(Roofing Siding Decks Flooring Windows),
+      include_blank: true
   .field
     = f.label :description
     = f.text_area :description
