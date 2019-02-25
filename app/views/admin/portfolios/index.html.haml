@@ -1,0 +1,27 @@
+%h1 Listing admin_portfolios
+
+%table
+  %thead
+    %tr
+      %th Service
+      %th Description
+      %th Job started at
+      %th Job completed at
+      %th
+      %th
+      %th
+
+  %tbody
+    - @admin_portfolios.each do |admin_portfolio|
+      %tr
+        %td= admin_portfolio.service
+        %td= admin_portfolio.description
+        %td= admin_portfolio.job_started_at
+        %td= admin_portfolio.job_completed_at
+        %td= link_to 'Show', admin_portfolio
+        %td= link_to 'Edit', edit_admin_portfolio_path(admin_portfolio)
+        %td= link_to 'Destroy', admin_portfolio, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Portfolio', new_admin_portfolio_path
