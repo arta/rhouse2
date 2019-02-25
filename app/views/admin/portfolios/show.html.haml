@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Service:
+  = @admin_portfolio.service
+%p
+  %b Description:
+  = @admin_portfolio.description
+%p
+  %b Job started at:
+  = @admin_portfolio.job_started_at
+%p
+  %b Job completed at:
+  = @admin_portfolio.job_completed_at
+
+= link_to 'Edit', edit_admin_portfolio_path(@admin_portfolio)
+\|
+= link_to 'Back', admin_portfolios_path

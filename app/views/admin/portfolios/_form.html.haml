@@ -1,0 +1,22 @@
+= form_for @admin_portfolio do |f|
+  - if @admin_portfolio.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@admin_portfolio.errors.count, "error")} prohibited this admin_portfolio from being saved:"
+      %ul
+        - @admin_portfolio.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :service
+    = f.text_field :service
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :job_started_at
+    = f.date_select :job_started_at
+  .field
+    = f.label :job_completed_at
+    = f.date_select :job_completed_at
+  .actions
+    = f.submit 'Save'
