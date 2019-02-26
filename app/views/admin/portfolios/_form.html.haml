@@ -13,11 +13,12 @@
   .field
     = f.label :description
     = f.text_area :description
-  .field
-    = f.label :job_started_at
-    = f.date_select :job_started_at, include_blank: true
-  .field
-    = f.label :job_completed_at
-    = f.date_select :job_completed_at, include_blank: true
+  .flexrow
+    .field.mr--2rem
+      = f.label :job_started_at
+      .flexrow= f.date_select :job_started_at, include_blank: true
+    .field
+      = f.label :job_completed_at
+      .flexrow= f.date_select :job_completed_at, include_blank: true
   .actions
-    = f.submit
+    = f.submit nil, class: 'button'
