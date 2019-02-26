@@ -13,10 +13,34 @@
   : https://gist.github.com/georgeclaghorn/9baf3b9f1796eed5a983d35825b7f86c
     : and that's what I ended up doing here
 
-: Basically, it's a workaround using joining table/model (images, Image) that
+: Basically, it's a workaround using join table/model (images, Image) that
   will carry the comment, and will have the image itself (file) attached:
   : portfolio has many images - the linking files that have the comment
   : each image has one file - the file is the actual image actually :)
+
+: Several issues had to be resolved, none mentioned in the above resources:
+  : Portfolio:
+      ...
+      accepts_nested_attributes_for :images
+      ...
+
+  : /admin/portfolios/_form, 2 items:
+      ...
+      = fields_for ..
+      ...
+
+    : and, this one was mysterious, putting fields_for into the form
+      and nested attributes into the model and reloading the _form, the
+      fields_for just disappeared
+    : https://stackoverflow.com/q/11769592/247626
+
+      ...
+      = fields_for .. @admin_portfolio.images.new ..
+
+    : putting this in the admin_portfolios_controller#edit allows editing of
+      the comments
+    : TODO: took it out for now, didn't have time to explore and style
+      but make that possible, is needed, of course
 
 ################################################################################
 
