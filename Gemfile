@@ -25,6 +25,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'devise'
 gem 'foundation-rails'
 gem 'autoprefixer-rails'
+gem "google-cloud-storage", "~> 1.8", require: false
 gem 'haml'
 gem 'haml-rails'
 gem 'jquery-rails'
