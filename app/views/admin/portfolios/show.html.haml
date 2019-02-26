@@ -20,9 +20,10 @@
 %p
   %b Uploaded images: #{@admin_portfolio.images.size}
   %br
-  - if @admin_portfolio.images.attached?
+  - if @admin_portfolio.images.present?
     - @admin_portfolio.images.each do |image|
-      .flexrow
-        = image_tag image
-        = link_to 'Delete', admin_attachment_path(image),
+      .fieldset
+        = image_tag image.file
+        = image.comment
+        = link_to 'Delete', admin_image_path(image),
           method: :delete, data: { confirm: 'Are you sure?' }

@@ -37,5 +37,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :portfolios, :testimonials
     resources :attachments, only: :destroy
+    resources :images, only: :destroy
   end
 end
