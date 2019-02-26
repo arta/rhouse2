@@ -5,3 +5,11 @@
 = link_to 'Show', @admin_portfolio
 \|
 = link_to 'Index', admin_portfolios_path
+
+%p
+  %b Uploaded images: #{@admin_portfolio.images.size}
+  %br
+  - if @admin_portfolio.images.attached?
+    - @admin_portfolio.images.each do |image|
+      .flexrow
+        = image_tag image
