@@ -1,4 +1,49 @@
 ################################################################################
+2-26-19: #######################################################################
+• WHAT, WHY, ISSUE:
+  : Unpermitted parameters
+  : Strong params & nested resources
+    : Specifically, portfolio images as a join model / table
+    : Pretty sure I ran into this in the past
+
+: While this worked when the ActiveStorage was directly hooked to Portfolio:
+
+  admin_portfolios_controller:
+    ...
+    def admin_portfolio_params
+      params.require(:admin_portfolio).permit(:service, :description,
+        :job_started_at, :job_completed_at, images: [])
+    end
+    ...
+
+: Equivalent didn't work when joining image model / table implemented:
+
+    ...
+    def admin_portfolio_params
+      params.require(:admin_portfolio).permit(:service, :description,
+        :job_started_at, :job_completed_at, images_attributes: [])
+    end
+    ...
+
+• FIX:
+  : After some hunting around:
+  https://6ftdan.com/allyourdev/2015/01/05/dealing-with-rails-4-forms-and-params
+
+  : basically, just whitelist them:
+
+    ...
+    def admin_portfolio_params
+      params.require(:admin_portfolio).permit(:service, :description,
+        :job_started_at, :job_completed_at,
+        images_attributes: [:id, :comment, :file])
+    end
+    ...
+
+################################################################################
+
+
+
+################################################################################
 2-25-19: #######################################################################
 • WHAT:
   ActionView::MissingTemplate at /admin/portfolios
