@@ -7,9 +7,10 @@
 = link_to 'Index', admin_portfolios_path
 
 %p
-  %b Uploaded images: #{@admin_portfolio.images.size}
+  %b Uploaded images: #{@admin_portfolio.images.reject(&:new_record?).size}
   %br
-  - if @admin_portfolio.images.attached?
-    - @admin_portfolio.images.each do |image|
-      .flexrow
-        = image_tag image
+  - if @admin_portfolio.images.present?
+    - @admin_portfolio.images.reject(&:new_record?).each do |image|
+      .fieldset
+        = image_tag image.file
+        = image.comment

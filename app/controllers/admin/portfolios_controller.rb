@@ -53,7 +53,8 @@ class Admin::PortfoliosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def admin_portfolio_params
-      params.require(:admin_portfolio).permit(:service, :description,
-        :job_started_at, :job_completed_at, images: [])
+      params.require(:admin_portfolio).permit!
+      # params.require(:admin_portfolio).permit(:service, :description,
+      #   :job_started_at, :job_completed_at, images_attributes: [])
     end
 end

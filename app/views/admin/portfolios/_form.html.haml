@@ -20,8 +20,13 @@
     .field
       = f.label :job_completed_at
       .flexrow= f.date_select :job_completed_at, include_blank: true
-  .field
-    = f.label :images
-    = f.file_field :images, multiple: true
+
+  .fieldset
+    = f.fields_for :images, @admin_portfolio.images.new do |pf|
+      = pf.label :file
+      = pf.file_field :file
+      = pf.label :comment
+      = pf.text_field :comment
+
   .actions
     = f.submit nil, class: 'button'

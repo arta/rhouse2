@@ -1,4 +1,28 @@
 ################################################################################
+2-26-19: #######################################################################
+• Add custom attributes to ActiveStorage:
+: Specifically, I needed comment on the portfolios pics
+: This turned into a major, prolonged hunt for solution
+: Adding fields directly to the ActiveStorage tables didn't work
+: No documentation. Fucking Rails when it comes to this
+: Finally, I found (in succession) these, and adapted the last link:
+  : https://stackoverflow.com/q/50770660/247626 <= one commenter stood out:
+  : https://stackoverflow.com/users/128546/george-claghorn
+  : https://stackoverflow.com/search?q=user:128546+[rails-activestorage]
+  : https://stackoverflow.com/q/49510195/247626 <= & here George linked:
+  : https://gist.github.com/georgeclaghorn/9baf3b9f1796eed5a983d35825b7f86c
+    : and that's what I ended up doing here
+
+: Basically, it's a workaround using joining table/model (images, Image) that
+  will carry the comment, and will have the image itself (file) attached:
+  : portfolio has many images - the linking files that have the comment
+  : each image has one file - the file is the actual image actually :)
+
+################################################################################
+
+
+
+################################################################################
 2-23-19: #######################################################################
 ################################################################################
 • Prune images from Git repo history:
