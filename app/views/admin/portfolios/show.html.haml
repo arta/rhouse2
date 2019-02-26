@@ -18,12 +18,11 @@
 = link_to 'Index', admin_portfolios_path
 
 %p
-  %strong Uploads:
+  %b Uploaded images: #{@admin_portfolio.images.size}
   %br
   - if @admin_portfolio.images.attached?
     - @admin_portfolio.images.each do |image|
-      = image_tag image
-      = link_to image.filename, image, target: '_blank'
-      %br
-  - else
-    %p no uploads
+      .flexrow
+        = image_tag image
+        = link_to 'Delete', admin_attachment_path(image),
+          method: :delete, data: { confirm: 'Are you sure?' }

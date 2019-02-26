@@ -7,6 +7,7 @@
       %th Description
       %th Job started at
       %th Job completed at
+      %th Uploaded images
       %th
       %th
       %th
@@ -18,6 +19,7 @@
         %td= admin_portfolio.description
         %td= admin_portfolio.job_started_at
         %td= admin_portfolio.job_completed_at
+        %td= admin_portfolio.images.size
         %td= link_to 'Show', admin_portfolio
         %td= link_to 'Edit', edit_admin_portfolio_path(admin_portfolio)
         %td= link_to 'Destroy', admin_portfolio, method: :delete, data: { confirm: 'Are you sure?' }
