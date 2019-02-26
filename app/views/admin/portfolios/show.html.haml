@@ -16,3 +16,14 @@
 = link_to 'Edit', edit_admin_portfolio_path(@admin_portfolio)
 \|
 = link_to 'Index', admin_portfolios_path
+
+%p
+  %strong Uploads:
+  %br
+  - if @admin_portfolio.images.attached?
+    - @admin_portfolio.images.each do |image|
+      = image_tag image
+      = link_to image.filename, image, target: '_blank'
+      %br
+  - else
+    %p no uploads
