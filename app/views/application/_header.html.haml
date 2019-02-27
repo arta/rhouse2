@@ -18,6 +18,7 @@
         %h5 We Will Treat it Like Our House Too!
   .top-bar-right
     %nav.header
+      = render 'flash'
       = render 'nav_global'
       - if lookup_context.exists?('nav_regional', path_prefixes, true)
         = render 'nav_regional'
