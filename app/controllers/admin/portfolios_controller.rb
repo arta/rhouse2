@@ -55,6 +55,7 @@ class Admin::PortfoliosController < ApplicationController
     def admin_portfolio_params
       params.require(:admin_portfolio).permit(:service, :description,
         :job_started_at, :job_completed_at,
-        images_attributes: [:id, :comment, :file])
+        images_attributes: [:id, :file, :show_order, :caption_heading,
+          :caption_text, :comment])
     end
 end

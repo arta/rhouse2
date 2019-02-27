@@ -38,6 +38,9 @@ ActiveRecord::Schema.define(version: 2019_02_26_192141) do
 
   create_table "images", force: :cascade do |t|
     t.bigint "portfolio_id"
+    t.integer "show_order"
+    t.string "caption_heading"
+    t.text "caption_text"
     t.text "comment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
