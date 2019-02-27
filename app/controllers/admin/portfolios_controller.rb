@@ -1,4 +1,5 @@
 class Admin::PortfoliosController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_admin_portfolio, only: [:show, :edit, :update, :destroy]
 
   # GET /admin/portfolios
