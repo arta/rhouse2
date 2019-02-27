@@ -27,7 +27,7 @@ gem 'foundation-rails'
 gem 'autoprefixer-rails'
 gem "google-cloud-storage", "~> 1.8", require: false
 gem 'haml'
-gem 'haml-rails'
+gem 'haml-rails', '1.0.0'
 gem 'jquery-rails'
 
 group :development, :test do
