@@ -35,7 +35,7 @@ span.phone, span.gc-cs-link {
 
 span.phone { margin-right: .7rem; }
 
-.button.contact {
+.contact-us-button {
   color: white;
   background-color: #e60000;
   border-radius: 7px 25px 25px 7px;
@@ -46,4 +46,4 @@ span.phone { margin-right: .7rem; }
   transition: background-color, .3s;
 }
 
-.button.contact:hover { background-color: darken(#e60000, 6%); }
+.contact-us-button:hover { background-color: darken(#e60000, 6%); }
