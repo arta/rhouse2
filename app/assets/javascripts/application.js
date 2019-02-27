@@ -29,4 +29,6 @@ $(function() {
     $('.hero-overlay').css('opacity',
       (currentScrollTop) / ($('.hero-overlay').height()));
   });
+  $('#flash-notice').fadeOut(12000);
+  $('#flash-alert').fadeOut(12000);
 });

@@ -1,0 +1,19 @@
+#flash-container {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  margin: 0 auto;
+  width: 30%;
+  z-index: 999;
+}
+#flash-notice, #flash-alert {
+  font-size: 120%;
+  margin: auto;
+  padding: 6px 0;
+  // width: 100%;
+  text-align: center;
+  // @include radius-bottom( 3px );
+  // @include shadow( 0, 2px, 4px, $jet );
+}
+#flash-notice { background-color: #F3D9AA; }
+#flash-alert { background-color: pink; }
