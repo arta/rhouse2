@@ -1,5 +1,6 @@
 ################################################################################
 2-27-19: #######################################################################
+################################################################################
 • Downgrade rubygems for heroku:
 : git push staging failed
   : gem haml-rails updated to 2.0.0 a few commits ago (from 1.0.0, thx git)
@@ -14,6 +15,61 @@
     $ gem update --system 2.7.6
     $ bundle update                 # nothing was updated
     $ rails s                       # all works
+  : commit and push to staging, all works
+
+################################################################################
+• Setting Heroku for GCS:
+  : see the app's heroku current settings:
+
+    $ heroku config -a rhouse2-staging
+
+  : set the env variable (i.e., read its value from the pointed file):
+
+    $ heroku config:set GOOGLE_SERVICE_ACCOUNT_KEY_CREDENTIALS="$(< config/secre
+      ts/rhouse2.json)" -a rhouse2-staging
+
+: sources:
+  : https://link.medium.com/7eZLemHEEU
+  : https://link.medium.com/Jq2uPlfbyU
+
+################################################################################
+• Google Cloud Storage GCS - Projects & Buckets & permissions:
+: at the moment, I think, this is the optimal setup:
+  : app (e.g. rhouse2) will have one project (say, rhouse2, name must be unique
+    across all buckets on GCS (hm!))
+  : and the GCS project (rhouse2) will have 2 or 3 buckets:
+    : rhouse2
+      : for assets uploaded manually by the developer: logo, hero, etc.
+      : permission StorageObjectViewer given to allUsers at the bucket level
+      : no service account needed here (?) (I removed it, all works)
+    : rhouse2-attachments-development
+      : for assets uploaded via the app's API/GUI, by the app's intended
+        users/visitors: i.e. attachments
+      : permissions to the assets (objects) given via bucket's service account
+    : rhouse2-attachments-production
+      : same as dev
+: that's because:
+  : files uploaded by the app's API are issued keys managed by Google
+  : manual uploads must(?) go to a bucket that gives viewing permission to
+    allUsers (internet public)
+  : but this permission is given on a bucket level, and once a bucket has
+    a bucket level permission to allUsers, permissions cannot be managed via
+    bucket's service account
+  : but app's API (e.g. ActiveStorage) can access only buckets it is
+    authenticated/authorized to access
+  : and this authentication/authorization is done via service account that
+    carries permissions and that service account itself must pass
+    authentication/authorization via google's keys (stored in config/secrets/)
+    to access the bucket's objects (the app's assets managed by the app's users,
+    visitors)
+  : now back to the assets uploaded by the developer (logo, hero, other
+    background and decorative pics and vids):
+    : those are not uploaded via authenticated API (via service account), have
+      no keys, cannot be in a bucket access to which is channeled through keys
+    : and so these assets must be in their own bucket w/ bucket level permission
+      to allUsers
+
+  ... or somehow along these lines it seems
 
 ################################################################################
 
