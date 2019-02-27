@@ -1,4 +1,5 @@
 class Admin::ImagesController < ApplicationController
+  before_action :authenticate_user!
 
   # DELETE /admin/images/1
   def destroy

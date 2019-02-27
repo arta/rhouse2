@@ -20,7 +20,9 @@
     %section= render 'hero' if current_page?(root_path)
 
     %main{ class: (yield :main_class) }
-      .container{ class: (yield :main_container_class) }= yield
+      .container{ class: (yield :main_container_class) }
+        = render 'user_links'
+        = yield
 
     %footer
       .container= render 'footer'
