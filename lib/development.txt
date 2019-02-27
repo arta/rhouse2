@@ -1,4 +1,25 @@
 ################################################################################
+2-27-19: #######################################################################
+• Downgrade rubygems for heroku:
+: git push staging failed
+  : gem haml-rails updated to 2.0.0 a few commits ago (from 1.0.0, thx git)
+  : that version required updating gem system (went from from 2.7.6 to 3.0.2)
+  : rubygems 3.0.2 is not on heroku tho, so must downgrade:
+
+  : Gemfile:
+      ...
+      gem 'haml-rails', '1.0.0'
+      ...
+  : terminal:
+    $ gem update --system 2.7.6
+    $ bundle update                 # nothing was updated
+    $ rails s                       # all works
+
+################################################################################
+
+
+
+################################################################################
 2-26-19: #######################################################################
 • Add custom attributes to ActiveStorage:
 : Specifically, I needed comment on the portfolios pics
