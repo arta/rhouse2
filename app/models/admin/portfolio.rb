@@ -6,5 +6,10 @@ class Admin::Portfolio < ApplicationRecord
 
   validates :service, presence: true
 
+  scope :roofing, -> { where(service: 'Roofing') }
   scope :with_attached_images, -> { includes(:images).merge(Image.with_attached_file) }
+
+  def image_show_order_taken
+    images.pluck(:show_order).join(', ')
+  end
 end

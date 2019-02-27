@@ -25,6 +25,17 @@
     = f.fields_for :images, @admin_portfolio.images.new do |pf|
       = pf.label :file
       = pf.file_field :file
+
+      = pf.label :show_order,
+        "Show order (already taken: #{@admin_portfolio.image_show_order_taken})"
+      = pf.number_field :show_order
+
+      = pf.label :caption_heading
+      = pf.text_field :caption_heading
+
+      = pf.label :caption_text
+      = pf.text_field :caption_text
+
       = pf.label :comment
       = pf.text_field :comment
 

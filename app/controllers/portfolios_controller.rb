@@ -9,6 +9,7 @@ class PortfoliosController < ApplicationController
   end
 
   def roofing
+    @roofing_portfolios = Admin::Portfolio.roofing
   end
 
   def siding

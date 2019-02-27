@@ -5,31 +5,12 @@
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Roofing' }
 
   %section.portfolio
-    %figure
-      = image_tag gcs('portfolios-roofing-1-during.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 1. Work in Progress (a)
-        %p
-          No project is too small or too big for #{rh2}. Our expert roofers,
-          siders, & window installers will have your place looking brand new!
-          %mark <= dev't note: this is a brand new house?)
-
-    %figure
-      = image_tag gcs('portfolios-roofing-2-during.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 2. Work in Progress (b)
-
-    %figure
-      = image_tag gcs('portfolios-roofing-3-during.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 3. Work in Progress (c)
-
-    %figure
-      = image_tag gcs('portfolios-roofing-4-during.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 4. Work in Progress (d)
-
-    %figure
-      = image_tag gcs('portfolios-roofing-5-after.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 5. After
+    - @roofing_portfolios.each do |roofing_portfolio|
+      - if roofing_portfolio.images.present?
+        - roofing_portfolio.images.ordered.each do |image|
+          %figure
+            = image_tag image.file, class: 'portfolio'
+            %figcaption
+              %h4= image.caption_heading if image.caption_heading.present?
+              %p= image.caption_text if image.caption_text.present?
+              %p= image.comment if image.comment.present?
