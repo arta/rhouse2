@@ -107,7 +107,8 @@ figure.nav:hover .overlay {
 .admin-header-nav a { color: white; }
 
 nav.footer { font-family: inherit; }
-nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
+nav.footer .fa-home,
+nav.footer .fa-user { border-bottom: 2px solid whitesmoke; }
 nav.footer a { color: whitesmoke; }
 nav.footer .menu.small { justify-content: center; }
 nav.footer .menu.medium { display: none; }
