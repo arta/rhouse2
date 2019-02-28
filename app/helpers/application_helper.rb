@@ -3,10 +3,6 @@ module ApplicationHelper
     request.fullpath.split('/').second == 'admin'
   end
 
-  def devise_controller?
-    controller_name.in? %w(registrations)
-  end
-
   # Return CSS class 'current <view>'/true or nil/false for nav items styling
   def current_view?(link_paths)
     if link_paths.is_a? String
@@ -59,5 +55,10 @@ module ApplicationHelper
   # TODO: temporary, move to RH2's permanent location for production
   def gcs(asset_path)
     "https://storage.googleapis.com/rhouse2/#{asset_path}"
+  end
+
+  def show_admin_header_nav?
+    admin_controller? ||
+    controller_name == 'registrations' && action_name != 'new'
   end
 end
