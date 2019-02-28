@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def admin_controller?
+    request.fullpath.split('/').second == 'admin'
+  end
+
   # Return CSS class 'current <view>'/true or nil/false for nav items styling
   def current_view?(link_paths)
     if link_paths.is_a? String
@@ -44,11 +48,7 @@ module ApplicationHelper
 
   # Check for _partials (e.g. _nav_regional) in these locations:
   def path_prefixes
-    if request.fullpath.split('/').second == 'admin'
-      "admin/#{controller_name}"
-    else
-      controller_name
-    end
+    admin_controller? ? "admin/#{controller_name}" :  controller_name
   end
 
   # RHouse2 Google Cloud Storage
