@@ -5,6 +5,10 @@
   %nav.footer
     %ul.menu.footer.small
       .flexrow
+        - if user_signed_in?
+          %li
+            = link_to admin_portfolios_path do
+              %i.fas.fa-user
         %li
           = link_to root_path do
             %i.fas.fa-home
@@ -16,10 +20,13 @@
         %li= link_to 'Testimonials', testimonials_path
 
     %ul.menu.footer.medium
+      - if user_signed_in?
+        %li
+          = link_to admin_portfolios_path do
+            %i.fas.fa-user
       %li
         = link_to root_path do
           %i.fas.fa-home
-      -# %span= "|"
       %li= link_to 'About us', about_path
       %span= "|"
       %li= link_to 'Contact us', contact_path
