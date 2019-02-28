@@ -3,6 +3,10 @@ module ApplicationHelper
     request.fullpath.split('/').second == 'admin'
   end
 
+  def devise_controller?
+    controller_name.in? %w(registrations)
+  end
+
   # Return CSS class 'current <view>'/true or nil/false for nav items styling
   def current_view?(link_paths)
     if link_paths.is_a? String
