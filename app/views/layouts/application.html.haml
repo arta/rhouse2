@@ -21,7 +21,7 @@
 
     %main{ class: (yield :main_class) }
       .container{ class: (yield :main_container_class) }
-        = render 'user_links' if admin_controller? || devise_controller?
+        = render 'admin_header_nav' if show_admin_header_nav?
         = yield
 
     %footer
