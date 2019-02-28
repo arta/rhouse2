@@ -92,6 +92,20 @@ figure.nav:hover .overlay {
   opacity: 1;
 }
 
+.admin-header-nav {
+  align-items: center;
+  background-color: #3a3a3a;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+.admin-header-nav p { font-size: 100%; margin: 0; }
+.admin-header-nav li { margin-bottom: 0; }
+.admin-header-nav a { color: white; }
+
 nav.footer { font-family: inherit; }
 nav.footer .fa-home { border-bottom: 2px solid whitesmoke; }
 nav.footer a { color: whitesmoke; }
