@@ -1,4 +1,8 @@
 module ApplicationHelper
+  def admin_action?
+    request.fullpath.split('/').last == 'admin'
+  end
+
   def admin_controller?
     request.fullpath.split('/').second == 'admin'
   end
@@ -48,7 +52,11 @@ module ApplicationHelper
 
   # Check for _partials (e.g. _nav_regional) in these locations:
   def path_prefixes
-    admin_controller? ? "admin/#{controller_name}" :  controller_name
+    if admin_action? || admin_controller?
+      "admin/#{controller_name}"
+    else
+      controller_name
+    end
   end
 
   # RHouse2 Google Cloud Storage

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'pages#index'
 
   get '/about',   to: 'pages#about'
+  get '/admin',   to: 'admin/portfolios#index'
   get '/contact', to: 'pages#contact'
 
   get '/services',  to: 'services#index'
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   get '/bats',      to: 'services#bats'
 
   get 'portfolios', to: 'portfolios#index'
+  get 'portfolios/admin', to: 'admin/portfolios#index'
   get 'portfolios/kitchens'
   get 'portfolios/bathrooms'
   get 'portfolios/roofing'
@@ -34,6 +36,7 @@ Rails.application.routes.draw do
   get 'portfolios/flooring'
 
   get 'testimonials', to: 'testimonials#index'
+  get 'testimonials/admin', to: 'admin/testimonials#index'
 
   namespace :admin do
     resources :portfolios, :testimonials
