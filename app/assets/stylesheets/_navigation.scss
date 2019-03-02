@@ -100,11 +100,13 @@ figure.nav:hover .overlay {
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
-  padding: 0 1rem;
 }
 .admin-header-nav p { font-size: 100%; margin: 0; }
 .admin-header-nav li { margin-bottom: 0; }
-.admin-header-nav a { color: white; }
+.admin-header-nav a {
+  color: white;
+  padding: .7rem;
+}
 
 nav.footer { font-family: inherit; }
 nav.footer .fa-home,
