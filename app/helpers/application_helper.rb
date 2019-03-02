@@ -24,30 +24,31 @@ module ApplicationHelper
     end
   end
 
+  # Header nav helper
   def exterior_paths
     [exterior_path, roofing_path, siding_path, gutters_path, green_path,
       stone_path, decks_path]
   end
 
+  # RHouse2 Google Cloud Storage
+  # TODO: temporary, move to RH2's permanent location for production
+  def gcs(asset_path)
+    "https://storage.googleapis.com/rhouse2/#{asset_path}"
+  end
+
+  # Header nav helper
   def interior_paths
     [interior_path, kitchens_path, bathrooms_path, flooring_path, windows_path]
   end
 
+  # Header nav helper
   def mend_paths
     [mend_path, hail_path, ice_path, snow_path, bats_path]
   end
 
+  # Header nav helper
   def parent_paths
     [exterior_path, interior_path, mend_path, portfolios_path]
-  end
-
-  def portfolios_paths
-    [portfolios_path, portfolios_roofing_path, portfolios_siding_path,
-      portfolios_decks_path, portfolios_flooring_path, portfolios_windows_path]
-  end
-
-  def services_paths
-    exterior_paths + interior_paths + mend_paths
   end
 
   # Check for _partials (e.g. _nav_regional) in these locations:
@@ -59,10 +60,15 @@ module ApplicationHelper
     end
   end
 
-  # RHouse2 Google Cloud Storage
-  # TODO: temporary, move to RH2's permanent location for production
-  def gcs(asset_path)
-    "https://storage.googleapis.com/rhouse2/#{asset_path}"
+  # Header nav helper
+  def portfolios_paths
+    [portfolios_path, portfolios_roofing_path, portfolios_siding_path,
+      portfolios_decks_path, portfolios_flooring_path, portfolios_windows_path]
+  end
+
+  # Header nav helper
+  def services_paths
+    exterior_paths + interior_paths + mend_paths
   end
 
   def show_admin_header_nav?
