@@ -12,4 +12,9 @@ class Admin::Portfolio < ApplicationRecord
   def image_show_order_taken
     images.pluck(:show_order).join(', ')
   end
+
+  def images_persisted_plus_new
+    self.images.new unless images.last.new_record?
+    self.images
+  end
 end

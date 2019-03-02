@@ -1,4 +1,21 @@
 ################################################################################
+3-2-19: ########################################################################
+• Make Portfolio's images updatable:
+  : pass the existing images and a one new to the fields_for
+    : unless one new image already is in the collection - so that render of edit
+      with errors doesn't add another new image
+  : done via portfolio instance method #images_persisted_plus_new
+
+: That's it!
+: Took too long to figure out, but happy/impressed with how little it takes. :)
+
+: TODO: figure out how to show fields for the new image atop, first on the form.
+
+################################################################################
+
+
+
+################################################################################
 2-27-19: #######################################################################
 ################################################################################
 • Downgrade rubygems for heroku:
