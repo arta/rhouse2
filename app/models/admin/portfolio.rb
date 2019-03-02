@@ -2,8 +2,7 @@ class Admin::Portfolio < ApplicationRecord
   self.table_name = 'portfolios'
 
   has_many :images, dependent: :destroy
-  accepts_nested_attributes_for :images,
-    reject_if: proc { |attributes| attributes['file'].blank? }
+  accepts_nested_attributes_for :images, reject_if: :all_blank
 
   validates :service, presence: true
 

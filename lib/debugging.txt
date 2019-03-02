@@ -1,4 +1,37 @@
 ################################################################################
+3-2-19: ########################################################################
+• WHAT:
+  : couldn't get text_field of portfolio's nested fields for image(s) updated
+
+  : no indication of any problem in the console <= IMPORTANT !!!
+
+• WHY:
+  : reject_if: on the Admin::Portfolio model
+
+      ...
+      accepts_nested_attributes_for :images,
+        reject_if: proc { |attributes| attributes['file'].blank? }
+      ...
+
+  : having it this way means that updating any image attribute alone, without
+    updating the image as well, will ignore the update
+
+• FIX:
+      ...
+      accepts_nested_attributes_for :images, reject_if: :all_blank
+      ...
+
+• NOTE to self:
+  : when console doesn't give any indication of a problem, chances are something
+    in the code's logic is the problem, i.e.
+
+      no bug, bad logic <= IMPORTANT !!!
+
+################################################################################
+
+
+
+################################################################################
 2-26-19: #######################################################################
 • WHAT, WHY, ISSUE:
   : Unpermitted parameters
