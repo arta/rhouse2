@@ -22,7 +22,7 @@
       .flexrow= f.date_select :job_completed_at, include_blank: true
 
   .fieldset
-    = f.fields_for :images do |pf|
+    = f.fields_for :images, @admin_portfolio.images_persisted_plus_new do |pf|
       = image_tag pf.object.file if pf.object.persisted?
 
       = pf.label :file
