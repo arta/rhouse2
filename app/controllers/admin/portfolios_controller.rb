@@ -18,6 +18,7 @@ class Admin::PortfoliosController < ApplicationController
 
   # GET /admin/portfolios/1/edit
   def edit
+    @admin_portfolio.images_persisted_plus_new
   end
 
   # POST /admin/portfolios
