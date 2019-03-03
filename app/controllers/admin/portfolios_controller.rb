@@ -52,7 +52,8 @@ class Admin::PortfoliosController < ApplicationController
       @admin_portfolio = Admin::Portfolio.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet,
+    # only allow the white list through.
     def admin_portfolio_params
       params.require(:admin_portfolio).permit(:service, :description,
         :job_started_at, :job_completed_at,
