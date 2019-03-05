@@ -195,6 +195,10 @@ img.portfolio {
   width: 100%;
 }
 
+.griddle.admin-portfolio {
+  grid-gap: 1rem;
+}
+
 .actions { margin: 2rem 0; }
 
 // declaring font-size here as % does not work
