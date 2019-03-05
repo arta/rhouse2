@@ -20,7 +20,8 @@ class Admin::PortfoliosController < ApplicationController
 
   # GET /admin/portfolios/1/edit
   def edit
-    @admin_portfolio.images.new unless @admin_portfolio.images.last.new_record?
+    @admin_portfolio.images.new unless
+      @admin_portfolio.images.try(:last).try(:new_record?)
   end
 
   # POST /admin/portfolios
