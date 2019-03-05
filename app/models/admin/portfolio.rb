@@ -7,15 +7,12 @@ class Admin::Portfolio < ApplicationRecord
   validates :service, presence: true
 
   scope :roofing, -> { where(service: 'Roofing') }
+  scope :find_with_attached_images,
+    -> (id) { includes(:images).merge(Image.with_attached_file).find(id) }
   scope :with_attached_images,
     -> { includes(:images).merge(Image.with_attached_file) }
 
   def image_show_order_taken
     images.pluck(:show_order).join(', ')
-  end
-
-  def persisted_images_plus_one_new
-    self.images.new unless images.last.new_record?
-    self.images
   end
 end
