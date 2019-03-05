@@ -1,4 +1,22 @@
 ################################################################################
+3-5-19: ########################################################################
+• Show & edit Portfolio's updatable images ordered (update on 3-2-19 note)
+: Simply make the images scope ordered:
+
+    ...
+    scope :images, -> { order(show_order: :asc) }
+    ...
+
+: Sweet & simple
+: But the approach has a N+1 query problem
+
+  => will need to implement a scope with includes() and merge()
+
+################################################################################
+
+
+
+################################################################################
 3-2-19: ########################################################################
 • Make Portfolio's images updatable:
   : pass the existing images and a one new to the fields_for
