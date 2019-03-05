@@ -23,10 +23,13 @@
   - if @admin_portfolio.images.present?
     - @admin_portfolio.images.each do |image|
       .fieldset
-        = image_tag image.file if image.file.attached?
-        = image.show_order
-        = image.caption_heading
-        = image.caption_text
-        = image.comment
-        = link_to 'Delete', admin_image_path(image),
-          method: :delete, data: { confirm: 'Are you sure?' }
+        %figure.griddle.admin-portfolio
+          = image_tag image.file if image.file.attached?
+          .flexcol
+            %span= image.show_order
+            %figcaption
+              %h4= image.caption_heading
+              %p= image.caption_text
+              %p= image.comment
+            = button_to 'Delete', admin_image_path(image),
+              method: :delete, data: { confirm: 'Are you sure?' }

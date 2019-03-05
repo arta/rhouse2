@@ -23,25 +23,26 @@
       = f.label :job_completed_at
       .flexrow= f.date_select :job_completed_at, include_blank: true
 
-  .fieldset
-    = f.fields_for :images do |pf|
-      = image_tag pf.object.file if pf.object.persisted?
+  = f.fields_for :images do |i|
+    .fieldset
+      %figure.griddle.admin-portfolio
+        = image_tag i.object.file if i.object.persisted?
+        .flexcol
+          = i.label :file
+          = i.file_field :file
 
-      = pf.label :file
-      = pf.file_field :file
+          = i.label :show_order,
+            "Show order (already taken: #{@admin_portfolio.image_show_order_taken})"
+          = i.number_field :show_order
 
-      = pf.label :show_order,
-        "Show order (already taken: #{@admin_portfolio.image_show_order_taken})"
-      = pf.number_field :show_order
+          = i.label :caption_heading
+          = i.text_field :caption_heading
 
-      = pf.label :caption_heading
-      = pf.text_field :caption_heading
+          = i.label :caption_text
+          = i.text_field :caption_text
 
-      = pf.label :caption_text
-      = pf.text_field :caption_text
-
-      = pf.label :comment
-      = pf.text_field :comment
+          = i.label :comment
+          = i.text_field :comment
 
   .actions
     = f.submit nil, class: 'button'
