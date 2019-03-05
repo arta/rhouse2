@@ -1,6 +1,8 @@
 class Admin::PortfoliosController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_admin_portfolio, only: [:show, :edit, :update, :destroy]
+  before_action :set_admin_portfolio_with_attached_images,
+    only: [:show, :edit, :update]
+  before_action :set_admin_portfolio, only: :destroy
 
   # GET /admin/portfolios
   def index
@@ -18,7 +20,7 @@ class Admin::PortfoliosController < ApplicationController
 
   # GET /admin/portfolios/1/edit
   def edit
-    @admin_portfolio.persisted_images_plus_one_new
+    @admin_portfolio.images.new unless @admin_portfolio.images.last.new_record?
   end
 
   # POST /admin/portfolios
@@ -49,6 +51,10 @@ class Admin::PortfoliosController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
+    def set_admin_portfolio_with_attached_images
+      @admin_portfolio = Admin::Portfolio.find_with_attached_images(params[:id])
+    end
+
     def set_admin_portfolio
       @admin_portfolio = Admin::Portfolio.find(params[:id])
     end
