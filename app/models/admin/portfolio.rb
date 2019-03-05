@@ -1,7 +1,7 @@
 class Admin::Portfolio < ApplicationRecord
   self.table_name = 'portfolios'
 
-  has_many :images, -> { order(show_order: :asc) }, dependent: :destroy
+  has_many :images, -> { ordered }, dependent: :destroy
   accepts_nested_attributes_for :images, reject_if: :all_blank
 
   validates :service, presence: true
