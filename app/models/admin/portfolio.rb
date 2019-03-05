@@ -14,7 +14,7 @@ class Admin::Portfolio < ApplicationRecord
     images.pluck(:show_order).join(', ')
   end
 
-  def images_persisted_plus_new
+  def persisted_images_plus_one_new
     self.images.new unless images.last.new_record?
     self.images
   end
