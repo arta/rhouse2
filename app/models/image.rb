@@ -4,7 +4,7 @@ class Image < ApplicationRecord
   delegate_missing_to :file
 
   validates_numericality_of :show_order, only_integer: true, greater_than: 0
-  validates_uniqueness_of :show_order
+  validates_uniqueness_of :show_order, scope: :portfolio_id
 
   scope :ordered, -> { order(show_order: :asc) }
 end
