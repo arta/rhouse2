@@ -32,8 +32,10 @@
           = i.file_field :file
 
           = i.label :show_order,
-            "Show order (already taken: #{@admin_portfolio.image_show_order_taken})"
-          = i.number_field :show_order
+            "Show order (taken:                                             |
+            #{@admin_portfolio.unavailable_image_show_order.join(', ')})"   |
+          = i.select :show_order,
+            [i.object.show_order]+@admin_portfolio.available_image_show_order
 
           = i.label :caption_heading
           = i.text_field :caption_heading
