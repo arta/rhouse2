@@ -5,5 +5,4 @@
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Windows' }
 
   %section.portfolio
-    = render partial: 'portfolios_images',
-      locals: { portfolios: @windows_portfolios }
+    = render partial: 'portfolio', collection: @windows_portfolios
