@@ -26,7 +26,10 @@
   = f.fields_for :images do |i|
     .fieldset
       %figure.griddle.admin-portfolio
-        = image_tag i.object.file if i.object.persisted?
+        - if i.object.persisted?
+          .flexcol
+            = image_tag i.object.file
+            = i.object.file.filename
         .flexcol
           = i.label :file
           = i.file_field :file
