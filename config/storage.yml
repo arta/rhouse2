@@ -19,7 +19,7 @@ google_staging:
   service: GCS
   project: clients-development
   credentials: <%= ENV['GOOGLE_CLOUD_STORAGE_SERVICE_ACCOUNT_CREDENTIALS'] %>
-  bucket: rhouse2-development-attachments
+  bucket: rhouse2-staging-attachments
 
 google_development:
   service: GCS
