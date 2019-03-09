@@ -39,7 +39,7 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  google_cloud_service = if request.subdomain == 'rhouse2-staging'
+  google_cloud_service = if ENV['STAGING'].present?
     :google_staging
   else # no subdomain; `rhouse2` domain implied
     :google_production
