@@ -5,51 +5,12 @@
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Windows' }
 
   %section.portfolio
-    %figure
-      = image_tag gcs('window1.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 1. Windows (a)
-        %p
-          Windows play an important role in your home, both functionally and
-          aesthetically.
-
-    %figure
-      = image_tag gcs('window2.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 2. Windows (b)
-        %p
-          Window products must be of the highest quality and workmanship, and
-          provide security, energy efficiency, functionality, and outstanding
-          style.
-
-    %figure
-      = image_tag gcs('window3.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 3. Windows (c)
-        %p
-          #{rh2} Home Improvement Company only installs the finest window
-          products in the industry - top quality window products that are
-          perfectly suited for our four-seasons.
-
-    %figure
-      = image_tag gcs('window4.jpg'), class: 'portfolio'
-      %figcaption
-        %h4  4. Windows :: Work in Progress (a)
-        %p Home Improvement
-
-    %figure
-      = image_tag gcs('window5.jpg'), class: 'portfolio'
-      %figcaption
-        %h4  5. Windows & Siding :: Work in Progress (b)
-        %p From start to finish #{rh2} uses quality craftsmanship.
-
-    %figure
-      = image_tag gcs('window6.jpg'), class: 'portfolio'
-      %figcaption
-        %h4  6. Windows & Siding :: Work in Progress (c)
-
-    %figure
-      = image_tag gcs('window7.jpg'), class: 'portfolio'
-      %figcaption
-        %h4  7. After
-        %p The finished home!
+    - @windows_portfolios.each do |windows_portfolio|
+      - if windows_portfolio.images.present?
+        - windows_portfolio.images.ordered.each do |image|
+          %figure
+            = image_tag image.file, class: 'portfolio'
+            %figcaption
+              %h4= image.caption_heading if image.caption_heading.present?
+              %p= image.caption_text if image.caption_text.present?
+              %p= image.comment if image.comment.present?
