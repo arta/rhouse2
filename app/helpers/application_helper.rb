@@ -34,6 +34,7 @@ module ApplicationHelper
   # TODO: temporary, move to RH2's permanent location for production
   def gcs(asset_path)
     "https://storage.googleapis.com/rhouse2-production-static/#{asset_path}"
+    # "https://storage.googleapis.com/rhouse2-development-static/#{asset_path}"
   end
 
   # Header nav helper
