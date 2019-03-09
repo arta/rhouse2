@@ -1,4 +1,4 @@
-%ul.nav.xlarge.menu
+%ul.menu.xlarge
   %li{ class: current_view?(exterior_paths) }
     = link_to_unless current_view?(exterior_path),
       'Exterior', exterior_path do
@@ -23,7 +23,7 @@
     = link_to_unless_current 'Testimonials', testimonials_path do
       %span Testimonials
 
-%ul.nav.large.menu.vertical.medium-horizontal{ data:              |
+%ul.menu.vertical.large.medium-horizontal{ data:              |
   { responsive_menu: 'drilldown medium-dropdown'} }               |
 
   %li{ class: current_view?(services_paths) }
