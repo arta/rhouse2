@@ -23,12 +23,9 @@ google:
 
 google_development:
   service: GCS
-  # project: rhouse2
-  # credentials: <%= Rails.root.join("config/secrets/rhouse2-gcs.json") %>
-  # bucket: rhouse2
-  project: rhouse2a
-  credentials: <%= Rails.root.join("config/secrets/rhouse2a.json") %>
-  bucket: rhouse2a-bucket
+  project: clients-development
+  credentials: <%= Rails.root.join("config/secrets/clients-development.json") %>
+  bucket: rhouse2-development-attachments
 
 # Use rails credentials:edit to set the Azure Storage secret (as azure_storage:storage_access_key)
 # microsoft:
