@@ -24,7 +24,10 @@
     - @admin_portfolio.images.each do |image|
       .fieldset
         %figure.griddle.admin-portfolio
-          = image_tag image.file if image.file.attached?
+          - if image.file.persisted?
+            .flexcol
+              = image_tag image.file
+              = image.file.filename
           .flexcol
             %span= image.show_order
             %figcaption
