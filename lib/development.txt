@@ -1,4 +1,45 @@
 ################################################################################
+3-9-19: ########################################################################
+• Use inheritance to DRY up Portfolio model
+: Tried delegating first, but didn't figure it our right away because
+  the delegatee (Admin::Portfolio) is a nested model
+
+    ...
+    delegate_missing_to :'admin/portfolio' ... <= or something ?
+    ...
+
+: Also, doesn't appear Ruby/Rails idiomatic?
+: So then tried inheriting
+  : everything seems to work beautifully, as intended
+
+  : Before:
+    : portfolio.rb:
+        class Portfolio < ApplicationRecord
+          has_many :images, -> { ordered }
+
+          scope :decks,     -> { where(service: 'Decks') }
+          scope :flooring,  -> { where(service: 'Flooring') }
+          scope :roofing,   -> { where(service: 'Roofing') }
+          scope :siding,    -> { where(service: 'Siding') }
+          scope :windows,   -> { where(service: 'Windows') }
+        end
+  : After:
+    : portfolio.rb:
+        class Portfolio < Admin::Portfolio
+        end
+
+: Portfolio inherits its methods from Admin::Portfolio
+  : like Admin::Portfolio inherits from ApplicationRecord etc.
+
+: Not sure if hidden future problems exist
+  : e.g. don't need to inherit everything, just the deleted methods ..
+  : .. so, noting here for future reference of what/when/why
+
+################################################################################
+
+
+
+################################################################################
 3-5-19: ########################################################################
 • Show & edit Portfolio's updatable images ordered (update on 3-2-19 note)
 : Simply make the images scope ordered:
