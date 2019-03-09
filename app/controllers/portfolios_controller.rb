@@ -9,22 +9,22 @@ class PortfoliosController < ApplicationController
   end
 
   def roofing
-    @portfolios = Admin::Portfolio.roofing
+    @portfolios = Portfolio.roofing
   end
 
   def siding
-    @portfolios = Admin::Portfolio.siding
+    @portfolios = Portfolio.siding
   end
 
   def windows
-    @portfolios = Admin::Portfolio.windows
+    @portfolios = Portfolio.windows
   end
 
   def decks
-    @portfolios = Admin::Portfolio.decks
+    @portfolios = Portfolio.decks
   end
 
   def flooring
-    @portfolios = Admin::Portfolio.flooring
+    @portfolios = Portfolio.flooring
   end
 end
