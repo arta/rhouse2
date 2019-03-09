@@ -5,12 +5,5 @@
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Decks' }
 
   %section.portfolio
-    - @decks_portfolios.each do |decks_portfolio|
-      - if decks_portfolio.images.present?
-        - decks_portfolio.images.ordered.each do |image|
-          %figure
-            = image_tag image.file, class: 'portfolio'
-            %figcaption
-              %h4= image.caption_heading if image.caption_heading.present?
-              %p= image.caption_text if image.caption_text.present?
-              %p= image.comment if image.comment.present?
+    = render partial: 'portfolios_images',
+      locals: { portfolios: @decks_portfolios }
