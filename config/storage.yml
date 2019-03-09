@@ -15,11 +15,11 @@ local:
 #   bucket: your_own_bucket
 
 # Remember not to checkin your GCS keyfile to a repository
-google:
+google_staging:
   service: GCS
-  project: rhouse2a
-  credentials: <%= ENV['GOOGLE_SERVICE_ACCOUNT_KEY_CREDENTIALS'] %>
-  bucket: rhouse2a-bucket
+  project: clients-development
+  credentials: <%= ENV['GOOGLE_CLOUD_STORAGE_SERVICE_ACCOUNT_CREDENTIALS'] %>
+  bucket: rhouse2-development-attachments
 
 google_development:
   service: GCS
