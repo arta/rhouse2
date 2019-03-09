@@ -39,7 +39,12 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
-  config.active_storage.service = :google_staging
+  google_cloud_service = if request.subdomain == 'rhouse2-staging'
+    :google_staging
+  else # no subdomain; `rhouse2` domain implied
+    :google_production
+  end
+  config.active_storage.service = google_cloud_service
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
