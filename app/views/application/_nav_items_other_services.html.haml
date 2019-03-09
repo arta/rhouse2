@@ -1,0 +1,15 @@
+%li{ class: current_view?(hail_path) }
+  = link_to_unless_current 'Hail damage', hail_path do
+    %span Hail damage
+
+%li{ class: current_view?(ice_path) }
+  = link_to_unless_current 'Ice dams', ice_path do
+    %span Ice dams
+
+%li{ class: current_view?(snow_path) }
+  = link_to_unless_current 'Snow removal', snow_path do
+    %span Snow removal
+
+%li{ class: current_view?(bats_path) }
+  = link_to_unless_current 'Bat removal', bats_path do
+    %span Bat removal

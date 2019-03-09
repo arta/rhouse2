@@ -1,61 +1,9 @@
 %ul.nav.regional.menu
   - if current_view?(exterior_paths)
-    %li{ class: current_view?(roofing_path) }
-      = link_to_unless_current 'Roofing', roofing_path do
-        %span Roofing
-
-    %li{ class: current_view?(siding_path) }
-      = link_to_unless_current 'Siding', siding_path do
-        %span Siding
-
-    %li{ class: current_view?(gutters_path) }
-      = link_to_unless_current 'Gutters', gutters_path do
-        %span Gutters
-
-    %li{ class: current_view?(green_path) }
-      = link_to_unless_current 'Green roofs', green_path do
-        %span Greer roofs
-
-    %li{ class: current_view?(stone_path) }
-      = link_to_unless_current 'Cultured stone', stone_path do
-        %span Cultured stone
-
-    %li{ class: current_view?(decks_path) }
-      = link_to_unless_current 'Decks', decks_path do
-        %span Decks
-
+    = render 'nav_items_exterior_services'
 
   - elsif current_view?(interior_paths)
-    %li{ class: current_view?(kitchens_path) }
-      = link_to_unless_current 'Kitchens', kitchens_path do
-        %span Kitchens
-
-    %li{ class: current_view?(bathrooms_path) }
-      = link_to_unless_current 'Bathrooms', bathrooms_path do
-        %span Bathrooms
-
-    %li{ class: current_view?(flooring_path) }
-      = link_to_unless_current 'Flooring', flooring_path do
-        %span Flooring
-
-    %li{ class: current_view?(windows_path) }
-      = link_to_unless_current 'Windows', windows_path do
-        %span Windows
-
+    = render 'nav_items_interior_services'
 
   - elsif current_view?(mend_paths)
-    %li{ class: current_view?(hail_path) }
-      = link_to_unless_current 'Hail damage', hail_path do
-        %span Hail damage
-
-    %li{ class: current_view?(ice_path) }
-      = link_to_unless_current 'Ice dams', ice_path do
-        %span Ice dams
-
-    %li{ class: current_view?(snow_path) }
-      = link_to_unless_current 'Snow removal', snow_path do
-        %span Snow removal
-
-    %li{ class: current_view?(bats_path) }
-      = link_to_unless_current 'Bat removal', bats_path do
-        %span Bat removal
+    = render 'nav_items_other_services'
