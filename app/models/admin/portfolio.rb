@@ -6,7 +6,12 @@ class Admin::Portfolio < ApplicationRecord
 
   validates :service, presence: true
 
-  scope :roofing, -> { where(service: 'Roofing') }
+  scope :decks,     -> { where(service: 'Decks') }
+  scope :flooring,  -> { where(service: 'Flooring') }
+  scope :roofing,   -> { where(service: 'Roofing') }
+  scope :siding,    -> { where(service: 'Siding') }
+  scope :windows,   -> { where(service: 'Windows') }
+
   scope :find_with_attached_images,
     -> (id) { includes(:images).merge(Image.with_attached_file).find(id) }
   scope :with_attached_images,

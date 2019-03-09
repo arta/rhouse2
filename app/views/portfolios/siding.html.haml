@@ -5,43 +5,12 @@
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Siding' }
 
   %section.portfolio
-    %figure
-      = image_tag gcs('portfolios-siding-1-before.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 1. Before (a)
-        %p
-          Vinyl provides enduring beauty and design flexibility. Using a variety
-          of siding and soffit styles, colors, accessories and trim, you can
-          update a Ranch, add character to a Colonial or even recreate
-          a Victorian.
-
-    %figure
-      = image_tag gcs('portfolios-siding-2-before.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 2. Before (b)
-        %p
-          We can help select siding that will be consistent with your home's
-          design and fit into the environment and neighboring homes.
-
-    %figure
-      = image_tag gcs('portfolios-siding-3-during.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 3. Work in Progress
-        %p
-          The satisfaction that comes from Vinyl siding is knowing you will
-          never have to paint again!
-
-    %figure
-      = image_tag gcs('portfolios-siding-4-after.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 4. After (a)
-        %p
-          Siding your home is a great investment. #{rh2} offers Free Siding
-          Price Quotes.
-
-    %figure
-      = image_tag gcs('portfolios-siding-5-after.jpg'), class: 'portfolio'
-      %figcaption
-        %h4 5. After (b)
-        %p
-          #{rh2} delivers expert installation!
+    - @siding_portfolios.each do |siding_portfolio|
+      - if siding_portfolio.images.present?
+        - siding_portfolio.images.ordered.each do |image|
+          %figure
+            = image_tag image.file, class: 'portfolio'
+            %figcaption
+              %h4= image.caption_heading if image.caption_heading.present?
+              %p= image.caption_text if image.caption_text.present?
+              %p= image.comment if image.comment.present?
