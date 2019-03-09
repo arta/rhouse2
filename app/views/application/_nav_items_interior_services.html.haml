@@ -1,0 +1,15 @@
+%li{ class: current_view?(kitchens_path) }
+  = link_to_unless_current 'Kitchens', kitchens_path do
+    %span Kitchens
+
+%li{ class: current_view?(bathrooms_path) }
+  = link_to_unless_current 'Bathrooms', bathrooms_path do
+    %span Bathrooms
+
+%li{ class: current_view?(flooring_path) }
+  = link_to_unless_current 'Flooring', flooring_path do
+    %span Flooring
+
+%li{ class: current_view?(windows_path) }
+  = link_to_unless_current 'Windows', windows_path do
+    %span Windows

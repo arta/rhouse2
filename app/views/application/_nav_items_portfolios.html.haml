@@ -1,0 +1,19 @@
+%li{ class: current_view?(portfolios_roofing_path) }
+  = link_to_unless_current 'Roofing', portfolios_roofing_path do
+    %span Roofing
+
+%li{ class: current_view?(portfolios_siding_path) }
+  = link_to_unless_current 'Siding', portfolios_siding_path do
+    %span Siding
+
+%li{ class: current_view?(portfolios_decks_path) }
+  = link_to_unless_current 'Decks', portfolios_decks_path do
+    %span Decks
+
+%li{ class: current_view?(portfolios_flooring_path) }
+  = link_to_unless_current 'Flooring', portfolios_flooring_path do
+    %span Flooring
+
+%li{ class: current_view?(portfolios_windows_path) }
+  = link_to_unless_current 'Windows', portfolios_windows_path do
+    %span Windows
