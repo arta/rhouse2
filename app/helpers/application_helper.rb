@@ -69,7 +69,7 @@ module ApplicationHelper
   end
 
   # Header nav helper
-  def services_paths
+  def all_services_paths
     exterior_paths + interior_paths + other_services_paths
   end
 

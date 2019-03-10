@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get '/admin',   to: 'admin/portfolios#index'
   get '/contact', to: 'pages#contact'
 
-  get '/services',  to: 'services#index'
+  get '/all-services',  to: 'services#index'
   get '/exterior',  to: 'services#exterior'
   get '/interior',  to: 'services#interior'
   get '/other-services', to: 'services#other_services'
