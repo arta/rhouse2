@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
 
   get '/all-services',  to: 'services#index'
-  get '/exterior',  to: 'services#exterior'
+  get '/exterior-services',  to: 'services#exterior_services'
   get '/interior',  to: 'services#interior'
   get '/other-services', to: 'services#other_services'
   get '/kitchens',  to: 'services#kitchens'
