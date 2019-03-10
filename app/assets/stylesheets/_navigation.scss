@@ -1,15 +1,22 @@
 nav { font-family: 'Telegrafico'; }
 nav li { white-space: nowrap; }
-nav.header a { color: #333; }
 
 nav.header li {
   border-radius: 3px;
   transition: background-color, .6s;
 }
+nav.header a { color: #333; }
+
+ul.menu { font-size: 140%; }
+ul.menu ul.menu { font-size: 100%; } // stop 140% of 140%, TODO: better way?
+
+ul.menu.xlarge,
+ul.menu.regional { display: none; }
+
 // nav element                      idle          :hover
 // ------------------------------------------------------
-// li                               black         border
-// li.current                        red          border
+// li                               black       lightgrey
+// li.current                        red        lightgrey
 // li.current.view                   red            -
 // ------------------------------------------------------
 // Hover ON:
@@ -23,17 +30,11 @@ nav.header li.current.view:hover {
   border-color: transparent;
 }
 
-ul.menu.xlarge,
-ul.menu.regional { display: none; }
-
-ul.menu { font-size: 140%; }
-ul.menu ul.menu { font-size: 100%; } // stop 140% of 140%, TODO: better way?
-
 li.current, .menu.regional { background-color: whitesmoke; }
-// // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
-// // link_to_unless _current(), current_view?() helpers.
-// // Use for state contingent styling, i.e. a "bread-crumb" and hover
-// // Must do children to prevent malformatting of nested navs manus
+// No anchor inside li.current.view. Courtesty of Rails' and my own adapted
+// link_to_unless _current(), current_view?() helpers.
+// Use for state contingent styling, i.e. a "bread-crumb" and hover
+// Must do children to prevent malformatting of nested navs manus
 ul.menu > li.current > a,
 ul.menu > li.current.view { color: #e60000; }
 ul.menu > li.current.view span {
