@@ -9,18 +9,19 @@ module ApplicationHelper
 
   # Return CSS class 'current <view>'/true or nil/false to style menu items
   # Call current_view?() when passing a single path
-  def current_view?(menu_item_paths)
-    if menu_item_paths.is_a?(String)
-      item_path = menu_item_paths
+  def current_view?(item_path_or_paths_collection)
+    if item_path_or_paths_collection.is_a? String
+      item_path = item_path_or_paths_collection
       # menu item path is current view of a final destination page
       'current view' if current_page?(item_path)
-    elsif menu_item_paths.is_a?(Array)
-      if menu_item_paths.any?{ |item_path|
-        current_page?(item_path) && item_path.in?(pantheons_paths) }
+    elsif item_path_or_paths_collection.is_a? Array
+      item_paths_collection = item_path_or_paths_collection
+      if item_paths_collection.any?{ |collection_path|
+        current_page?(collection_path) && collection_path.in?(pantheons_paths) }
         # menu item path is current view of a pantheon page
         'current view'
-      elsif menu_item_paths.any?{ |item_path|
-        current_page?(item_path) }
+      elsif item_paths_collection.any?{ |collection_path|
+        current_page?(collection_path) }
         # menu item path is along the way to a final destination page
         'current'
       end
