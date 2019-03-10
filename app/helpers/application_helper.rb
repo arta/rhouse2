@@ -28,8 +28,9 @@ module ApplicationHelper
 
   # Header nav helper
   def exterior_services_paths
-    [exterior_services_path, roofing_path, siding_path, gutters_path, green_roofs_path,
-      stone_path, decks_path]
+    [exterior_services_path,
+      roofing_path, siding_path, gutters_path, green_roofs_path, stone_path,
+      decks_path]
   end
 
   # RHouse2 Google Cloud Storage
@@ -40,17 +41,20 @@ module ApplicationHelper
 
   # Header nav helper
   def interior_services_paths
-    [interior_services_path, kitchens_path, bathrooms_path, flooring_path, windows_path]
+    [interior_services_path,
+      kitchens_path, bathrooms_path, flooring_path, windows_path]
   end
 
   # Header nav helper
   def other_services_paths
-    [other_services_path, hail_damage_path, ice_dams_path, snow_removal_path, bat_removal_path]
+    [other_services_path,
+      hail_damage_path, ice_dams_path, snow_removal_path, bat_removal_path]
   end
 
   # Header nav helper
   def pantheons_paths
-    [exterior_services_path, interior_services_path, other_services_path, portfolios_path]
+    [exterior_services_path, interior_services_path, other_services_path,
+      portfolios_path]
   end
 
   # Check for _partials (e.g. _nav_regional) in these locations:
@@ -64,8 +68,9 @@ module ApplicationHelper
 
   # Header nav helper
   def portfolios_paths
-    [portfolios_path, portfolios_roofing_path, portfolios_siding_path,
-      portfolios_decks_path, portfolios_flooring_path, portfolios_windows_path]
+    [portfolios_path,
+      portfolios_roofing_path, portfolios_siding_path, portfolios_decks_path,
+      portfolios_flooring_path, portfolios_windows_path]
   end
 
   # Header nav helper
