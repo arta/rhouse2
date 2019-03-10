@@ -44,7 +44,7 @@ class ServicesController < ApplicationController
   def hail_damage
   end
 
-  def ice
+  def ice_dams
   end
 
   def snow

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   get '/flooring',  to: 'services#flooring'
   get '/stone',     to: 'services#stone'
   get '/hail-damage', to: 'services#hail_damage'
-  get '/ice',       to: 'services#ice'
+  get '/ice-dams',       to: 'services#ice_dams'
   get '/snow',      to: 'services#snow'
   get '/bats',      to: 'services#bats'
 
