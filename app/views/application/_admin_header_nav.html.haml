@@ -1,8 +1,8 @@
 .admin-header-nav
-	%ul.menu
+	%ul.menu.admin
 		%li= link_to 'Portfolios', admin_portfolios_path
 		%li= link_to 'Testimonials', admin_testimonials_path
-	%ul.menu
+	%ul.menu.admin
 		- if user_signed_in?
 			%li
 				= link_to edit_user_registration_path do
