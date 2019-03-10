@@ -7,28 +7,22 @@ module ApplicationHelper
     request.fullpath.split('/').second == 'admin'
   end
 
-  # Return CSS class 'current <view>'/true or nil/false to show/style menu items
-  # Call current_view?() to assignn class(es) to a single path
-  def current_view?(item_path_or_paths_collection)
-    if item_path_or_paths_collection.is_a? String
-      item_path = item_path_or_paths_collection
-      # menu item path is current view of a final destination page
-      'current view' if current_page?(item_path)
-    elsif item_path_or_paths_collection.is_a? Array
-      item_paths_collection = item_path_or_paths_collection
-      if item_paths_collection.any?{ |collection_path|
-        current_page?(collection_path) && collection_path.in?(pantheons_paths) }
-        # menu item path is current view of a pantheon page
-        'current view'
-      elsif item_paths_collection.any?{ |collection_path|
-        current_page?(collection_path) }
-        # menu item path is along the way to a final destination page
-        'current'
-      end
+  def current_view?(menu_item_path)
+    'current view' if current_page?(menu_item_path)
+  end
+
+  # Call current_view_in?() to assign class(es) to a collection path
+  def current_view_in?(menu_item_paths_collection)
+    if menu_item_paths_collection.any?{ |collection_path|
+      current_page?(collection_path) && collection_path.in?(pantheons_paths) }
+      # menu item path is current view of a pantheon page
+      'current view'
+    elsif menu_item_paths_collection.any?{ |collection_path|
+      current_page?(collection_path) }
+      # menu item path is along the way to a final destination page
+      'current'
     end
   end
-  # Call current_view_in?() to assign class(es) to a collection path
-  alias current_view_in? current_view?
   # Call current_page_in?() for true/false of current page in paths collection
   alias current_page_in? current_view_in?
 
