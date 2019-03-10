@@ -30,8 +30,8 @@ module ApplicationHelper
   # Header nav helper
   def exterior_services_paths_collection
     [exterior_services_path,
-      roofing_path, siding_path, gutters_path, green_roofs_path, stone_path,
-      decks_path]
+      roofing_path, siding_path, gutters_path, green_roofs_path,
+      cultured_stone_path, decks_path]
   end
 
   # RHouse2 Google Cloud Storage

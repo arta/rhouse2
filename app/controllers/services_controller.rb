@@ -38,7 +38,7 @@ class ServicesController < ApplicationController
   def flooring
   end
 
-  def stone
+  def cultured_stone
   end
 
   def hail_damage
