@@ -28,7 +28,7 @@ module ApplicationHelper
 
   # Header nav helper
   def exterior_services_paths
-    [exterior_services_path, roofing_path, siding_path, gutters_path, green_path,
+    [exterior_services_path, roofing_path, siding_path, gutters_path, green_roofs_path,
       stone_path, decks_path]
   end
 
