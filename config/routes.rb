@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get '/decks',             to: 'services#decks'
   get '/gutters',           to: 'services#gutters'
   get '/flooring',          to: 'services#flooring'
-  get '/stone',             to: 'services#stone'
+  get '/cultured-stone',    to: 'services#cultured_stone'
   get '/hail-damage',       to: 'services#hail_damage'
   get '/ice-dams',          to: 'services#ice_dams'
   get '/snow-removal',      to: 'services#snow_removal'
