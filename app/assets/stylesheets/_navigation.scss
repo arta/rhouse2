@@ -42,6 +42,8 @@ ul.menu > li.current.view span {
   line-height: 1;
   padding: $global-menu-padding;
 }
+// Override F6 #333;
+ul.menu > li.current.is-dropdown-submenu-parent > a { color: #e60000; }
 
 button.menu-icon:hover { background-color: lightgrey; }
 button.fa-hard-hat {
