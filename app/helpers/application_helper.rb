@@ -14,7 +14,8 @@ module ApplicationHelper
   # Call current_view_in?() to assign class(es) to a collection path
   def current_view_in?(menu_item_paths_collection)
     if menu_item_paths_collection.any?{ |collection_path|
-      current_page?(collection_path) && collection_path.in?(pantheons_paths) }
+      current_page?(collection_path) &&
+      collection_path.in?(pantheons_paths_collection) }
       # menu item path is current view of a pantheon page
       'current view'
     elsif menu_item_paths_collection.any?{ |collection_path|
@@ -27,7 +28,7 @@ module ApplicationHelper
   alias current_page_in? current_view_in?
 
   # Header nav helper
-  def exterior_services_paths
+  def exterior_services_paths_collection
     [exterior_services_path,
       roofing_path, siding_path, gutters_path, green_roofs_path, stone_path,
       decks_path]
@@ -40,19 +41,19 @@ module ApplicationHelper
   end
 
   # Header nav helper
-  def interior_services_paths
+  def interior_services_paths_collection
     [interior_services_path,
       kitchens_path, bathrooms_path, flooring_path, windows_path]
   end
 
   # Header nav helper
-  def other_services_paths
+  def other_services_paths_collection
     [other_services_path,
       hail_damage_path, ice_dams_path, snow_removal_path, bat_removal_path]
   end
 
   # Header nav helper
-  def pantheons_paths
+  def pantheons_paths_collection
     [exterior_services_path, interior_services_path, other_services_path,
       portfolios_path]
   end
@@ -67,15 +68,17 @@ module ApplicationHelper
   end
 
   # Header nav helper
-  def portfolios_paths
+  def portfolios_paths_collection
     [portfolios_path,
       portfolios_roofing_path, portfolios_siding_path, portfolios_decks_path,
       portfolios_flooring_path, portfolios_windows_path]
   end
 
   # Header nav helper
-  def all_services_paths
-    exterior_services_paths + interior_services_paths + other_services_paths
+  def all_services_paths_collection
+    exterior_services_paths_collection +
+    interior_services_paths_collection +
+    other_services_paths_collection
   end
 
   def show_admin_header_nav?
