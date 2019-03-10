@@ -107,9 +107,9 @@ figure.nav:hover .overlay {
   justify-content: space-between;
   margin-top: 1rem;
 }
-.admin-header-nav p { font-size: 100%; margin: 0; }
-.admin-header-nav li { margin-bottom: 0; }
-.admin-header-nav a {
+ul.menu.admin { font-size: 110%; }
+ul.menu.admin li { margin-bottom: 0; }
+ul.menu.admin a {
   color: white;
   padding: .7rem;
 }
