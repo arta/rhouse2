@@ -2,8 +2,8 @@
   = link_to_unless_current 'Hail damage', hail_damage_path do
     %span Hail damage
 
-%li{ class: current_view?(ice_path) }
-  = link_to_unless_current 'Ice dams', ice_path do
+%li{ class: current_view?(ice_dams_path) }
+  = link_to_unless_current 'Ice dams', ice_dams_path do
     %span Ice dams
 
 %li{ class: current_view?(snow_path) }
