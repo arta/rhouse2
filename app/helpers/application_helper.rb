@@ -7,18 +7,20 @@ module ApplicationHelper
     request.fullpath.split('/').second == 'admin'
   end
 
-  # Return CSS class 'current <view>'/true or nil/false for nav items styling
-  def current_view?(link_paths)
-    if link_paths.is_a? String
-      path = link_paths
-      'current view' if current_page?(path)
-    elsif link_paths.is_a? Array
-      if link_paths.any?{ |path| current_page?(path) && path.in?(parent_paths) }
+  # Return CSS class 'current <view>'/true or nil/false to style menu items
+  def current_view?(menu_item_paths)
+    if menu_item_paths.is_a?(String)
+      item_path = menu_item_paths
+      # menu item path is current view of a final destination page
+      'current view' if current_page?(item_path)
+    elsif menu_item_paths.is_a?(Array)
+      if menu_item_paths.any?{ |item_path|
+        current_page?(item_path) && item_path.in?(pantheons_paths) }
+        # menu item path is current view of a pantheon page
         'current view'
-      elsif link_paths.any?{ |path| current_page?(path) } && link_paths.size > 10
-        # this is one of services_paths on ul.nav.large.menu
-        'current view'
-      elsif link_paths.any?{ |path| current_page?(path) }
+      elsif menu_item_paths.any?{ |item_path|
+        current_page?(item_path) }
+        # menu item path is along the way to a final destination page
         'current'
       end
     end
@@ -47,7 +49,7 @@ module ApplicationHelper
   end
 
   # Header nav helper
-  def parent_paths
+  def pantheons_paths
     [exterior_path, interior_path, mend_path, portfolios_path]
   end
 
