@@ -13,13 +13,13 @@ module ApplicationHelper
 
   # Call current_view_in?() to assign class(es) to a collection path
   def current_view_in?(menu_item_paths_collection)
-    if menu_item_paths_collection.any?{ |collection_path|
-      current_page?(collection_path) &&
-      collection_path.in?(pantheons_paths_collection) }
+    if menu_item_paths_collection.any?{ |member_path|
+      current_page?(member_path) &&
+      member_path.in?(pantheons_paths_collection) }
       # menu item path is current view of a pantheon page
       'current view'
-    elsif menu_item_paths_collection.any?{ |collection_path|
-      current_page?(collection_path) }
+    elsif menu_item_paths_collection.any?{ |member_path|
+      current_page?(member_path) }
       # menu item path is along the way to a final destination page
       'current'
     end
