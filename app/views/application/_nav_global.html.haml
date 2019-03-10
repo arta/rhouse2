@@ -1,7 +1,7 @@
 %ul.menu.xlarge
-  %li{ class: current_view_in?(exterior_paths) }
-    = link_to_unless current_page?(exterior_path),
-      'Exterior', exterior_path do
+  %li{ class: current_view_in?(exterior_services_paths) }
+    = link_to_unless current_page?(exterior_services_path),
+      'Exterior', exterior_services_path do
       %span Exterior
 
   %li{ class: current_view_in?(interior_paths) }
@@ -29,8 +29,8 @@
   %li{ class: current_view_in?(all_services_paths) }
     = link_to 'Services', '#'
     %ul.menu.vertical
-      %li{ class: current_view_in?(exterior_paths) }
-        = link_to 'Exterior', exterior_path
+      %li{ class: current_view_in?(exterior_services_paths) }
+        = link_to 'Exterior', exterior_services_path
         %ul.menu.vertical
           = render 'nav_items_exterior_services'
 

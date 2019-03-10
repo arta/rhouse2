@@ -2,7 +2,7 @@ class ServicesController < ApplicationController
   def index
   end
 
-  def exterior
+  def exterior_services
   end
 
   def interior

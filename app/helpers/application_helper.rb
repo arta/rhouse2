@@ -27,8 +27,8 @@ module ApplicationHelper
   alias current_page_in? current_view_in?
 
   # Header nav helper
-  def exterior_paths
-    [exterior_path, roofing_path, siding_path, gutters_path, green_path,
+  def exterior_services_paths
+    [exterior_services_path, roofing_path, siding_path, gutters_path, green_path,
       stone_path, decks_path]
   end
 
@@ -50,7 +50,7 @@ module ApplicationHelper
 
   # Header nav helper
   def pantheons_paths
-    [exterior_path, interior_path, other_services_path, portfolios_path]
+    [exterior_services_path, interior_path, other_services_path, portfolios_path]
   end
 
   # Check for _partials (e.g. _nav_regional) in these locations:
@@ -70,7 +70,7 @@ module ApplicationHelper
 
   # Header nav helper
   def all_services_paths
-    exterior_paths + interior_paths + other_services_paths
+    exterior_services_paths + interior_paths + other_services_paths
   end
 
   def show_admin_header_nav?
