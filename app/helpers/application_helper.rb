@@ -7,8 +7,8 @@ module ApplicationHelper
     request.fullpath.split('/').second == 'admin'
   end
 
-  # Return CSS class 'current <view>'/true or nil/false to style menu items
-  # Call current_view?() when passing a single path
+  # Return CSS class 'current <view>'/true or nil/false to show/style menu items
+  # Call current_view?() to assignn class(es) to a single path
   def current_view?(item_path_or_paths_collection)
     if item_path_or_paths_collection.is_a? String
       item_path = item_path_or_paths_collection
@@ -27,9 +27,9 @@ module ApplicationHelper
       end
     end
   end
-  # Call current_view_in?() when interrogating paths collection to assign class
+  # Call current_view_in?() to assign class(es) to a collection path
   alias current_view_in? current_view?
-  # Call current_page_in?() when interrogating paths collection for true/false
+  # Call current_page_in?() for true/false of current page in paths collection
   alias current_page_in? current_view_in?
 
   # Header nav helper
