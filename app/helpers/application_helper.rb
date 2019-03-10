@@ -8,6 +8,7 @@ module ApplicationHelper
   end
 
   # Return CSS class 'current <view>'/true or nil/false to style menu items
+  # Call current_view?() when passing a single path
   def current_view?(menu_item_paths)
     if menu_item_paths.is_a?(String)
       item_path = menu_item_paths
@@ -25,6 +26,8 @@ module ApplicationHelper
       end
     end
   end
+  # Call current_view_in?() when passing a collection of paths
+  alias current_view_in? current_view?
 
   # Header nav helper
   def exterior_paths
