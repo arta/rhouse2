@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/kitchens',  to: 'services#kitchens'
   get '/bathrooms', to: 'services#bathrooms'
   get '/roofing',   to: 'services#roofing'
-  get '/green',     to: 'services#green'
+  get '/green-roofs',     to: 'services#green_roofs'
   get '/siding',    to: 'services#siding'
   get '/windows',   to: 'services#windows'
   get '/decks',     to: 'services#decks'

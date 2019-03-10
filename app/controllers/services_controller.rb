@@ -20,7 +20,7 @@ class ServicesController < ApplicationController
   def roofing
   end
 
-  def green
+  def green_roofs
   end
 
   def siding
