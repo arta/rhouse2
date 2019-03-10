@@ -45,7 +45,7 @@ module ApplicationHelper
 
   # Header nav helper
   def other_services_paths
-    [other_services_path, hail_path, ice_path, snow_path, bats_path]
+    [other_services_path, hail_damage_path, ice_path, snow_path, bats_path]
   end
 
   # Header nav helper
