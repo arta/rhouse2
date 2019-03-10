@@ -22,7 +22,7 @@ Rails.application.routes.draw do
   get '/stone',     to: 'services#stone'
   get '/hail-damage', to: 'services#hail_damage'
   get '/ice-dams',       to: 'services#ice_dams'
-  get '/snow',      to: 'services#snow'
+  get '/snow-removal', to: 'services#snow_removal'
   get '/bats',      to: 'services#bats'
 
   get 'portfolios', to: 'portfolios#index'
