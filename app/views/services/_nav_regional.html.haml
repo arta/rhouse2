@@ -1,9 +1,9 @@
 %ul.menu.regional
-  - if current_view?(exterior_paths)
+  - if current_view_in?(exterior_paths)
     = render 'nav_items_exterior_services'
 
-  - elsif current_view?(interior_paths)
+  - elsif current_view_in?(interior_paths)
     = render 'nav_items_interior_services'
 
-  - elsif current_view?(mend_paths)
+  - elsif current_view_in?(mend_paths)
     = render 'nav_items_other_services'

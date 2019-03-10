@@ -1,20 +1,20 @@
 %ul.menu.xlarge
-  %li{ class: current_view?(exterior_paths) }
+  %li{ class: current_view_in?(exterior_paths) }
     = link_to_unless current_view?(exterior_path),
       'Exterior', exterior_path do
       %span Exterior
 
-  %li{ class: current_view?(interior_paths) }
+  %li{ class: current_view_in?(interior_paths) }
     = link_to_unless current_view?(interior_path),
       'Interior', interior_path do
       %span Interior
 
-  %li{ class: current_view?(mend_paths) }
+  %li{ class: current_view_in?(mend_paths) }
     = link_to_unless current_view?(mend_path),
       'Other services', mend_path do
       %span Other services
 
-  %li{ class: current_view?(portfolios_paths) }
+  %li{ class: current_view_in?(portfolios_paths) }
     = link_to_unless current_view?(portfolios_path),
       'Portfolios', portfolios_path do
       %span Portfolios
@@ -26,25 +26,25 @@
 %ul.menu.vertical.large.medium-horizontal{ data:              |
   { responsive_menu: 'drilldown medium-dropdown'} }           |
 
-  %li{ class: current_view?(services_paths) }
+  %li{ class: current_view_in?(services_paths) }
     = link_to 'Services', '#'
     %ul.menu.vertical
-      %li{ class: current_view?(exterior_paths) }
+      %li{ class: current_view_in?(exterior_paths) }
         = link_to 'Exterior', exterior_path
         %ul.menu.vertical
           = render 'nav_items_exterior_services'
 
-      %li{ class: current_view?(interior_paths) }
+      %li{ class: current_view_in?(interior_paths) }
         = link_to 'Interior', interior_path
         %ul.menu.vertical
           = render 'nav_items_interior_services'
 
-      %li{ class: current_view?(mend_paths) }
+      %li{ class: current_view_in?(mend_paths) }
         = link_to 'Other services', mend_path
         %ul.menu.vertical
           = render 'nav_items_other_services'
 
-  %li{ class: current_view?(portfolios_paths) }
+  %li{ class: current_view_in?(portfolios_paths) }
     = link_to 'Portfolios', portfolios_path
     %ul.menu.vertical
       = render 'nav_items_portfolios'
