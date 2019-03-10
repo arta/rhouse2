@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   get '/hail-damage', to: 'services#hail_damage'
   get '/ice-dams',       to: 'services#ice_dams'
   get '/snow-removal', to: 'services#snow_removal'
-  get '/bats',      to: 'services#bats'
+  get '/bat-removal', to: 'services#bat_removal'
 
   get 'portfolios', to: 'portfolios#index'
   get 'portfolios/admin', to: 'admin/portfolios#index'

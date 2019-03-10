@@ -50,6 +50,6 @@ class ServicesController < ApplicationController
   def snow
   end
 
-  def bats
+  def bat_removal
   end
 end
