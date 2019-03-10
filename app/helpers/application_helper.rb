@@ -27,8 +27,10 @@ module ApplicationHelper
       end
     end
   end
-  # Call current_view_in?() when passing a collection of paths
+  # Call current_view_in?() when interrogating paths collection to assign class
   alias current_view_in? current_view?
+  # Call current_page_in?() when interrogating paths collection for true/false
+  alias current_page_in? current_view_in?
 
   # Header nav helper
   def exterior_paths
