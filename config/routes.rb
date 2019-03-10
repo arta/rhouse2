@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get '/services',  to: 'services#index'
   get '/exterior',  to: 'services#exterior'
   get '/interior',  to: 'services#interior'
-  get '/mend',      to: 'services#mend'
+  get '/other-services', to: 'services#other_services'
   get '/kitchens',  to: 'services#kitchens'
   get '/bathrooms', to: 'services#bathrooms'
   get '/roofing',   to: 'services#roofing'

@@ -8,7 +8,7 @@ class ServicesController < ApplicationController
   def interior
   end
 
-  def mend
+  def other_services
   end
 
   def kitchens

@@ -9,9 +9,9 @@
       'Interior', interior_path do
       %span Interior
 
-  %li{ class: current_view_in?(mend_paths) }
-    = link_to_unless current_page?(mend_path),
-      'Other services', mend_path do
+  %li{ class: current_view_in?(other_services_paths) }
+    = link_to_unless current_page?(other_services_path),
+      'Other services', other_services_path do
       %span Other services
 
   %li{ class: current_view_in?(portfolios_paths) }
@@ -39,8 +39,8 @@
         %ul.menu.vertical
           = render 'nav_items_interior_services'
 
-      %li{ class: current_view_in?(mend_paths) }
-        = link_to 'Other services', mend_path
+      %li{ class: current_view_in?(other_services_paths) }
+        = link_to 'Other services', other_services_path
         %ul.menu.vertical
           = render 'nav_items_other_services'
 

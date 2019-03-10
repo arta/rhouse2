@@ -44,13 +44,13 @@ module ApplicationHelper
   end
 
   # Header nav helper
-  def mend_paths
-    [mend_path, hail_path, ice_path, snow_path, bats_path]
+  def other_services_paths
+    [other_services_path, hail_path, ice_path, snow_path, bats_path]
   end
 
   # Header nav helper
   def pantheons_paths
-    [exterior_path, interior_path, mend_path, portfolios_path]
+    [exterior_path, interior_path, other_services_path, portfolios_path]
   end
 
   # Check for _partials (e.g. _nav_regional) in these locations:
@@ -70,7 +70,7 @@ module ApplicationHelper
 
   # Header nav helper
   def services_paths
-    exterior_paths + interior_paths + mend_paths
+    exterior_paths + interior_paths + other_services_paths
   end
 
   def show_admin_header_nav?
