@@ -47,7 +47,7 @@ class ServicesController < ApplicationController
   def ice_dams
   end
 
-  def snow
+  def snow_removal
   end
 
   def bat_removal
