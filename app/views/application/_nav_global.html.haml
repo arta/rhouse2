@@ -4,9 +4,9 @@
       'Exterior', exterior_services_path do
       %span Exterior
 
-  %li{ class: current_view_in?(interior_paths) }
-    = link_to_unless current_page?(interior_path),
-      'Interior', interior_path do
+  %li{ class: current_view_in?(interior_services_paths) }
+    = link_to_unless current_page?(interior_services_path),
+      'Interior', interior_services_path do
       %span Interior
 
   %li{ class: current_view_in?(other_services_paths) }
@@ -34,8 +34,8 @@
         %ul.menu.vertical
           = render 'nav_items_exterior_services'
 
-      %li{ class: current_view_in?(interior_paths) }
-        = link_to 'Interior', interior_path
+      %li{ class: current_view_in?(interior_services_paths) }
+        = link_to 'Interior', interior_services_path
         %ul.menu.vertical
           = render 'nav_items_interior_services'
 

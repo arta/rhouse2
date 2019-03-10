@@ -5,7 +5,7 @@ class ServicesController < ApplicationController
   def exterior_services
   end
 
-  def interior
+  def interior_services
   end
 
   def other_services
