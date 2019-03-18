@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ContactsControllerTest < ActionDispatch::IntegrationTest
   test "should GET new" do
-    get new_contact_url
+    get new_inquiry_url
 
     assert_response :success
 

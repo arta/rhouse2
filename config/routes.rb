@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   get '/about',   to: 'pages#about'
   get '/admin',   to: 'admin/portfolios#index'
-  get '/contact', to: 'contacts#new', as: 'new_contact'
+  get '/contact', to: 'contacts#new', as: 'new_inquiry'
+  post '/contact', to: 'contacts#create', as: 'inquiries'
 
   get '/all-services',      to: 'services#index'
   get '/exterior-services', to: 'services#exterior_services'
