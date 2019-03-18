@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  get 'contacts/new'
   devise_for :users, controllers: { registrations: 'users/registrations' }
   root 'pages#index'
 
   get '/about',   to: 'pages#about'
   get '/admin',   to: 'admin/portfolios#index'
-  get '/contact', to: 'pages#contact'
+  get '/contact', to: 'contacts#new', as: 'new_contact'
 
   get '/all-services',      to: 'services#index'
   get '/exterior-services', to: 'services#exterior_services'
