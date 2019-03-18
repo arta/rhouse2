@@ -20,14 +20,17 @@
     e-mail (SPAM). Email is for business use only.
 
   %p
+    - if @inquiry.errors.any?
+      #error_explanation
+        %h2
+          = "#{pluralize(@inquiry.errors.count, "error")}   |
+            prohibited this inquiry from being sent:"       |
+        %ul
+          - @inquiry.errors.full_messages.each do |message|
+            %li= message
+
     = form_for @inquiry do |f|
-      = f.label :name
-      = f.text_field :name
-
-      = f.label :email
-      = f.email_field :email
-
-      = f.label :body
-      = f.text_area :body
-
+      = f.text_field  :name,  placeholder: 'Name'
+      = f.email_field :email, placeholder: 'Email'
+      = f.text_area   :body,  placeholder: 'Text'
       = f.submit
