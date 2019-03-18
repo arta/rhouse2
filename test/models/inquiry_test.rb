@@ -8,4 +8,15 @@ class InquiryTest < ActiveSupport::TestCase
     assert inquiry.respond_to?(:email), 'does not respond to :email'
     assert inquiry.respond_to?(:body),  'does not respond to :body'
   end
+
+  test 'should be valid when all attributes are set' do
+    attrs = {
+      name: 'visitor',
+      email: 'visitor@example.org',
+      body: 'Lorem ipsum'
+    }
+
+    inquiry = Inquiry.new attrs
+    assert inquiry.valid?, 'should be valid'
+  end
 end
