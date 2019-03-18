@@ -1,2 +1,2 @@
-class Inquiry < ApplicationRecord
+class Inquiry
 end

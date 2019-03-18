@@ -1,7 +1,11 @@
 require 'test_helper'
 
 class InquiryTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  test 'responds to name, email and body' do
+    inquiry = Inquiry.new
+
+    assert inquiry.respond_to?(:name),  'does not respond to :name'
+    assert inquiry.respond_to?(:email), 'does not respond to :email'
+    assert inquiry.respond_to?(:body),  'does not respond to :body'
+  end
 end
