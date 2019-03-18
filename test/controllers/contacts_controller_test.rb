@@ -13,4 +13,20 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
       assert_select 'input[type=submit]'
     end
   end
+
+  test "should POST create" do
+    post inquiries_url, params: {
+      inquiry: {
+        name: 'visitor',
+        email: 'visitor@example.org',
+        body: 'Lorem ipsum'
+      }
+    }
+
+    assert_redirected_to new_inquiry_url
+
+    follow_redirect!
+
+    assert_match /Inquiry received, thanks!/, response.body
+  end
 end
