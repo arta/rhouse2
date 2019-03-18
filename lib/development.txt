@@ -1,4 +1,17 @@
 ################################################################################
+3-17-19: #######################################################################
+• Setting up visitor mailer to handle online inquires
+: following:
+
+  https://www.murdo.ch/blog/build-a-contact-form-with-ruby-on-rails-part-1
+
+  : includes tests, doing - write, fail, pass - them, too
+
+################################################################################
+
+
+
+################################################################################
 3-9-19: ########################################################################
 • Use inheritance to DRY up Portfolio model
 : Tried delegating first, but didn't figure it our right away because
