@@ -29,4 +29,15 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
 
     assert_match /Inquiry received, thanks!/, response.body
   end
+
+  test "should get error messages for invalid POST create" do
+    post inquiries_url, params: {
+      inquiry: { name: '', email: '', body: '' }
+    }
+
+    # Error messages are shown:
+    assert_match /Name .* blank/, response.body
+    assert_match /Email .* blank/, response.body
+    assert_match /Body .* blank/, response.body
+  end
 end
