@@ -19,4 +19,14 @@ class InquiryTest < ActiveSupport::TestCase
     inquiry = Inquiry.new attrs
     assert inquiry.valid?, 'should be valid'
   end
+
+  test 'name, email and body are required by law' do
+    inquiry = Inquiry.new
+
+    refute inquiry.valid?, 'Blank Inquiry should be invalid'
+
+    assert_match /blank/, inquiry.errors[:name].to_s
+    assert_match /blank/, inquiry.errors[:email].to_s
+    assert_match /blank/, inquiry.errors[:body].to_s
+  end
 end
