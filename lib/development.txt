@@ -1,4 +1,27 @@
 ################################################################################
+3-31-19: #######################################################################
+• Setting up VisitorMailer's inquiry subject line:
+  : Either right in VisitorMailer#inquiry():
+      class VisitorMailer < ApplicationMailer
+        def inquiry(inquiry)
+          ..
+          mail to: .., from: .., subject: 'Inquiry from rhouse2.com'
+        end
+      end
+
+  : Or in en.yml:
+      en:
+        hello: "Hello world"
+        ...
+        visitor_mailer:
+          inquiry:
+            subject: 'Inquiry from rhouse2.com'
+
+################################################################################
+
+
+
+################################################################################
 3-17-19: #######################################################################
 • Setting up visitor mailer to handle online inquires
 : following:
