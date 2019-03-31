@@ -49,6 +49,9 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'meta_request'
+  # 3-31-19:
+  # https://github.com/ryanb/letter_opener
+  gem 'letter_opener'
 end
 
 group :test do
