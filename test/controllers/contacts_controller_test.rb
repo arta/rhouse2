@@ -14,14 +14,19 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  # Successful post to inquiries_url should increase the size
+  # of the ActionMailer::Base.deliveries array by 1
+  # (indicating that an email was sent as a result of the action performed)
   test "should POST create" do
-    post inquiries_url, params: {
-      inquiry: {
-        name: 'visitor',
-        email: 'visitor@example.org',
-        body: 'Lorem ipsum'
+    assert_difference 'ActionMailer::Base.deliveries.size', 1 do
+      post inquiries_url, params: {
+        inquiry: {
+          name: 'visitor',
+          email: 'visitor@example.org',
+          body: 'Lorem ipsum'
+        }
       }
-    }
+    end
 
     assert_redirected_to new_inquiry_url
 
