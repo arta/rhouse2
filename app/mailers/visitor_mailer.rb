@@ -5,9 +5,11 @@ class VisitorMailer < ApplicationMailer
   #
   #   en.visitor_mailer.inquiry.subject
   #
-  def inquiry
-    @greeting = "Hi"
+  def inquiry(inquiry)
+    @body = inquiry.body
 
-    mail to: "to@example.org"
+    mail  to: "info@goodpeople.us",
+          from: inquiry.email,
+          subject: 'Inquiry from rhouse2.com'
   end
 end

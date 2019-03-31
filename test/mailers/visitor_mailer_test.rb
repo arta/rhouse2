@@ -13,8 +13,8 @@ class VisitorMailerTest < ActionMailer::TestCase
     end
 
     assert_equal "Inquiry from rhouse2.com", mail.subject
-    assert_equal ["info@rhouse2.com"], mail.to
-    assert_equal ["anna@example.com"], mail.from
+    assert_equal ["info@goodpeople.us"], mail.to
+    assert_equal ["anna@example.org"], mail.from
     assert_match /we would like a new roof/, mail.body.encoded
   end
 
