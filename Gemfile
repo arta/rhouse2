@@ -29,6 +29,7 @@ gem "google-cloud-storage", "~> 1.8", require: false
 gem 'haml'
 gem 'haml-rails', '1.0.0'
 gem 'jquery-rails'
+gem 'sendgrid-ruby'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution
