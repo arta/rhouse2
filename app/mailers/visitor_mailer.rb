@@ -7,9 +7,10 @@ class VisitorMailer < ApplicationMailer
   #
   def inquiry(inquiry)
     @body = inquiry.body
+    @email = inquiry.email
 
-    mail  to: "martin.fencl@gmail.com",
-          from: inquiry.email,
+    mail  to: "info@goodpeople.us",
+          from: 'info@rhouse2-staging.herokuapp.com',
           subject: 'Inquiry from rhouse2.com'
   end
 end
