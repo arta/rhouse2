@@ -31,8 +31,21 @@ Rails.application.configure do
   config.active_storage.service = :gcs_development
   # config.active_storage.service = :local
 
-  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    # :user_name => 'apikey',
+    # :password => ENV['SENDGRID_API_KEY'],
+    :user_name => 'app122167337@heroku.com',
+    :password => 'ny0d8fqf8511',
+    :domain => 'rhouse2-staging.herokuapp.com',
+    :address => 'smtp.sendgrid.net',
+    :port => 587,
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+  # config.action_mailer.delivery_method = :letter_opener
+  # config.action_mailer.perform_deliveries = true
   # Don't care if the mailer can't send.
   # config.action_mailer.raise_delivery_errors = false
 
