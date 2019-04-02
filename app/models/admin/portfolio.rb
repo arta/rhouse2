@@ -19,6 +19,10 @@ class Admin::Portfolio < ApplicationRecord
   scope :with_attached_images,
     -> { includes(:images).merge(Image.with_attached_file) }
 
+  def self.options_for_select_service
+    %w(Roofing Siding Decks Kitchens Bathrooms Flooring Windows)
+  end
+
   def unavailable_image_show_order
     images.pluck(:show_order).compact
   end

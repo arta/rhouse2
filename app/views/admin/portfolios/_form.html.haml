@@ -10,7 +10,7 @@
 
   .field
     = f.label :service
-    = f.select :service, %w(Roofing Siding Decks Kitchens Bathrooms Flooring Windows),
+    = f.select :service, Portfolio.options_for_select_service,
       include_blank: true
   .field
     = f.label :description
