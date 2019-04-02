@@ -9,6 +9,12 @@ nav.header a { color: #333; }
 
 ul.menu { font-size: 140%; }
 ul.menu ul.menu { font-size: 100%; } // stop 140% of 140%, TODO: better way?
+// squish a bit, not enough space for all the portfolios items
+ul.menu.portfolios a,
+ul.menu.portfolios > li.current.view span {
+  padding-right: .95rem;
+  padding-left: .95rem;
+}
 
 ul.menu.xlarge,
 ul.menu.regional { display: none; }
