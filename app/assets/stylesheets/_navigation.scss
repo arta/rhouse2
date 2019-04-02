@@ -103,6 +103,11 @@ figure.nav:hover .overlay {
   background: rgba(0, 0, 0, 0.3); /* Black see-through */
   opacity: 1;
 }
+nav.pantheon aside.thankyou {
+  align-self: center;
+  grid-column-end: -1;
+  margin: 0;
+}
 
 .admin-header-nav {
   align-items: center;
