@@ -1,36 +1,38 @@
-%article
-  %h1 Contact Us
+.griddle
+	%article
+		%h1 Contact Us
 
-  %figure.in-article-right.mt--3rem= image_tag gcs('tools.jpg')
+		%figure.in-article-right.mt--3rem= image_tag gcs('tools.jpg')
 
-  %p
-    %span Email:
-    = mail_to 'info@Rhouse2.com'
+		%p
+			%span Email:
+			= mail_to 'info@rhouse2.com'
 
-  %p
-    %span Phone:
-    = link_to '608-445-6511', 'tel:608-445-6511'
+		%p
+			%span Phone:
+			= link_to '608-445-6511', 'tel:608-445-6511'
 
-  %p
-    If you would prefer to contact us through this web page, please fill out
-    the information below.
-  %p
-    #{rh2} will never give or sell your personal information such as name and
-    e-mail addresses to anyone for the purposes of advertising or unsolicited
-    e-mail (SPAM). Email is for business use only.
+		%p
+			If you prefer to contact us through this web page, please fill out and
+			send our inquiry form.
 
-  %p
-    - if @inquiry.errors.any?
-      #error_explanation
-        %h2
-          = "#{pluralize(@inquiry.errors.count, "error")}   |
-            prohibited this inquiry from being sent:"       |
-        %ul
-          - @inquiry.errors.full_messages.each do |message|
-            %li= message
-
-    = form_for @inquiry do |f|
-      = f.text_field  :name,  placeholder: 'Name'
-      = f.email_field :email, placeholder: 'Email'
-      = f.text_area   :body,  placeholder: 'Text'
-      = f.submit
+		%p
+			- if @inquiry.errors.any?
+				#error_explanation
+					%h2
+						= "#{pluralize(@inquiry.errors.count, "error")}   |
+							prohibited this inquiry from being sent:"       |
+					%ul
+						- @inquiry.errors.full_messages.each do |message|
+							%li= message
+	%aside.contact-us
+		%p
+			#{rh2} will never share, give or sell your personal information such as
+			your name or email to anyone for the purposes of advertising or
+			unsolicited email (SPAM). Your email is for our business use only.
+		= form_for @inquiry do |f|
+			= f.text_field  :name,  placeholder: 'Name'
+			= f.email_field :email, placeholder: 'Email'
+			= f.text_area   :body,  placeholder: 'Inquiry text', rows: 7
+			.actions.mb--0
+				= f.submit 'Send', class: 'button'
