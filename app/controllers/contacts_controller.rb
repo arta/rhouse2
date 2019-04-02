@@ -8,7 +8,8 @@ class ContactsController < ApplicationController
 
     if @inquiry.valid?
       VisitorMailer.inquiry(@inquiry).deliver_now
-      redirect_to new_inquiry_path, notice: 'Inquiry received, thanks!'
+      redirect_to new_inquiry_path, notice: "Thank you for your inquiry,</br>
+        we will respond as soon as we can!"
     else
       render 'new'
     end
