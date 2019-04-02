@@ -10,6 +10,14 @@
   = link_to_unless_current 'Decks', portfolios_decks_path do
     %span Decks
 
+%li{ class: current_view?(portfolios_kitchens_path) }
+  = link_to_unless_current 'Kitchens', portfolios_kitchens_path do
+    %span Kitchens
+
+%li{ class: current_view?(portfolios_bathrooms_path) }
+  = link_to_unless_current 'Bathrooms', portfolios_bathrooms_path do
+    %span Bathrooms
+
 %li{ class: current_view?(portfolios_flooring_path) }
   = link_to_unless_current 'Flooring', portfolios_flooring_path do
     %span Flooring
