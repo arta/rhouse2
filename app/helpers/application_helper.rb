@@ -71,6 +71,7 @@ module ApplicationHelper
   def portfolios_paths_collection
     [portfolios_path,
       portfolios_roofing_path, portfolios_siding_path, portfolios_decks_path,
+      portfolios_kitchens_path, portfolios_bathrooms_path,
       portfolios_flooring_path, portfolios_windows_path]
   end
 
