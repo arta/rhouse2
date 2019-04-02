@@ -14,13 +14,13 @@ Rails.application.routes.draw do
   get '/kitchens',          to: 'services#kitchens'
   get '/bathrooms',         to: 'services#bathrooms'
   get '/roofing',           to: 'services#roofing'
-  get '/green-roofs',       to: 'services#green_roofs'
+  get '/green-roofs',       to: 'services#green_roofs'# TODO: remove
   get '/siding',            to: 'services#siding'
   get '/windows',           to: 'services#windows'
   get '/decks',             to: 'services#decks'
   get '/gutters',           to: 'services#gutters'
   get '/flooring',          to: 'services#flooring'
-  get '/cultured-stone',    to: 'services#cultured_stone'
+  get '/cultured-stone',    to: 'services#cultured_stone'# TODO: remove
   get '/hail-damage',       to: 'services#hail_damage'
   get '/ice-dams',          to: 'services#ice_dams'
   get '/snow-removal',      to: 'services#snow_removal'
