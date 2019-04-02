@@ -98,10 +98,11 @@ Rails.application.configure do
   # 3-31-19, sendgrid:
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
+  d = ENV['STAGING'].present? ? 'rhouse2-staging.herokuapp.com' : 'rhouse2.com'
   config.action_mailer.smtp_settings = {
     user_name: 'apikey',
     password: ENV['SENDGRID_API_KEY'],
-    domain: 'rhouse2-staging.herokuapp.com',
+    domain: d,
     address: 'smtp.sendgrid.net',
     port: 587,
     authentication: :plain,

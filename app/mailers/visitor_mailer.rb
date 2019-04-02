@@ -9,7 +9,9 @@ class VisitorMailer < ApplicationMailer
     @name = inquiry.name
     @body = inquiry.body
 
-    mail  to: "info@goodpeople.us",
+    development_staging = Rails.env.development? || ENV['STAGING'].present?
+    mail_to = development_staging ? 'martin' : 'info'
+    mail  to: "#{mail_to}@goodpeople.us",
           from: inquiry.email,
           subject: 'Inquiry from rhouse2.com'
   end
