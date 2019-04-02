@@ -26,6 +26,16 @@
         .overlay
           .overlay-text Decks
     %figure.nav
+      = link_to portfolios_kitchens_path do
+        = image_tag gcs('nav-portfolios-kitchens.jpg'), class: 'nav'
+        .overlay
+          .overlay-text Kitchens
+    %figure.nav
+      = link_to portfolios_bathrooms_path do
+        = image_tag gcs('nav-portfolios-bathrooms.jpg'), class: 'nav'
+        .overlay
+          .overlay-text Bathrooms
+    %figure.nav
       = link_to portfolios_flooring_path do
         = image_tag gcs('nav-portfolios-flooring.jpg'), class: 'nav'
         .overlay
