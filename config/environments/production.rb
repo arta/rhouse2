@@ -95,6 +95,7 @@ Rails.application.configure do
   # 2-27-19, devise:
   config.action_mailer.default_url_options = { host: 'rhouse2-staging.herokuapp.com' }
 
+  # 4-1-19, TODO: set up rhouse2's own sendgrid account for actual production !!
   # 3-31-19, sendgrid:
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
