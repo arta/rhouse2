@@ -1,3 +1,8 @@
+- provide :main_class, 'portfolio'
+- provide :main_container_class, 'portfolio'
+
 %article
-  %h1 Portfolios#bathrooms
-  %p Find me in app /views /portfolios /bathrooms.html.haml
+  = render 'contact_prompt_heading', { h1: 'Portfolio :: Bathrooms' }
+
+  %section.portfolio
+    = render @portfolios

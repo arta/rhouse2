@@ -6,8 +6,10 @@ class Admin::Portfolio < ApplicationRecord
 
   validates :service, presence: true
 
+  scope :bathrooms, -> { where(service: 'Bathrooms') }
   scope :decks,     -> { where(service: 'Decks') }
   scope :flooring,  -> { where(service: 'Flooring') }
+  scope :kitchens,  -> { where(service: 'Kitchens') }
   scope :roofing,   -> { where(service: 'Roofing') }
   scope :siding,    -> { where(service: 'Siding') }
   scope :windows,   -> { where(service: 'Windows') }

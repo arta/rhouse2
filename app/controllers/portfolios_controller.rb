@@ -3,9 +3,11 @@ class PortfoliosController < ApplicationController
   end
 
   def kitchens
+    @portfolios = Portfolio.kitchens
   end
 
   def bathrooms
+    @portfolios = Portfolio.bathrooms
   end
 
   def roofing
