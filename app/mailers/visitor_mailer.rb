@@ -6,11 +6,11 @@ class VisitorMailer < ApplicationMailer
   #   en.visitor_mailer.inquiry.subject
   #
   def inquiry(inquiry)
+    @name = inquiry.name
     @body = inquiry.body
-    @email = inquiry.email
 
     mail  to: "info@goodpeople.us",
-          from: 'info@rhouse2-staging.herokuapp.com',
+          from: inquiry.email,
           subject: 'Inquiry from rhouse2.com'
   end
 end
