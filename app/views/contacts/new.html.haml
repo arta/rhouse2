@@ -25,6 +25,7 @@
 					%ul
 						- @inquiry.errors.full_messages.each do |message|
 							%li= message
+
 	%aside.contact-us
 		%p
 			#{rh2} will never share, give or sell your personal information such as
@@ -34,5 +35,7 @@
 			= f.text_field  :name,  placeholder: 'Name'
 			= f.email_field :email, placeholder: 'Email'
 			= f.text_area   :body,  placeholder: 'Inquiry text', rows: 7
+			= f.check_box 	:cc_inquiry, checked: true
+			= f.label     	:cc_inquiry, 'Send me a copy'
 			.actions.mb--0
 				= f.submit 'Send', class: 'button'
