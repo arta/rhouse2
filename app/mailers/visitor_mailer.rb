@@ -11,7 +11,7 @@ class VisitorMailer < ApplicationMailer
     @body = inquiry.body
 
     development_staging = Rails.env.development? || ENV['STAGING'].present?
-    domain = development_staging ? 'goodpeople.us' : 'rhouse2.com'
+    domain = development_staging ? 'goodpeople.us' : 'Rhouse2.com'
     rh2_email = "info@#{domain}"
     recipients = inquiry.cc_inquiry? ? [rh2_email, inquiry.email] : rh2_email
     from_domain = development_staging ? 'rhouse2-staging.herokuapp.com' : 'rhouse2.herokuapp.com'
