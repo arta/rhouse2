@@ -17,13 +17,13 @@ local:
 # Remember not to checkin your GCS keyfile to a repository
 gcs_development:
   service: GCS
-  project: clients-development
-  credentials: <%= Rails.root.join("config/secrets/clients-development.json") %>
+  project: rhouse2-development
+  credentials: <%= Rails.root.join("config/secrets/rhouse2-development.json") %>
   bucket: rhouse2-development-attachments
 
 gcs_staging:
   service: GCS
-  project: clients-development
+  project: rhouse2-development
   credentials: <%= ENV['GOOGLE_CLOUD_STORAGE_CREDENTIALS'] %>
   bucket: rhouse2-staging-attachments
 
