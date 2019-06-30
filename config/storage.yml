@@ -29,7 +29,7 @@ gcs_staging:
 
 gcs_production:
   service: GCS
-  project: rhouse2
+  project: rhouse2-production
   credentials: <%= ENV['GOOGLE_CLOUD_STORAGE_CREDENTIALS'] %>
   bucket: rhouse2-production-attachments
 
