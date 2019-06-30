@@ -36,8 +36,12 @@ module ApplicationHelper
 
   # RHouse2 Google Cloud Storage
   def gcs(asset_path)
-    "https://storage.googleapis.com/rhouse2-production-static/#{asset_path}"
-    # "https://storage.googleapis.com/rhouse2-development-static/#{asset_path}"
+    development_staging = Rails.env.development? || ENV['STAGING'].present?
+    if development_staging
+      "https://storage.googleapis.com/rhouse2-development-staging-static/#{asset_path}"
+    else # production
+      "https://storage.googleapis.com/rhouse2-production-static/#{asset_path}"
+    end
   end
 
   # Header nav helper
