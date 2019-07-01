@@ -14,7 +14,7 @@ class VisitorMailer < ApplicationMailer
     domain = development_staging ? 'goodpeople.us' : 'rhouse2.com'
     # rh2_email = 'zx9hall@yahoo.com'
     # rh2_email = 'rhouse2constructionllc@gmail.com'
-    rh2_email = "info@#{domain}"
+    rh2_email = 'info@goodpeople.us' # "info@#{domain}"
     recipients = inquiry.cc_inquiry? ? [rh2_email, inquiry.email] : rh2_email
     from_domain = development_staging ? 'rhouse2-staging.herokuapp.com' : 'rhouse2.herokuapp.com'
 
