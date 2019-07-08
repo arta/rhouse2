@@ -1,4 +1,25 @@
 ################################################################################
+7-6-19: ########################################################################
+• WHAT:
+  : couldn't get ActiveStorage variant working
+
+      = image_tag image.file.variant(resize: '300x300')
+
+• WHY:
+  : well, the old one: didn't restart server after $ bundle update
+  : (to install mini_magick required for .variant() to work)
+
+• FIX:
+  : restart server
+
+• NOTE to self:
+  : REMEMBER to restart server after any $ bundle ... command <= IMPORTANT !!!
+
+################################################################################
+
+
+
+################################################################################
 3-17-19: #######################################################################
 ################################################################################
 • Testing :: writing tests

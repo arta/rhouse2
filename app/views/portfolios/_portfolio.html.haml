@@ -1,7 +1,8 @@
 - if portfolio.images.present?
   - portfolio.images.ordered.each do |image|
     %figure
-      = image_tag image.file, class: 'portfolio'
+      = image_tag image.file.variant(resize: '800').processed.service_url,
+        class: 'portfolio'
       %figcaption
         %h4= image.caption_heading if image.caption_heading.present?
         %p= image.caption_text if image.caption_text.present?
