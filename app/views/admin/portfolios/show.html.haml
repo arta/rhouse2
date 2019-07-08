@@ -26,7 +26,7 @@
         %figure.griddle.admin-portfolio
           - if image.file.persisted?
             .flexcol
-              = image_tag image.file.variant(resize: '800').processed.service_url
+              = image_tag image.file.variant(resize: '800').processed
               = image.file.filename
           .flexcol
             %span= image.show_order
