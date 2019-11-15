@@ -1,4 +1,43 @@
 ################################################################################
+11-14-19: ######################################################################
+• WHAT:
+  : troubles after bumping up Ruby, Rails, Bundler
+
+• WHEN:
+  : after updating bundler
+  : https://stackoverflow.com/a/56536564/247626 (1. & 2.)
+
+    $ bundle update --bundler
+    $ gem update --system
+    $ bundle install|update   #<= I never remember which one is the 'fix'
+                                  when troubles w/ dependencies pop up
+
+  : deploying to heroku
+  : good old ~ "can't find your specified bundler version"
+
+• WHY:
+  : triggered by the new rhouse2-demo app on heroku
+    : it was created with heroku's current buildpack (with Bundler 2.0.2)
+      but the Gemfile used Bundler 2.0.1
+    : upgrading to Bundler 2.0.2 broke push to staging cuz that had
+      an old buildpack (with Bundler 2.0.1)
+  : this may be a new (?) (since Bundler 2.+) heroku bundler approach
+
+• FIX
+  : after lots of looking around, the issue was easy to fix
+  : and it may be that Bundler 2.+ does things better now (?)
+  : basically, had to change old buildpacks (on staging & production):
+
+    $ heroku buildpacks:set heroku/ruby
+
+  : https://devcenter.heroku.com/articles/bundler-version
+  : this was also possible to do easily on heroku dashboard settings UI
+
+################################################################################
+
+
+
+################################################################################
 7-6-19: ########################################################################
 • WHAT:
   : couldn't get ActiveStorage variant working
