@@ -1,11 +1,3 @@
-%li{ class: current_view?(kitchens_path) }
-  = link_to_unless_current 'Kitchens', kitchens_path do
-    %span Kitchens
-
-%li{ class: current_view?(bathrooms_path) }
-  = link_to_unless_current 'Bathrooms', bathrooms_path do
-    %span Bathrooms
-
 %li{ class: current_view?(roofing_path) }
   = link_to_unless_current 'Roofing', roofing_path do
     %span Roofing
@@ -21,3 +13,11 @@
 %li{ class: current_view?(bat_removal_path) }
   = link_to_unless_current 'Bat removal', bat_removal_path do
     %span Bat removal
+
+%li{ class: current_view?(kitchens_path) }
+  = link_to_unless_current 'Kitchens', kitchens_path do
+    %span Kitchens
+
+%li{ class: current_view?(bathrooms_path) }
+  = link_to_unless_current 'Bathrooms', bathrooms_path do
+    %span Bathrooms
