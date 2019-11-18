@@ -4,7 +4,8 @@
       = render 'contact_prompt_heading', { h1: 'Kitchens' }
     .xlarge-heading
       %h1 Kitchens
-    = render partial: 'construction_message', locals: { subject: 'kitchen' }
+    .under-construction.kitchens
+      = render partial: 'construction_message', locals: { subject: 'kitchen' }
 
   .grid-item
     = render 'contact_prompt_heading'
