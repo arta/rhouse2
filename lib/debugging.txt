@@ -1,5 +1,25 @@
 ################################################################################
 11-18-19: ######################################################################
+################################################################################
+• WHAT:
+  : %aside changing its width per content
+
+• WHEN:
+  : %br separating two lines of a short paragraph (basically, a two-liner)
+  : in %aside that is a grid item
+
+• WHY:
+  : it seems that %br messes up browsers' calculating widths
+
+• FIX:
+  : do not use %br in a (short?) paragraph
+
+• NOTE:
+  : that's a .. surprise ..
+  : Safari "miscalculated" much more than Chrome:
+    : the aside width would change visibly between two pages
+
+################################################################################
 • WHAT:
   : background image wouldn't show in Safari
 

@@ -5,12 +5,12 @@
     .xlarge-heading
       %h1 Kitchens
     .under-construction.kitchens
-      = render partial: 'construction_message', locals: { subject: 'kitchen' }
+      = render partial: 'construction_message',
+        locals: { subject: 'kitchens', path: portfolios_kitchens_path }
 
   .grid-item
     = render 'contact_prompt_heading'
     %aside
       %p
-        In the meantime, please, see a few pictures of
-        = link_to "kitchens we've recently worked on",
-          portfolios_kitchens_path
+        Please, contact us if you have questions or
+        would like us to help improve your kitchen.
