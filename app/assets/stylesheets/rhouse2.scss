@@ -4,6 +4,8 @@ html { box-sizing: border-box; }
 // Foundation applies this silently in _global.scss (see dev't notes),
 // but I'll have it here "re-declared" anyway, as a reminder
 
+// * { border: 1px dotted black; }
+
 body {
   color: #444;
   display: flex;
@@ -211,25 +213,24 @@ img.portfolio {
 .under-construction {
   align-items: center;
   background-blend-mode: lighten;
-  background-color: #ccc;
-  // background-color: rgb(60, 60, 60);
+  background-color: #cdcdcd;
+  background-position: cover;
   border: 2px solid #888;
   border-radius: 5px;
   color: #333; //white;
   display: flex;
   flex-flow: column;
   font-weight: bold;
-  min-height: 400px;
+  max-width: 100%;
   padding: 2em;
   text-align: center;
 }
 .under-construction.kitchens {
-  background-image: url('https://storage.cloud.google.com/rhouse2-development-staging-static/background-kitchen1.jpg?authuser=4'),
-    linear-gradient(45deg, #222, #888);
+  background-image: url('https://storage.googleapis.com/rhouse2-development-staging-static/background-kitchen1.jpg');
+  background-position: center 60%;
 }
 .under-construction.bathrooms {
-  background-image: url('https://storage.cloud.google.com/rhouse2-development-staging-static/background-bathroom1.jpg?authuser=4'),
-    linear-gradient(45deg, #000, #888);
+  background-image: url('https://storage.googleapis.com/rhouse2-development-staging-static/background-bathroom1.jpg');
   background-position: center 30%;
 }
 

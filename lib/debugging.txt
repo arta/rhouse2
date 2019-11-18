@@ -1,4 +1,46 @@
 ################################################################################
+11-18-19: ######################################################################
+• WHAT:
+  : background image wouldn't show in Safari
+
+• WHEN:
+  : get /bathrooms (& /kitchens)
+    (background image only a temp filler until content produced)
+
+• WHY:
+  : wrong address in the url(..)
+  : the problem is that Chrome read the image, Safari did not
+
+  : Chrome reads from both:
+    https://storage.cloud.google.com/..
+    : this is the address in address bar after clicking the image name
+      (while in the GCS console)
+
+    https://storage.googleapis.com/..
+    : this is the address in address bar after clicking the chainlink icon
+      in the Public access column (while in the GCS column)
+
+
+  : but Safari reads only from the chainlink address:
+    https://storage.googleapis.com/..
+
+• FIX:
+  : provide correct url();
+
+    .under-construction.kitchens {
+      background-image: url('https://storage.googleapis.com/rhouse2-dev..'); ..
+      ..
+    }
+
+• NOTE:
+  : this took painfully long to figure out ..
+    : .. cuz Chrome ok w/ both addresses
+
+################################################################################
+
+
+
+################################################################################
 11-14-19: ######################################################################
 • WHAT:
   : troubles after bumping up Ruby, Rails, Bundler
