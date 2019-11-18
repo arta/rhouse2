@@ -58,8 +58,9 @@ module ApplicationHelper
 
   # Header nav helper
   def pantheons_paths_collection
-    [exterior_services_path, interior_services_path, other_services_path,
-      portfolios_path]
+    [services_path, portfolios_path]
+    # [exterior_services_path, interior_services_path, other_services_path,
+    #   portfolios_path]
   end
 
   # Check for _partials (e.g. _nav_regional) in these locations:
@@ -84,6 +85,13 @@ module ApplicationHelper
     exterior_services_paths_collection +
     interior_services_paths_collection +
     other_services_paths_collection
+  end
+
+  # Header nav helper
+  def services_paths_collection
+    [services_path,
+      kitchens_path, bathrooms_path, roofing_path,
+      hail_damage_path, ice_dams_path, bat_removal_path]
   end
 
   def show_admin_header_nav?

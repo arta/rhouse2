@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'contacts#new', as: 'new_inquiry'
   post '/contact', to: 'contacts#create', as: 'inquiries'
 
-  get '/all-services',      to: 'services#index'
+  get '/services',          to: 'services#index'
   get '/exterior-services', to: 'services#exterior_services'
   get '/interior-services', to: 'services#interior_services'
   get '/other-services',    to: 'services#other_services'

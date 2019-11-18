@@ -208,6 +208,17 @@ img.portfolio {
 
 .actions { margin: 2rem 0; }
 
+.under-construction {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.img-construction-sign {
+  max-width: 140px;
+}
+
 // declaring font-size here as % does not work
 // p & nav font-sizes differ per inheritance cascade
 // is % the problem?
