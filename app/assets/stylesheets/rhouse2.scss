@@ -210,9 +210,27 @@ img.portfolio {
 
 .under-construction {
   align-items: center;
+  background-blend-mode: lighten;
+  background-color: #ccc;
+  // background-color: rgb(60, 60, 60);
+  border: 2px solid #888;
+  border-radius: 5px;
+  color: #333; //white;
   display: flex;
   flex-flow: column;
+  font-weight: bold;
+  min-height: 400px;
+  padding: 2em;
   text-align: center;
+}
+.under-construction.kitchens {
+  background-image: url('https://storage.cloud.google.com/rhouse2-development-staging-static/background-kitchen1.jpg?authuser=4'),
+    linear-gradient(45deg, #222, #888);
+}
+.under-construction.bathrooms {
+  background-image: url('https://storage.cloud.google.com/rhouse2-development-staging-static/background-bathroom1.jpg?authuser=4'),
+    linear-gradient(45deg, #000, #888);
+  background-position: center 30%;
 }
 
 .img-construction-sign {
