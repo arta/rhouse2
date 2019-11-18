@@ -5,12 +5,12 @@
     .xlarge-heading
       %h1 Bathrooms
     .under-construction.bathrooms
-      = render partial: 'construction_message', locals: { subject: 'bathroom' }
+      = render partial: 'construction_message',
+        locals: { subject: 'bathrooms', path: portfolios_bathrooms_path }
 
   .grid-item
     = render 'contact_prompt_heading'
     %aside
       %p
-        In the meantime, please, see a few pictures of
-        = link_to "bathrooms we've recently worked on.",
-          portfolios_bathrooms_path
+        Please, contact us if you have questions or
+        would like us to help improve your bathroom.
