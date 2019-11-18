@@ -4,10 +4,12 @@
       = render 'contact_prompt_heading', { h1: 'Kitchens' }
     .xlarge-heading
       %h1 Kitchens
-    %p Find me in app /views /services /kitchens.html.haml
-    %p
-      Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur.
+    = render partial: 'construction_message', locals: { subject: 'kitchen' }
 
   .grid-item
     = render 'contact_prompt_heading'
+    %aside
+      %p
+        In the meantime, please, see a few pictures of
+        = link_to "kitchens we've recently worked on",
+          portfolios_kitchens_path

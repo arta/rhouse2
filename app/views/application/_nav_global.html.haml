@@ -1,18 +1,23 @@
 %ul.menu.xlarge
-  %li{ class: current_view_in?(exterior_services_paths_collection) }
-    = link_to_unless current_page?(exterior_services_path),
-      'Exterior', exterior_services_path do
-      %span Exterior
+  %li{ class: current_view_in?(services_paths_collection) }
+    = link_to_unless current_page?(services_path),
+      'Services', services_path do
+      %span Services
 
-  %li{ class: current_view_in?(interior_services_paths_collection) }
-    = link_to_unless current_page?(interior_services_path),
-      'Interior', interior_services_path do
-      %span Interior
-
-  %li{ class: current_view_in?(other_services_paths_collection) }
-    = link_to_unless current_page?(other_services_path),
-      'Other services', other_services_path do
-      %span Other services
+  -# %li{ class: current_view_in?(exterior_services_paths_collection) }
+  -#   = link_to_unless current_page?(exterior_services_path),
+  -#     'Exterior', exterior_services_path do
+  -#     %span Exterior
+  -#
+  -# %li{ class: current_view_in?(interior_services_paths_collection) }
+  -#   = link_to_unless current_page?(interior_services_path),
+  -#     'Interior', interior_services_path do
+  -#     %span Interior
+  -#
+  -# %li{ class: current_view_in?(other_services_paths_collection) }
+  -#   = link_to_unless current_page?(other_services_path),
+  -#     'Other services', other_services_path do
+  -#     %span Other services
 
   %li{ class: current_view_in?(portfolios_paths_collection) }
     = link_to_unless current_page?(portfolios_path),
@@ -26,23 +31,28 @@
 %ul.menu.vertical.large.medium-horizontal{ data:              |
   { responsive_menu: 'drilldown medium-dropdown'} }           |
 
-  %li{ class: current_view_in?(all_services_paths_collection) }
-    = link_to 'Services', '#'
+  %li{ class: current_view_in?(services_paths_collection) }
+    = link_to 'Services', services_path
     %ul.menu.vertical
-      %li{ class: current_view_in?(exterior_services_paths_collection) }
-        = link_to 'Exterior', exterior_services_path
-        %ul.menu.vertical
-          = render 'nav_items_exterior_services'
+      = render 'nav_items_services'
 
-      %li{ class: current_view_in?(interior_services_paths_collection) }
-        = link_to 'Interior', interior_services_path
-        %ul.menu.vertical
-          = render 'nav_items_interior_services'
-
-      %li{ class: current_view_in?(other_services_paths_collection) }
-        = link_to 'Other services', other_services_path
-        %ul.menu.vertical
-          = render 'nav_items_other_services'
+  -# %li{ class: current_view_in?(all_services_paths_collection) }
+  -#   = link_to 'Services', '#'
+  -#   %ul.menu.vertical
+  -#     %li{ class: current_view_in?(exterior_services_paths_collection) }
+  -#       = link_to 'Exterior', exterior_services_path
+  -#       %ul.menu.vertical
+  -#         = render 'nav_items_exterior_services'
+  -#
+  -#     %li{ class: current_view_in?(interior_services_paths_collection) }
+  -#       = link_to 'Interior', interior_services_path
+  -#       %ul.menu.vertical
+  -#         = render 'nav_items_interior_services'
+  -#
+  -#     %li{ class: current_view_in?(other_services_paths_collection) }
+  -#       = link_to 'Other services', other_services_path
+  -#       %ul.menu.vertical
+  -#         = render 'nav_items_other_services'
 
   %li{ class: current_view_in?(portfolios_paths_collection) }
     = link_to 'Portfolios', portfolios_path
