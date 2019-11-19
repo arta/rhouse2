@@ -6,13 +6,13 @@ class Admin::Portfolio < ApplicationRecord
 
   validates :service, presence: true
 
-  scope :bathrooms, -> { where(service: 'Bathrooms') }
-  scope :decks,     -> { where(service: 'Decks') }
-  scope :flooring,  -> { where(service: 'Flooring') }
-  scope :kitchens,  -> { where(service: 'Kitchens') }
-  scope :roofing,   -> { where(service: 'Roofing') }
-  scope :siding,    -> { where(service: 'Siding') }
-  scope :windows,   -> { where(service: 'Windows') }
+  scope :bathrooms, -> { where(service: 'Bathrooms').order(updated_at: :desc) }
+  scope :decks,     -> { where(service: 'Decks').order(updated_at: :desc) }
+  scope :flooring,  -> { where(service: 'Flooring').order(updated_at: :desc) }
+  scope :kitchens,  -> { where(service: 'Kitchens').order(updated_at: :desc) }
+  scope :roofing,   -> { where(service: 'Roofing').order(updated_at: :desc) }
+  scope :siding,    -> { where(service: 'Siding').order(updated_at: :desc) }
+  scope :windows,   -> { where(service: 'Windows').order(updated_at: :desc) }
 
   scope :find_with_attached_images,
     -> (id) { includes(:images).merge(Image.with_attached_file).find(id) }
