@@ -1,8 +1,7 @@
 - provide :main_class, 'portfolio'
 - provide :main_container_class, 'portfolio'
 
-%flooring
+%article
   = render 'contact_prompt_heading', { h1: 'Portfolio :: Flooring' }
 
-  %section.portfolio
-    = render @portfolios
+  = render partial: @portfolios, spacer_template: 'portfolio_spacer'
