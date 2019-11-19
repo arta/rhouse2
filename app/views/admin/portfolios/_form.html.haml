@@ -1,13 +1,13 @@
-= form_for @admin_portfolio do |f|
-  - if @admin_portfolio.errors.any?
-    #error_explanation
-      %h2
-        = "#{pluralize(@admin_portfolio.errors.count, "error")}   |
-          prohibited this admin_portfolio from being saved:"      |
-      %ul
-        - @admin_portfolio.errors.full_messages.each do |message|
-          %li= message
+- if @admin_portfolio.errors.any?
+  #error_explanation
+    %h2
+      = "#{pluralize(@admin_portfolio.errors.count, "error")}   |
+        prohibited this admin_portfolio from being saved:"      |
+    %ul
+      - @admin_portfolio.errors.full_messages.each do |message|
+        %li= message
 
+= form_for @admin_portfolio do |f|
   .field
     = f.label :service
     = f.select :service, Portfolio.options_for_select_service,
