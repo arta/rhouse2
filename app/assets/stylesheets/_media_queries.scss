@@ -54,6 +54,10 @@
   main { margin-top: 100px; }
   .container { max-width: 90%; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
+  .portfolio-spacer {
+    border: 5px solid #555;
+    margin: 3em 3em 5em;
+  }
   nav.footer .menu.small { display: none; }
   nav.footer .menu.medium { display: flex; }
   .flexrow.footer { flex-wrap: nowrap; justify-content: space-between; }
@@ -125,6 +129,10 @@
   li.roofing-supplier { flex-wrap: wrap; }
   nav.pantheon,
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
+  .portfolio-spacer {
+    border:3px solid #3a3a3a;
+    margin: 2em 1em 3em;
+  }
 }
 
 @media (min-width: 1280px) {
