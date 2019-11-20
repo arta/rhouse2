@@ -7,9 +7,6 @@ nav.header li {
 }
 nav.header a { color: #333; }
 
-ul.menu { font-size: 140%; }
-ul.menu ul.menu { font-size: 100%; } // stop 140% of 140%, TODO: better way?
-// squish a bit, not enough space for all the portfolios items
 ul.menu.portfolios a,
 ul.menu.portfolios > li.current.view span {
   padding-right: .95rem;
@@ -94,7 +91,6 @@ img.nav {
 .overlay-text {
   border: 1px solid whitesmoke;
   color: whitesmoke;
-  font-size: 160%;
   background-color: #333;
   padding: 0 8px 1px 8px;
   border-radius: 7px;
@@ -118,14 +114,12 @@ nav.pantheon aside.thankyou {
   justify-content: space-between;
   margin-top: 1rem;
 }
-ul.menu.admin { font-size: 110%; }
 ul.menu.admin li { margin-bottom: 0; }
 ul.menu.admin a {
   color: white;
   padding: .7rem;
 }
 
-nav.footer { font-family: inherit; }
 nav.footer .fa-home,
 nav.footer .fa-user { border-bottom: 2px solid whitesmoke; }
 nav.footer a { color: whitesmoke; }
