@@ -11,8 +11,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'MyriadPro-Regular', sans-serif;
+  font-size: 1.4rem;
   height: 100vh;
+  line-height: 1.5;
 }
+
+aside,
+footer,
+.container-admin { font-size: 1.125rem; }
 
 header {
   box-shadow: 2px 2px 4px #aaa;
@@ -21,6 +27,7 @@ header {
   width: 100%;
   z-index: 1;
 }
+
 
 .title-bar {
   justify-content: space-between;
@@ -62,7 +69,7 @@ main li { margin-bottom: 1rem; }
 
 ul.aside { padding-left: 1rem; }
 ul.roofing-suppliers {
-  font-size: 90%;
+  font-size: .9rem;
   list-style-type: none;
   padding-left: 0;
 }
@@ -245,16 +252,11 @@ img.portfolio {
   max-width: 140px;
 }
 
-// declaring font-size here as % does not work
-// p & nav font-sizes differ per inheritance cascade
-// is % the problem?
-// TODO: convert all (relative) font sizes to rem
 footer {
   background-color: #333;
   color: whitesmoke;
   flex-shrink: 0;
   font-family: 'Monteserrat', sans-serif;
-  font-size: 80%;
   padding: 3rem 0;
 }
 .flexrow.footer {

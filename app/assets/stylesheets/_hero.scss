@@ -25,14 +25,15 @@
 }
 
 /* Place text in the middle of the image */
-.hero-text {
-  font-size: 125%; // TODO: responsive, fluid
+.p-hero-text {
+  color: white;
+  font-size: 2rem; // TODO: responsive, fluid
+  font-weight: bold;
   grid-area: 1/1;
-  margin-top: 50px;
+  margin-top: 3em;
   padding-right: 9vw;
   padding-left: 10vw;
 }
-.hero-text h2 { color: white; }
 
 .hero-overlay {
   grid-area: 1/1;

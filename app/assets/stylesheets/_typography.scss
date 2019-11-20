@@ -14,37 +14,30 @@
 h1 {
   color: #666;
   font-family: 'Chaparral Pro';
-  font-size: 300%;
+  font-size: 3rem;
   margin: 2rem 0;
 }
 // to space .contact-prompt vertically as if on pages with h1
 // really hackings => TODO: come up w/ a different solution for this
 .h1-spacer {
   font-family: 'Chaparral Pro';
-  font-size: 300%;
+  font-size: 3rem;
   margin: 2rem 0;
 }
 h2 {
   color: #555;
-  font-size: 160%;
+  font-size: 1.6rem;
 }
-header h4, header h5 {
+.p-headline, .p-subheadline {
   font-family: 'Chaparral Pro';
-  margin: .3rem 0;
+  margin: .1em 0;
 }
-header h4 {
+.p-headline {
   color: #444;
-  font-size: 130%;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
-header h5 {
-  font-size: 120%;
-  font-weight: normal;
-}
-
-p, article ul, aside ul, footer ul {
-  font-size: 140%;
-  line-height: 1.5;
-}
+.p-subheadline { font-size: 1.125rem; }
 
 mark.rh2 {
   background-color: inherit;
@@ -53,8 +46,6 @@ mark.rh2 {
   font-style: italic;
   white-space: nowrap;
 }
-
-aside p, aside ul { font-size: 115%; }
 
 .container.portfolio h1,
 section.portfolio h4,
