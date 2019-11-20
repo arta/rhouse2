@@ -23,15 +23,16 @@ class Admin::Portfolio < ApplicationRecord
     %w(Roofing Siding Decks Kitchens Bathrooms Flooring Windows)
   end
 
-  def unavailable_image_show_order
-    images.pluck(:show_order).compact
+  def new_or_persisted_images
+    # .length <= length of (relation) array
+    # .count <= SQL COUNT query
+    until images.length == images.count + 7
+      images.build
+    end
+    images
   end
 
-  def available_image_show_order
-    case unavailable_image_show_order.size
-    when 0 then [1]
-    else
-      (1..unavailable_image_show_order.size+2).to_a-unavailable_image_show_order
-    end
+  def unavailable_image_show_order
+    images.persisted.pluck(:show_order).compact
   end
 end
