@@ -40,6 +40,10 @@
   }
   nav.pantheon { grid-template-columns: 1fr 1fr; }
   figure.fourth { grid-area: 2/2; }
+  .p-hero-text {
+    padding-right: 9vw;
+    padding-left: 10vw;
+  }
 }
 
 @media (min-width: 640px) {
