@@ -17,7 +17,6 @@ body {
 }
 
 aside,
-footer,
 .container-admin { font-size: 1.125rem; }
 
 header {
@@ -28,6 +27,7 @@ header {
   z-index: 1;
 }
 
+footer { font-size: 1rem; }
 
 .title-bar {
   justify-content: space-between;
