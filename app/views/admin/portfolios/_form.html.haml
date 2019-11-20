@@ -23,31 +23,31 @@
       = f.label :job_completed_at
       .flexrow= f.date_select :job_completed_at, include_blank: true
 
-  = f.fields_for :images do |i|
-    .fieldset
-      %figure.griddle.admin-portfolio
-        - if i.object.persisted?
+  - @admin_portfolio.new_or_persisted_images.each do |image|
+    = f.fields_for :images, image do |ff|
+      .fieldset
+        %figure.griddle.admin-portfolio
+          - if ff.object.persisted?
+            .flexcol
+              = image_tag ff.object.file
+              = ff.object.file.filename
           .flexcol
-            = image_tag i.object.file
-            = i.object.file.filename
-        .flexcol
-          = i.label :file
-          = i.file_field :file
+            = ff.label :file
+            = ff.file_field :file
 
-          = i.label :show_order,
-            "Show order (taken:                                             |
-            #{@admin_portfolio.unavailable_image_show_order.join(', ')})"   |
-          = i.select :show_order,
-            [i.object.show_order]+@admin_portfolio.available_image_show_order
+            = ff.label :show_order,
+              "Show order (taken:                                             |
+              #{@admin_portfolio.unavailable_image_show_order.join(', ')})"   |
+            = ff.text_field :show_order, class: 'show-order'
 
-          = i.label :caption_heading
-          = i.text_field :caption_heading
+            = ff.label :caption_heading
+            = ff.text_field :caption_heading
 
-          = i.label :caption_text
-          = i.text_area :caption_text, rows: 3
+            = ff.label :caption_text
+            = ff.text_area :caption_text, rows: 3
 
-          = i.label :comment
-          = i.text_field :comment
+            = ff.label :comment
+            = ff.text_field :comment
 
   .actions
     = f.submit nil, class: 'button'
