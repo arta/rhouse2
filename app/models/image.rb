@@ -6,8 +6,10 @@ class Image < ApplicationRecord
   validate :file_is_attached?
   validate :file_is_image?
 
-  validates_numericality_of :show_order, only_integer: true, greater_than: 0
-  validates_uniqueness_of :show_order, scope: :portfolio_id
+  validates_numericality_of :show_order, only_integer: true, greater_than: 0,
+    if: :show_order_present?
+  validates_uniqueness_of :show_order, scope: :portfolio_id,
+    if: :show_order_present?
 
   scope :ordered, -> { order(show_order: :asc) }
   scope :persisted, -> { where.not(id: nil) }
@@ -23,5 +25,9 @@ class Image < ApplicationRecord
           errors.add(:file, :invalid)
         end
       end
+    end
+
+    def show_order_present?
+      show_order.present?
     end
 end
