@@ -1,10 +1,11 @@
-.flexrow.footer
-  %p.footer.copyright
+.flexrow.flexrow-footer
+  %p.p-footer-copyright
     R House 2 © 2005 -
     = Date.today.year
-  %nav.footer
-    %ul.menu.footer.small
-      .flexrow
+
+  %nav.nav-footer
+    %ul.menu.menu-footer-small
+      .footer-icons
         - if user_signed_in?
           %li
             = link_to admin_portfolios_path do
@@ -12,14 +13,14 @@
         %li
           = link_to root_path do
             %i.fas.fa-home
-      .flexrow
+      .footer-links-small
         %li= link_to 'About us', about_path
-        %span= "|"
+        %span.span-bar= "|"
         %li= link_to 'Contact us', new_inquiry_path
-        %span= "|"
+        %span.span-bar= "|"
         %li= link_to 'Testimonials', testimonials_path
 
-    %ul.menu.footer.medium
+    %ul.menu.menu-footer-medium
       - if user_signed_in?
         %li
           = link_to admin_portfolios_path do
@@ -28,7 +29,7 @@
         = link_to root_path do
           %i.fas.fa-home
       %li= link_to 'About us', about_path
-      %span= "|"
+      %span.span-bar= "|"
       %li= link_to 'Contact us', new_inquiry_path
-      %span= "|"
+      %span.span-bar= "|"
       %li= link_to 'Testimonials', testimonials_path

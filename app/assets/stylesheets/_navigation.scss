@@ -120,13 +120,37 @@ ul.menu.admin a {
   padding: .7rem;
 }
 
-nav.footer .fa-home,
-nav.footer .fa-user { border-bottom: 2px solid whitesmoke; }
-nav.footer a { color: whitesmoke; }
-nav.footer .menu.small { justify-content: center; }
-nav.footer .menu.medium { display: none; }
-nav.footer span {
-  display: block;
-  line-height: 1;
-  padding: .7rem 0;
+.container-footer {
+  flex: initial; /* override .container's 1 0 auto #<= odd, fix it, see above */
+  margin: 0 auto;
+}
+
+.flexrow-footer {
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.footer-icons { display: flex; }
+
+.fa-home,
+.fa-user {
+  padding-bottom: 1px;
+  border-bottom: 2px solid whitesmoke;
+}
+
+.menu-footer-small {
+  align-items: center;
+  flex-direction: column;
+}
+.menu-footer-medium { display: none; }
+
+.footer-links-small {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.span-bar {
+  display: none;
+  padding: .6rem 0;
 }
