@@ -1,10 +1,11 @@
-// https://www.paulirish.com/2012/box-sizing-border-box-ftw/
-html { box-sizing: border-box; }
-*, *:before, *:after { box-sizing: inherit; }
-// Foundation applies this silently in _global.scss (see dev't notes),
-// but I'll have it here "re-declared" anyway, as a reminder
+// ======
+// GLOBAL
+// ======
 
 // * { border: 1px dotted black; }
+
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
 
 body {
   color: #444;
@@ -16,8 +17,31 @@ body {
   line-height: 1.5;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+// ======
+// LAYOUT
+// ======
+
 aside,
 .container-admin { font-size: 1.125rem; }
+
+.in-article-left,
+.in-article-right {
+  display: inline;
+  margin: .3rem auto 0 auto;
+}
+
+.in-article-left img,
+.in-article-right img,
+.roofing-supplier img { max-width: 600px; }
+
+aside .in-article-left img,
+aside .in-article-right img { max-width: 340px; }
 
 header {
   box-shadow: 2px 2px 4px #aaa;
@@ -26,6 +50,37 @@ header {
   width: 100%;
   z-index: 1;
 }
+
+main {
+  align-items: center;
+  background-color: #eee;
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: column;
+  margin-top: 62px;
+}
+
+article { margin-bottom: 2rem; }
+
+aside {
+  align-self: baseline;
+  background-color: #e8e8e8;
+  border-left: .5rem solid #d0d0d0;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+blockquote {
+  background-color: #ededef;
+  border-left: 1.5rem solid #f3f3f3;
+  border-radius: 3px;
+  box-shadow: 0px 3px 7px 0px #d0d0d0;
+  margin-bottom: 3rem;
+  padding: .2rem 2rem 1.5rem 2rem;
+}
+
+figure { margin: 0; }
 
 footer {
   background-color: #333;
@@ -61,17 +116,11 @@ footer {
   max-height: 80px;
   max-width: 280px;
   width: 100%;
-  // max-height: 126px;
-  // max-width: 516px;
 }
 .rh2-headlines {
   display: flex;
   flex-direction: column;
 }
-
-main { margin-top: 62px; }
-
-main li { margin-bottom: 1rem; }
 
 ul.aside { padding-left: 1rem; }
 ul.roofing-suppliers {
@@ -101,14 +150,6 @@ li.roofing-supplier.gaf img {
   width: 100%;
 }
 
-main {
-  align-items: center;
-  background-color: #eee;
-  display: flex;
-  flex-direction: column;
-  flex: 1 0 auto;
-}
-
 // TODO: why the flex? looks fishy, investigage, fix it
 .container {
   flex: 1 0 auto; // 0 0 auto; (i.e. grow: 0;) to not grow beyond content
@@ -129,30 +170,9 @@ main.portfolio { background-color: #6d6d6d; }
 .container.pantheon.portfolios { background-color: #cbcbcb; }
 .container.portfolio { background-color: #292929; }
 
-article { margin-bottom: 2rem; }
-
 .xlarge-heading { display: none; }
 
 span.tall { line-height: 2.5; }
-
-blockquote {
-  background-color: #ededef;
-  border-left: 1.5rem solid #f3f3f3;
-  border-radius: 3px;
-  box-shadow: 0px 3px 7px 0px #d0d0d0;
-  margin-bottom: 3rem;
-  padding: .2rem 2rem 1.5rem 2rem;
-}
-
-aside {
-  align-self: baseline;
-  background-color: #e8e8e8;
-  border-left: .5rem solid #d0d0d0;
-  border-radius: 5px;
-  margin-bottom: 3rem;
-  padding: 1rem 1rem 2rem 1rem;
-}
-aside li { margin-bottom: .8rem; }
 
 .griddle {
   display: grid;
@@ -182,45 +202,7 @@ section.portfolio {
   margin: 6em 4em 7em;
 }
 
-figure { margin: 0; }
-.in-article-left,
-.in-article-right {
-  display: inline;
-  margin: .3rem auto 0 auto;
-}
-.in-article-left img,
-.in-article-right img,
-.roofing-supplier img {
-  max-width: 600px;
-  width: 100%;
-}
-aside .in-article-left img,
-aside .in-article-right img {
-  max-width: 340px;
-  width: 100%;
-}
-.video-wrapper {
-	position: relative;
-	padding-bottom: 56.25%; /* 16:9 */
-	padding-top: 25px;
-	height: 0;
-}
-.video-wrapper iframe {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-}
-
-img.portfolio {
-  height: auto;
-  width: 100%;
-}
-
-.griddle.admin-portfolio {
-  grid-gap: 1rem;
-}
+.griddle.admin-portfolio { grid-gap: 1rem; }
 
 .show-order { max-width: 90px; }
 
@@ -250,6 +232,21 @@ img.portfolio {
   background-position: center 30%;
 }
 
-.img-construction-sign {
-  max-width: 140px;
+.img-construction-sign { max-width: 140px; }
+
+.video-wrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
 }
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+img.portfolio { height: auto; }
