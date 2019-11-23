@@ -1,11 +1,20 @@
-span.phone,
-span.gc-cs-link {
-  color: black;
-  cursor: auto;
-  text-decoration: none;
+.contact-prompt-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.h1-spacer { display: none; }
+
+.contact-prompt {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-size: 1.3rem;
 }
 
-span.phone { margin-right: .7rem; }
+.contact-prompt { margin: 0 0 3rem 0; }
 
 i.fa-phone {
   color: #e60000;
@@ -16,26 +25,15 @@ i.fa-phone + a {
   text-decoration: none;
   color: #333;
 }
-
 .portfolio i.fa-phone + a { color: #ddd; }
 
-.contact-prompt-heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+span.phone, span.gc-cs-link {
+  color: black;
+  cursor: auto;
+  text-decoration: none;
 }
 
-.h1-spacer { display: none; }
-
-.contact-prompt {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  font-size: 1.3rem;
-  justify-content: center;
-  margin: 0 0 3rem 0;
-}
+span.phone { margin-right: .7rem; }
 
 .contact-us-button {
   color: white;
