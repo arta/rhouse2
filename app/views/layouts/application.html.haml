@@ -1,6 +1,10 @@
 !!!
 %html
   %head
+    -# Global site tag (gtag.js) - Google Analytics
+    = javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=UA-153301501-1",
+      async: true
+    = javascript_include_tag 'rhouse2-gtag'
     %meta{ content: 'text/html; charset=UTF-8', http_equiv: "Content-Type" }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
     %title= content_for?(:title) ? yield(:title) : 'RHouse2'
