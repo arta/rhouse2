@@ -1,0 +1,45 @@
+/* ###### */
+/* IMAGES */
+/* ------ */
+
+figure { margin: 0; }
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ------ */
+
+li.roofing-supplier.carlisle img {
+  min-width: 100px;
+  max-width: 125px;
+}
+
+li.roofing-supplier.certainteed img {
+  min-width: 170px;
+  max-width: 237px;
+}
+
+li.roofing-supplier.gaf img {
+  min-width: 70px;
+  max-width: 110px;
+}
+
+img.portfolio { height: auto; }
+
+.img-construction-sign { max-width: 140px; }
+
+/* ------ */
+
+@media (min-width: 768px) {
+
+  img.rh2-logo-responsive { min-height: 68.4px; }
+
+}
+
+@media (min-width: 1200px) {
+
+  figure.fourth { grid-area: 2/2; }
+
+}

@@ -71,22 +71,6 @@ footer {
 
 main { margin-top: 62px; }
 
-li.roofing-supplier.carlisle img {
-  min-width: 100px;
-  max-width: 125px;
-  width: 100%;
-}
-li.roofing-supplier.certainteed img {
-  min-width: 170px;
-  max-width: 237px;
-  width: 100%;
-}
-li.roofing-supplier.gaf img {
-  min-width: 70px;
-  max-width: 110px;
-  width: 100%;
-}
-
 main {
   align-items: center;
   background-color: #eee;
@@ -158,23 +142,12 @@ section.portfolio {
   margin: 6em 4em 7em;
 }
 
-figure { margin: 0; }
 .in-article-left,
 .in-article-right {
   display: inline;
   margin: .3rem auto 0 auto;
 }
-.in-article-left img,
-.in-article-right img,
-.roofing-supplier img {
-  max-width: 600px;
-  width: 100%;
-}
-aside .in-article-left img,
-aside .in-article-right img {
-  max-width: 340px;
-  width: 100%;
-}
+
 .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
@@ -187,11 +160,6 @@ aside .in-article-right img {
 	left: 0;
 	width: 100%;
 	height: 100%;
-}
-
-img.portfolio {
-  height: auto;
-  width: 100%;
 }
 
 .griddle.admin-portfolio {
@@ -224,8 +192,4 @@ img.portfolio {
 .under-construction.bathrooms {
   background-image: url('https://storage.googleapis.com/rhouse2-development-staging-static/background-bathroom1.jpg');
   background-position: center 30%;
-}
-
-.img-construction-sign {
-  max-width: 140px;
 }
