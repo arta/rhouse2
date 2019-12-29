@@ -1,4 +1,21 @@
 ################################################################################
+12-28-19: ######################################################################
+• Bump up Rails to 6.0.2, following instructions
+  : https://selleo.com/blog/how-to-upgrade-to-rails-6
+  : https://edgeguides.rubyonrails.org/configuring.html
+  : & in the new_framework_defaults_6_0.rb:
+    Turned each config on, one by one, and restarted server every time
+    then flipped Rails defaults to "6.0" from 5.2 in application.rb
+      config.load_defaults "6.0"
+      => so, the new_framework_defaults_6_0.rb file should be safe to delete
+      cuz, if I understand correctly,
+      these cofigurations in the file are now the defaults loaded automatically
+
+################################################################################
+
+
+
+################################################################################
 7-8-19: ########################################################################
 • ActiveStorage :: Variant
 : great resource (including resizing, until future version does it?):
