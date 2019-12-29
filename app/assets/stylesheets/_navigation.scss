@@ -1,10 +1,12 @@
 nav { font-family: 'Telegrafico'; }
+
 nav li { white-space: nowrap; }
 
 nav.header li {
   border-radius: 3px;
   transition: background-color, .6s;
 }
+
 nav.header a { color: #333; }
 
 ul.menu.portfolios a,
@@ -33,22 +35,25 @@ nav.header li.current.view:hover {
   border-color: transparent;
 }
 
-li.current, .menu.regional { background-color: whitesmoke; }
+li.current,
+.menu.regional { background-color: whitesmoke; }
+
 // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // link_to_unless _current(), current_view?() helpers.
 // Use for state contingent styling, i.e. a "bread-crumb" and hover
 // Must do children to prevent malformatting of nested navs manus
 ul.menu > li.current > a,
+ul.menu > li.current.is-dropdown-submenu-parent > a, // Override F6 #333
 ul.menu > li.current.view { color: #e60000; }
+
 ul.menu > li.current.view span {
   display: block;
   line-height: 1;
   padding: $global-menu-padding;
 }
-// Override F6 #333;
-ul.menu > li.current.is-dropdown-submenu-parent > a { color: #e60000; }
 
 button.menu-icon:hover { background-color: lightgrey; }
+
 button.fa-hard-hat {
   color: #e60000;
   border: 1px transparent solid;
@@ -57,6 +62,7 @@ button.fa-hard-hat {
   padding: 6px;
   transition: background-color, .6s;
 }
+
 button.fa-hard-hat:hover { background-color: lightgrey; }
 
 figure.nav {
@@ -64,6 +70,7 @@ figure.nav {
   border-radius: 3px;
   position: relative; // anchor .overlay
 }
+
 img.nav {
   display: block;
   height: 250px;
@@ -71,6 +78,7 @@ img.nav {
   padding: 0;
   width: 100%;
 }
+
 .overlay {
   border: 3px solid #aaa;
   border-radius: 3px;

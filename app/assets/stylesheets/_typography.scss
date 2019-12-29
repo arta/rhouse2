@@ -11,12 +11,40 @@
   src: font-url('telegrafico.ttf') format('truetype');
 }
 
+.container.portfolio h1,
+section.portfolio h4,
+section.portfolio p { color: #ddd; }
+
+.container.portfolio span.phone,
+.container.portfolio span.gc-cs-link { color: #ddd; }
+
+.p-headline,
+.p-subheadline {
+  font-family: 'Chaparral Pro';
+  margin: .1em 0;
+}
+
 h1 {
   color: #666;
   font-family: 'Chaparral Pro';
   font-size: 3rem;
   margin: 2rem 0;
 }
+
+h2 {
+  color: #555;
+  font-size: 1.6rem;
+}
+
+blockquote {
+  background-color: #ededef;
+  border-left: 1.5rem solid #f3f3f3;
+  border-radius: 3px;
+  box-shadow: 0px 3px 7px 0px #d0d0d0;
+  margin-bottom: 3rem;
+  padding: .2rem 2rem 1.5rem 2rem;
+}
+
 // to space .contact-prompt vertically as if on pages with h1
 // really hackings => TODO: come up w/ a different solution for this
 .h1-spacer {
@@ -24,20 +52,6 @@ h1 {
   font-size: 3rem;
   margin: 2rem 0;
 }
-h2 {
-  color: #555;
-  font-size: 1.6rem;
-}
-.p-headline, .p-subheadline {
-  font-family: 'Chaparral Pro';
-  margin: .1em 0;
-}
-.p-headline {
-  color: #444;
-  font-size: 1.25rem;
-  font-weight: bold;
-}
-.p-subheadline { font-size: 1.125rem; }
 
 mark.rh2 {
   background-color: inherit;
@@ -47,13 +61,33 @@ mark.rh2 {
   white-space: nowrap;
 }
 
-.container.portfolio h1,
-section.portfolio h4,
-section.portfolio p { color: #ddd; }
+.p-headline {
+  color: #444;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
 
-.container.portfolio span.phone,
-.container.portfolio span.gc-cs-link { color: #ddd; }
-
-footer a { color: whitesmoke; }
+.p-subheadline { font-size: 1.125rem; }
 
 .p-footer-copyright { font-size: .94rem; }
+
+ul.aside { padding-left: 1rem; }
+
+ul.roofing-suppliers {
+  font-size: .9rem;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li.roofing-supplier {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2.2rem 0;
+}
+
+aside li { margin-bottom: .8rem; }
+
+main li { margin-bottom: 1rem; }
+
+footer a { color: whitesmoke; }

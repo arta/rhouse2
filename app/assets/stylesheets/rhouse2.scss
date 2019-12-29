@@ -71,20 +71,6 @@ footer {
 
 main { margin-top: 62px; }
 
-main li { margin-bottom: 1rem; }
-
-ul.aside { padding-left: 1rem; }
-ul.roofing-suppliers {
-  font-size: .9rem;
-  list-style-type: none;
-  padding-left: 0;
-}
-li.roofing-supplier {
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2.2rem 0;
-}
 li.roofing-supplier.carlisle img {
   min-width: 100px;
   max-width: 125px;
@@ -135,15 +121,6 @@ article { margin-bottom: 2rem; }
 
 span.tall { line-height: 2.5; }
 
-blockquote {
-  background-color: #ededef;
-  border-left: 1.5rem solid #f3f3f3;
-  border-radius: 3px;
-  box-shadow: 0px 3px 7px 0px #d0d0d0;
-  margin-bottom: 3rem;
-  padding: .2rem 2rem 1.5rem 2rem;
-}
-
 aside {
   align-self: baseline;
   background-color: #e8e8e8;
@@ -152,7 +129,6 @@ aside {
   margin-bottom: 3rem;
   padding: 1rem 1rem 2rem 1rem;
 }
-aside li { margin-bottom: .8rem; }
 
 .griddle {
   display: grid;
