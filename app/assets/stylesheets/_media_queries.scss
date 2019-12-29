@@ -38,7 +38,6 @@
     float: right;
     margin: .3rem 0 .3rem 1.3rem;
   }
-  figure.fourth { grid-area: 2/2; }
   .p-hero-text {
     padding-right: 9vw;
     padding-left: 10vw;
@@ -57,7 +56,6 @@
 }
 
 @media (min-width: 768px) {
-  img.rh2-logo-responsive { min-height: 68.4px; }
   main { margin-top: 100px; }
   .container { max-width: 90%; }
   section.portfolio { grid-template-columns: 1fr 1fr; }
