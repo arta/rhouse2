@@ -1,3 +1,19 @@
+span.phone,
+span.gc-cs-link {
+  color: black;
+  cursor: auto;
+  text-decoration: none;
+}
+
+i.fa-phone + a {
+  text-decoration: none;
+  color: #333;
+}
+
+.portfolio i.fa-phone + a { color: #ddd; }
+
+span.phone { margin-right: .7rem; }
+
 .contact-prompt-heading {
   display: flex;
   flex-direction: column;
@@ -20,20 +36,6 @@ i.fa-phone {
   color: #e60000;
   margin-right: .3rem;
 }
-
-i.fa-phone + a {
-  text-decoration: none;
-  color: #333;
-}
-.portfolio i.fa-phone + a { color: #ddd; }
-
-span.phone, span.gc-cs-link {
-  color: black;
-  cursor: auto;
-  text-decoration: none;
-}
-
-span.phone { margin-right: .7rem; }
 
 .contact-us-button {
   color: white;
