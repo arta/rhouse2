@@ -187,15 +187,33 @@ ul.menu.admin a {
 
 .footer-icons { display: flex; }
 
-.footer-links-small {
+.footer-links {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
 
-.menu-footer-small {
+.menu-footer {
   align-items: center;
   flex-direction: column;
 }
 
-.menu-footer-medium { display: none; }
+/* ---------- */
+
+@media (min-width: 640px) {
+
+  .menu-footer,
+  .footer-links { flex-direction: row; }
+
+  footer { font-size: 1.125rem; }
+
+}
+
+@media (min-width: 898px) {
+
+  .flexrow-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}

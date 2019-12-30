@@ -49,9 +49,6 @@
   .griddle.admin-portfolio {
     grid-template-columns: 1fr 1fr;
   }
-  footer { font-size: 1.125rem; }
-  .menu-footer-small,
-  .footer-links-small { flex-direction: row; }
   .span-bar { display: inline; }
 }
 
@@ -63,8 +60,6 @@
     border: 5px solid #555;
     margin: 3em 3em 5em;
   }
-  .menu-footer-small { display: none; }
-  .menu-footer-medium { display: flex; }
 }
 
 @media (min-width: 898px) {
@@ -78,10 +73,6 @@
     justify-content: space-between;
   }
   h1 + p.contact-prompt { margin: 0; }
-  .flexrow-footer {
-    flex-direction: row;
-    justify-content: space-between;
-  }
 }
 
 @media (min-width: 768px) {
