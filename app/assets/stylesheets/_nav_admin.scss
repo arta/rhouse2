@@ -1,0 +1,20 @@
+/* ######### */
+/* NAV ADMIN */
+/* --------- */
+
+ul.menu.admin li { margin-bottom: 0; }
+
+ul.menu.admin a {
+  color: white;
+  padding: .7rem;
+}
+
+.admin-header-nav {
+  align-items: center;
+  background-color: #3a3a3a;
+  border-radius: 3px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
