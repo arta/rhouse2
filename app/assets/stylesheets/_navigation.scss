@@ -1,22 +1,12 @@
-nav { font-family: 'Telegrafico'; }
+/* ########## */
+/* NAVIGATION */
+/* ---------- */
 
-nav li { white-space: nowrap; }
+/* ---------- */
+/* HEADER NAV */
+/* ---------- */
 
-nav.header li {
-  border-radius: 3px;
-  transition: background-color, .6s;
-}
-
-nav.header a { color: #333; }
-
-ul.menu.portfolios a,
-ul.menu.portfolios > li.current.view span {
-  padding-right: .95rem;
-  padding-left: .95rem;
-}
-
-ul.menu.xlarge,
-ul.menu.regional { display: none; }
+/* --- Header nav hover & current view styles --- */
 
 // nav element                      idle          :hover
 // ------------------------------------------------------
@@ -24,19 +14,18 @@ ul.menu.regional { display: none; }
 // li.current                        red        lightgrey
 // li.current.view                   red            -
 // ------------------------------------------------------
+
 // Hover ON:
 nav.header li:hover {
   background-color: lightgrey;
   border-color: lightgrey;
 }
+
 // Hover OFF:
 nav.header li.current.view:hover {
   background-color: whitesmoke;
   border-color: transparent;
 }
-
-li.current,
-.menu.regional { background-color: whitesmoke; }
 
 // No anchor inside li.current.view. Courtesty of Rails' and my own adapted
 // link_to_unless _current(), current_view?() helpers.
@@ -52,6 +41,31 @@ ul.menu > li.current.view span {
   padding: $global-menu-padding;
 }
 
+/* ------------------------------------------ */
+
+ul.menu.xlarge,
+ul.menu.regional { display: none; }
+
+li.current,
+.menu.regional { background-color: whitesmoke; }
+
+ul.menu.portfolios a,
+ul.menu.portfolios > li.current.view span {
+  padding-right: .95rem;
+  padding-left: .95rem;
+}
+
+nav { font-family: 'Telegrafico'; }
+
+nav li { white-space: nowrap; }
+
+nav.header li {
+  border-radius: 3px;
+  transition: background-color, .6s;
+}
+
+nav.header a { color: #333; }
+
 button.menu-icon:hover { background-color: lightgrey; }
 
 button.fa-hard-hat {
@@ -65,19 +79,9 @@ button.fa-hard-hat {
 
 button.fa-hard-hat:hover { background-color: lightgrey; }
 
-figure.nav {
-  border: 3px solid #aaa;
-  border-radius: 3px;
-  position: relative; // anchor .overlay
-}
-
-img.nav {
-  display: block;
-  height: 250px;
-  object-fit: cover;
-  padding: 0;
-  width: 100%;
-}
+/* ------------ */
+/* PANTHEON NAV */
+/* ------------ */
 
 .overlay {
   border: 3px solid #aaa;
@@ -97,6 +101,7 @@ img.nav {
   justify-content: center;
   align-items: center;
 }
+
 .overlay-text {
   border: 1px solid whitesmoke;
   color: whitesmoke;
@@ -104,14 +109,41 @@ img.nav {
   padding: 0 8px 1px 8px;
   border-radius: 7px;
 }
+
 figure.nav:hover .overlay {
   background: rgba(0, 0, 0, 0.3); /* Black see-through */
   opacity: 1;
 }
+
 nav.pantheon aside.thankyou {
   align-self: center;
   grid-column-end: -1;
   margin: 0;
+}
+
+figure.nav {
+  border: 3px solid #aaa;
+  border-radius: 3px;
+  position: relative; // anchor .overlay
+}
+
+img.nav {
+  display: block;
+  height: 250px;
+  object-fit: cover;
+  padding: 0;
+  width: 100%;
+}
+
+/* --------- */
+/* ADMIN NAV */
+/* --------- */
+
+ul.menu.admin li { margin-bottom: 0; }
+
+ul.menu.admin a {
+  color: white;
+  padding: .7rem;
 }
 
 .admin-header-nav {
@@ -123,11 +155,25 @@ nav.pantheon aside.thankyou {
   justify-content: space-between;
   margin-top: 1rem;
 }
-ul.menu.admin li { margin-bottom: 0; }
-ul.menu.admin a {
-  color: white;
-  padding: .7rem;
+
+/* ---------- */
+/* FOOTER NAV */
+/* ---------- */
+
+.fa-home,
+.fa-user {
+  padding-bottom: 1px;
+  border-bottom: 2px solid whitesmoke;
 }
+
+/* ---------- */
+
+.span-bar {
+  display: none;
+  padding: .6rem 0;
+}
+
+/* ---------- */
 
 .container-footer {
   flex: initial; /* override .container's 1 0 auto #<= odd, fix it, see above */
@@ -141,25 +187,15 @@ ul.menu.admin a {
 
 .footer-icons { display: flex; }
 
-.fa-home,
-.fa-user {
-  padding-bottom: 1px;
-  border-bottom: 2px solid whitesmoke;
-}
-
-.menu-footer-small {
-  align-items: center;
-  flex-direction: column;
-}
-.menu-footer-medium { display: none; }
-
 .footer-links-small {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
 
-.span-bar {
-  display: none;
-  padding: .6rem 0;
+.menu-footer-small {
+  align-items: center;
+  flex-direction: column;
 }
+
+.menu-footer-medium { display: none; }
