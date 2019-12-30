@@ -4,7 +4,7 @@
     = Date.today.year
 
   %nav.nav-footer
-    %ul.menu.menu-footer-small
+    %ul.menu.menu-footer
       .footer-icons
         - if user_signed_in?
           %li
@@ -13,23 +13,9 @@
         %li
           = link_to root_path do
             %i.fas.fa-home
-      .footer-links-small
+      .footer-links
         %li= link_to 'About us', about_path
         %span.span-bar= "|"
         %li= link_to 'Contact us', new_inquiry_path
         %span.span-bar= "|"
         %li= link_to 'Testimonials', testimonials_path
-
-    %ul.menu.menu-footer-medium
-      - if user_signed_in?
-        %li
-          = link_to admin_portfolios_path do
-            %i.fas.fa-user
-      %li
-        = link_to root_path do
-          %i.fas.fa-home
-      %li= link_to 'About us', about_path
-      %span.span-bar= "|"
-      %li= link_to 'Contact us', new_inquiry_path
-      %span.span-bar= "|"
-      %li= link_to 'Testimonials', testimonials_path
