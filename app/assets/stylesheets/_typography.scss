@@ -41,9 +41,8 @@ blockquote {
   border-left: 1.5rem solid #f3f3f3;
   border-radius: 3px;
   box-shadow: 0px 3px 7px 0px #d0d0d0;
-  margin-bottom: 3rem;
-  // FIXME lateral padding breakks mobile display
-  padding: .2rem 2rem 1.5rem 2rem;
+  margin: 0 auto 3em auto;
+  padding: .2em .375em 1.5em .375em;
 }
 
 // to space .contact-prompt vertically as if on pages with h1
@@ -92,3 +91,12 @@ aside li { margin-bottom: .8rem; }
 main li { margin-bottom: 1rem; }
 
 footer a { color: whitesmoke; }
+
+@media (min-width: 768px) {
+
+  blockquote {
+    padding-left: 1em;
+    padding-right: 2em;
+  }
+
+}
