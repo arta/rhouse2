@@ -19,54 +19,12 @@ body {
 aside,
 .container-admin { font-size: 1.125rem; }
 
-header {
-  box-shadow: 2px 2px 4px #aaa;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
 footer {
   background-color: #333;
   color: whitesmoke;
   font-family: 'Monteserrat', sans-serif;
   font-size: 1rem;
   padding: 5em 0;
-}
-
-.title-bar {
-  justify-content: space-between;
-  padding: .5rem 1rem;
-}
-.title-bar .rh2-logo { max-width: 150px; }
-
-.top-bar {
-  align-items: flex-start; // Override F6: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem;
-}
-.top-bar .top-bar-left {
-  flex-grow: 0;  // Override F6: 1; (@ (min-width: 40em) {flex: 1 1 auto;})
-  margin-right: 0; // Override F6: auto; (resize shrinks it, intersting)
-}
-.rh2-logo-headlines {
-  align-items: center;
-  display: none;//flex;
-  flex-shrink: 0;
-}
-.rh2-logo-responsive {
-  height: 100%;
-  max-height: 80px;
-  max-width: 280px;
-  width: 100%;
-  // max-height: 126px;
-  // max-width: 516px;
-}
-.rh2-headlines {
-  display: flex;
-  flex-direction: column;
 }
 
 main { margin-top: 62px; }
