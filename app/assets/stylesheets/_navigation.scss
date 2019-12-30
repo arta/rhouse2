@@ -83,6 +83,20 @@ button.fa-hard-hat:hover { background-color: lightgrey; }
 /* PANTHEON NAV */
 /* ------------ */
 
+nav.pantheon {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+nav.pantheon aside.thankyou {
+  align-self: center;
+  grid-column-end: -1;
+  margin: 0;
+}
+
+.container.pantheon.portfolios { background-color: #cbcbcb; }
+
 .overlay {
   border: 3px solid #aaa;
   border-radius: 3px;
@@ -115,12 +129,6 @@ figure.nav:hover .overlay {
   opacity: 1;
 }
 
-nav.pantheon aside.thankyou {
-  align-self: center;
-  grid-column-end: -1;
-  margin: 0;
-}
-
 figure.nav {
   border: 3px solid #aaa;
   border-radius: 3px;
@@ -133,6 +141,14 @@ img.nav {
   object-fit: cover;
   padding: 0;
   width: 100%;
+}
+
+/* ------------ */
+
+@media (min-width: 1200px) {
+
+  nav.pantheon { grid-template-columns: 1fr 1fr 1fr; }
+
 }
 
 /* --------- */
