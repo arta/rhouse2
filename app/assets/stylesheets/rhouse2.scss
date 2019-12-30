@@ -91,12 +91,10 @@ main .container {
   border-radius: 5px;
   padding: 1px 2rem;
 }
-.container.pantheon { flex-grow: 0; }
 
 main.pantheon.portfolios { background-color: #909090; }
 main.portfolio { background-color: #6d6d6d; }
 
-.container.pantheon.portfolios { background-color: #cbcbcb; }
 .container.portfolio { background-color: #292929; }
 
 article { margin-bottom: 2rem; }
@@ -118,12 +116,6 @@ aside {
   display: grid;
   grid-column-gap: 2rem;
   grid-row-gap: 1rem;
-}
-
-nav.pantheon {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
 }
 
 .flexrow { display: flex; }
