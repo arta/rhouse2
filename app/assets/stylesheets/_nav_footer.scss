@@ -1,0 +1,61 @@
+/* ########## */
+/* NAV FOOTER */
+/* ---------- */
+
+.fa-home,
+.fa-user {
+  padding-bottom: 1px;
+  border-bottom: 2px solid whitesmoke;
+}
+
+/* ---------- */
+
+.span-bar {
+  display: none;
+  padding: .6rem 0;
+}
+
+/* ---------- */
+
+.container-footer {
+  flex: initial; /* override .container's 1 0 auto #<= odd, fix it, see above */
+  margin: 0 auto;
+}
+
+.flexrow-footer {
+  align-items: center;
+  flex-direction: column-reverse;
+}
+
+.footer-icons { display: flex; }
+
+.footer-links {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.menu-footer {
+  align-items: center;
+  flex-direction: column;
+}
+
+/* ---------- */
+
+@media (min-width: 640px) {
+
+  .menu-footer,
+  .footer-links { flex-direction: row; }
+
+  footer { font-size: 1.125rem; }
+
+}
+
+@media (min-width: 898px) {
+
+  .flexrow-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
