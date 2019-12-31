@@ -14,7 +14,7 @@
     url('https://storage.googleapis.com/rhouse2-production-static/hero-top-5.jpg');
 
   /* Set a specific height */
-  height: 57.5vh;//50vh;//62.5vh; <= golden ratio ... hm, too large
+  height: 75vh;//50vh;//62.5vh; <= golden ratio ... hm, too large
   width: 100vw;
 
   /* Position and center the image to scale nicely on all screens */
@@ -27,7 +27,7 @@
 /* Place text in the middle of the image */
 .p-hero-text {
   color: white;
-  font-size: 2rem; // TODO: responsive, fluid
+  font-size: 1.7rem;//2rem; // TODO: responsive, fluid
   font-weight: bold;
   grid-area: 1/1;
   margin-top: 2em;
@@ -48,4 +48,16 @@ main.home { margin-top: 0; } // hero comes 1st, no need to offset for header
   margin-top: 0;
   border-radius: 0;
   border-top: 2px solid white;
+}
+
+@media (min-width: 540px) {
+
+  .hero-image { height: 57.5vh; }
+
+}
+
+@media (min-width: 640px) {
+
+  .p-hero-text { font-size: 2rem; }
+
 }
