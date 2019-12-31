@@ -94,7 +94,6 @@ header {
 .title-bar .rh2-logo { max-width: 150px; }
 
 .top-bar {
-  align-items: flex-start; // Override F6: center;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -137,8 +136,6 @@ header {
 
   .rh2-logo-headlines { display: flex; }
 
-  .rh2-logo-responsive { min-height: 68.4px; }
-
   .rh2-headlines { display: none; }
 
 }
@@ -173,6 +170,9 @@ header {
   }
 
   .rh2-headlines { display: flex; }
+
+  // Override F6: center; to make room for nav regional:
+  .top-bar { align-items: flex-start; }
 
 }
 
