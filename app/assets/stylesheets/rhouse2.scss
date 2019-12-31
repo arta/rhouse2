@@ -37,12 +37,7 @@ main {
   flex: 1 0 auto;
 }
 
-// TODO: why the flex? looks fishy, investigage, fix it
-.container {
-  flex: 1 0 auto; // 0 0 auto; (i.e. grow: 0;) to not grow beyond content
-  margin: 2rem auto 3rem auto; // 0 auto; for edge to edge
-  // padding: 1px 2rem;
-}
+.container { margin: 2rem auto 3rem auto; }
 
 main .container {
   background-color: #dfdfdf; // indiv. portfolio: #4a, #15
