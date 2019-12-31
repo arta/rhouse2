@@ -25,7 +25,7 @@
 }
 
 /* Place text in the middle of the image */
-.p-hero-text {
+.hero-p {
   color: white;
   font-size: 1.7rem;//2rem; // TODO: responsive, fluid
   font-weight: bold;
@@ -42,12 +42,13 @@
   height: 100%;
 }
 
-main.home { margin-top: 0; } // hero comes 1st, no need to offset for header
+@media (min-width: 375px) {
 
-.container.home {
-  margin-top: 0;
-  border-radius: 0;
-  border-top: 2px solid white;
+  .hero-p {
+    padding-right: 9vw;
+    padding-left: 10vw;
+  }
+
 }
 
 @media (min-width: 540px) {
@@ -58,6 +59,6 @@ main.home { margin-top: 0; } // hero comes 1st, no need to offset for header
 
 @media (min-width: 640px) {
 
-  .p-hero-text { font-size: 2rem; }
+  .hero-p { font-size: 2rem; }
 
 }
