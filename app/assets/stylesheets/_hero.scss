@@ -1,4 +1,7 @@
-/* The hero image */
+/* #### */
+/* HERO */
+/* ---- */
+
 .hero-image {
   // to position .hero-text
   display: grid;
@@ -41,6 +44,8 @@
   opacity: 0.0;
   height: 100%;
 }
+
+/* ---- */
 
 @media (min-width: 375px) {
 
