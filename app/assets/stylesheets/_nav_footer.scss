@@ -12,6 +12,11 @@
 
 .footer-copyright-p { font-size: .94rem; }
 
+.footer-nav-ul {
+  align-items: center;
+  flex-direction: column;
+}
+
 .span-footer-nav-links-pipe {
   display: none;
   padding: .6rem 0;
@@ -50,21 +55,16 @@ footer {
   align-items: center;
 }
 
-.footer-nav-ul {
-  align-items: center;
-  flex-direction: column;
-}
-
 /* ---------- */
 
 @media (min-width: 640px) {
 
-  footer { font-size: 1.125rem; }
+  .footer-nav-ul,
+  .footer-nav-links { flex-direction: row; }
 
   .span-footer-nav-links-pipe { display: inline; }
 
-  .footer-nav-ul,
-  .footer-nav-links { flex-direction: row; }
+  footer { font-size: 1.125rem; }
 
 }
 
