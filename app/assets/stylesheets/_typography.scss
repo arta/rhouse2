@@ -52,14 +52,6 @@ h2 {
   padding: .2em .375em 1.5em .375em;
 }
 
-mark.rh2 {
-  background-color: inherit;
-  color: #444;
-  color: inherit;
-  font-style: italic;
-  white-space: nowrap;
-}
-
 .p-headline {
   color: #444;
   font-size: 1.25rem;
@@ -88,6 +80,8 @@ ul.aside { padding-left: 1rem; }
 aside li { margin-bottom: .8rem; }
 
 main li { margin-bottom: 1rem; }
+
+.em-rh2 { white-space: nowrap; }
 
 footer a { color: whitesmoke; }
 
