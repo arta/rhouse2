@@ -87,6 +87,10 @@ h2 {
 
 /* ---------- */
 
+@media (max-width: 375px) {
+  h1 { font-size: calc(16px + (48 - 22) * (100vw - 150px)/(335 - 150)); }
+}
+
 @media (min-width: 768px) {
 
   .blockquote-testimonial {
