@@ -6,6 +6,6 @@
   %h2 In Business since 2005
 
   - @testimonials.each do |testimonial|
-    %blockquote
+    %blockquote.blockquote-testimonial
       %p= testimonial.body
       %cite= testimonial.client_signature
