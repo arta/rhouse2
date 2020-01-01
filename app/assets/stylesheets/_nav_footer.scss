@@ -17,12 +17,14 @@
   flex-direction: column;
 }
 
+/* ---------- */
+
+footer a { color: whitesmoke; }
+
 .span-footer-nav-links-pipe {
   display: none;
   padding: .6rem 0;
 }
-
-footer a { color: whitesmoke; }
 
 /* ---------- */
 
@@ -62,7 +64,11 @@ footer {
   .footer-nav-ul,
   .footer-nav-links { flex-direction: row; }
 
+  /* ---------- */
+
   .span-footer-nav-links-pipe { display: inline; }
+
+  /* ---------- */
 
   footer { font-size: 1.125rem; }
 
