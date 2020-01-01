@@ -10,7 +10,7 @@
 
 /* ---------- */
 
-.span-bar {
+.span-footer-links-pipe {
   display: none;
   padding: .6rem 0;
 }
@@ -44,7 +44,7 @@
 
 @media (min-width: 640px) {
 
-  .span-bar { display: inline; }
+  .span-footer-links-pipe { display: inline; }
 
   .menu-footer,
   .footer-links { flex-direction: row; }
