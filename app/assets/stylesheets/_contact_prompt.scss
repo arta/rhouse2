@@ -26,17 +26,23 @@ i.fa-phone {
   text-align: center;
 }
 
-.h1-spacer { display: none; }
+// to space .contact-prompt vertically as if on pages with h1
+// really hackings => TODO: come up w/ a different solution for this
+.h1-spacer {
+  display: none;
+  font-family: 'Chaparral Pro';
+  font-size: 3rem;
+  margin: 2rem 0;
+}
 
 .contact-prompt {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   font-size: 1.3rem;
+  justify-content: center;
+  margin: 0 0 3rem 0;
 }
-
-.contact-prompt { margin: 0 0 3rem 0; }
 
 .contact-us-button {
   color: white;
@@ -50,3 +56,47 @@ i.fa-phone {
 }
 
 .contact-us-button:hover { background-color: darken(#e60000, 6%); }
+
+
+@media (min-width: 898px) {
+
+  .about .contact-prompt-heading,
+  .testimonials .contact-prompt-heading,
+  .small-heading .contact-prompt-heading,
+  .pantheon .contact-prompt-heading,
+  .portfolio .contact-prompt-heading {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  h1 + p.contact-prompt { margin: 0; }
+
+}
+
+@media (max-width: 1200px) {
+
+  .about .contact-prompt-heading,
+  .testimonials .contact-prompt-heading,
+  .small-heading .contact-prompt-heading {
+
+    i.fa-phone { color: #aaa; }
+    .contact-us-button { background-color: #aaa; }
+    .contact-us-button:hover { background-color: darken(#aaa, 9%); }
+
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .h1-spacer { display: block; }
+
+  .grid-item .contact-prompt-heading {
+    flex-direction: row;
+    justify-content: flex-end;//center;
+  }
+
+  p.contact-prompt { margin-bottom: 0; }
+
+}

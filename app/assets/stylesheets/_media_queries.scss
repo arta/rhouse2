@@ -56,19 +56,6 @@
   }
 }
 
-@media (min-width: 898px) {
-  .about .contact-prompt-heading,
-  .testimonials .contact-prompt-heading,
-  .small-heading .contact-prompt-heading,
-  .pantheon .contact-prompt-heading,
-  .portfolio .contact-prompt-heading {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-  }
-  h1 + p.contact-prompt { margin: 0; }
-}
-
 @media (min-width: 768px) {
   .under-construction {
     justify-content: space-between;
@@ -78,25 +65,9 @@
   .construction-message { width: 70%; }
 }
 
-@media (max-width: 1200px) {
-  .about .contact-prompt-heading,
-  .testimonials .contact-prompt-heading,
-  .small-heading .contact-prompt-heading {
-    i.fa-phone { color: #aaa; }
-    .contact-us-button { background-color: #aaa; }
-    .contact-us-button:hover { background-color: darken(#aaa, 9%); }
-  }
-}
-
 @media (min-width: 1200px) {
   .small-heading { display: none; }
   .xlarge-heading { display: block; }
-  .h1-spacer { display: block; }
-  .grid-item .contact-prompt-heading {
-    flex-direction: row;
-    justify-content: flex-end;//center;
-  }
-  p.contact-prompt { margin-bottom: 0; }
   .griddle { grid-template-columns: 2fr 1fr; }
   aside.contact-us { margin-top: 2rem; }
   aside .in-article-left, aside .in-article-right {
@@ -117,7 +88,6 @@
 }
 
 @media (min-width: 1440px) {
-  .h1-spacer { display: block; }
   aside { border-left: 1.5rem solid #d0d0d0; }
   aside .in-article-left {
     float: left;
