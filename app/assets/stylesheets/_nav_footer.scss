@@ -35,7 +35,7 @@
   align-items: center;
 }
 
-.menu-footer {
+.footer-menu {
   align-items: center;
   flex-direction: column;
 }
@@ -46,7 +46,7 @@
 
   .span-footer-links-pipe { display: inline; }
 
-  .menu-footer,
+  .footer-menu,
   .footer-links { flex-direction: row; }
 
   footer { font-size: 1.125rem; }
