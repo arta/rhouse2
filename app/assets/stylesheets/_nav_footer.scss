@@ -10,7 +10,7 @@
 
 /* ---------- */
 
-.span-footer-links-pipe {
+.span-footer-nav-links-pipe {
   display: none;
   padding: .6rem 0;
 }
@@ -28,15 +28,15 @@
   flex-direction: column-reverse;
 }
 
-.footer-icons { display: flex; }
+.footer-nav-icons { display: flex; }
 
-.footer-links {
+.footer-nav-links {
   display: flex;
   flex-flow: column wrap;
   align-items: center;
 }
 
-.footer-menu {
+.footer-nav-ul {
   align-items: center;
   flex-direction: column;
 }
@@ -45,10 +45,10 @@
 
 @media (min-width: 640px) {
 
-  .span-footer-links-pipe { display: inline; }
+  .span-footer-nav-links-pipe { display: inline; }
 
-  .footer-menu,
-  .footer-links { flex-direction: row; }
+  .footer-nav-ul,
+  .footer-nav-links { flex-direction: row; }
 
   footer { font-size: 1.125rem; }
 
