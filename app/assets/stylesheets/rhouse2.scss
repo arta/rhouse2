@@ -118,3 +118,57 @@ section.portfolio {
   background-image: url('https://storage.googleapis.com/rhouse2-development-staging-static/background-bathroom1.jpg');
   background-position: center 30%;
 }
+
+@media (min-width: 640px) {
+  .griddle.admin-portfolio {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 768px) {
+  main { margin-top: 100px; }
+  .container { max-width: 90%; }
+  section.portfolio { grid-template-columns: 1fr 1fr; }
+  .portfolio-spacer {
+    border: 5px solid #555;
+    margin: 3em 3em 5em;
+  }
+}
+
+@media (min-width: 768px) {
+  .under-construction {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .construction-sign { width: 30%; }
+  .construction-message { width: 70%; }
+}
+
+@media (min-width: 1200px) {
+  .small-heading { display: none; }
+  .xlarge-heading { display: block; }
+  .griddle { grid-template-columns: 2fr 1fr; }
+  aside.contact-us { margin-top: 2rem; }
+  section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
+  .portfolio-spacer {
+    border:3px solid #3a3a3a;
+    margin: 2em 1em 3em;
+  }
+}
+
+@media (min-width: 1280px) {
+
+  main { margin-top: 173px; }
+
+}
+
+@media (min-width: 1440px) {
+  aside { border-left: 1.5rem solid #d0d0d0; }
+  .container { max-width: 1280px; }
+}
+
+@media (min-width: 1700px) {
+
+  main { margin-top: 123px; }
+
+}
