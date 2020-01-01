@@ -29,17 +29,6 @@
   h1 { font-size: calc(16px + (48 - 22) * (100vw - 150px)/(335 - 150)); }
 }
 
-@media (min-width: 540px) {
-  .in-article-left {
-    float: left;
-    margin: .3rem 1.7em .3rem 0;
-  }
-  .in-article-right {
-    float: right;
-    margin: .3rem 0 .3rem 1.3rem;
-  }
-}
-
 @media (min-width: 640px) {
   .griddle.admin-portfolio {
     grid-template-columns: 1fr 1fr;
@@ -70,10 +59,6 @@
   .xlarge-heading { display: block; }
   .griddle { grid-template-columns: 2fr 1fr; }
   aside.contact-us { margin-top: 2rem; }
-  aside .in-article-left, aside .in-article-right {
-    float: none;
-    margin: 0 auto;
-  }
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
   .portfolio-spacer {
     border:3px solid #3a3a3a;
@@ -89,14 +74,6 @@
 
 @media (min-width: 1440px) {
   aside { border-left: 1.5rem solid #d0d0d0; }
-  aside .in-article-left {
-    float: left;
-    margin: .3rem 1rem 0 0;
-  }
-  aside .in-article-right {
-    float: right;
-    margin: .3rem 0 0 1rem;
-  }
   .container { max-width: 1280px; }
 }
 
