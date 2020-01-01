@@ -3,7 +3,7 @@
     - portfolio.images.ordered.each do |image|
       %figure
         = image_tag image.file.variant(resize: '800').processed,
-          class: 'portfolio'
+          class: 'portfolio-img'
         %figcaption
           %h4.portfolio-figcaption-h4= image.caption_heading
           %p.portfolio-figcaption-p= image.caption_text

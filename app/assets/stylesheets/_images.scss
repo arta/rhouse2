@@ -11,21 +11,21 @@ img {
 
 /* ------ */
 
-li.roofing-supplier.carlisle img {
+.construction-sign-img { max-width: 140px; }
+
+.portfolio-img { height: auto; }
+
+.roofing-supplier-carlisle-img {
   min-width: 100px;
   max-width: 125px;
 }
 
-li.roofing-supplier.certainteed img {
+.roofing-supplier-certainteed-img {
   min-width: 170px;
   max-width: 237px;
 }
 
-li.roofing-supplier.gaf img {
+.roofing-supplier-gaf-img {
   min-width: 70px;
   max-width: 110px;
 }
-
-img.portfolio { height: auto; }
-
-.img-construction-sign { max-width: 140px; }
