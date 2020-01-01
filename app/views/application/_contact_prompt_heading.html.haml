@@ -1,7 +1,10 @@
+- if controller_name == 'portfolios' && action_name != 'index'
+  - h1_selector = 'portfolio-h1'
+
 .contact-prompt-heading
   - if local_assigns[:h1]
-    %h1.portfolio-h1= local_assigns[:h1]
-    = render 'contact_prompt'
+    %h1{ class: h1_selector }= local_assigns[:h1]
   - else
     .h1-spacer &nbsp;
-    = render 'contact_prompt'
+
+  = render 'contact_prompt'
