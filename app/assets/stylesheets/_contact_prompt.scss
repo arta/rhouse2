@@ -1,4 +1,4 @@
-span.phone,
+.span-contact-us-prompt-phone,
 span.gc-cs-link {
   color: black;
   cursor: auto;
@@ -12,7 +12,12 @@ i.fa-phone + a {
 
 .portfolio i.fa-phone + a { color: #ddd; }
 
-span.phone { margin-right: .7rem; }
+i.fa-phone {
+  color: #e60000;
+  margin-right: .3rem;
+}
+
+.span-contact-us-prompt-phone { margin-right: .7rem; }
 
 .contact-prompt-heading {
   display: flex;
@@ -20,6 +25,7 @@ span.phone { margin-right: .7rem; }
   align-items: center;
   text-align: center;
 }
+
 .h1-spacer { display: none; }
 
 .contact-prompt {
@@ -31,11 +37,6 @@ span.phone { margin-right: .7rem; }
 }
 
 .contact-prompt { margin: 0 0 3rem 0; }
-
-i.fa-phone {
-  color: #e60000;
-  margin-right: .3rem;
-}
 
 .contact-us-button {
   color: white;
