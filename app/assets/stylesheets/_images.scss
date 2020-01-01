@@ -12,7 +12,9 @@ img {
 /* ------ */
 
 .figure-article-left,
-.figure-article-right {
+.figure-article-right,
+.figure-aside-left,
+.figure-aside-right {
   display: inline;
   margin: .3rem auto 0 auto;
 }
@@ -71,8 +73,8 @@ img {
 
 @media (min-width: 1200px) {
 
-  aside .figure-article-left,
-  aside .figure-article-right {
+  .figure-aside-left,
+  .figure-aside-right {
     float: none;
     margin: 0 auto;
   }
@@ -81,12 +83,12 @@ img {
 
 @media (min-width: 1440px) {
 
-  aside .figure-article-left {
+  .figure-aside-left {
     float: left;
     margin: .3rem 1rem 0 0;
   }
 
-  aside .figure-article-right {
+  .figure-aside-right {
     float: right;
     margin: .3rem 0 0 1rem;
   }
