@@ -1,3 +1,7 @@
+/* ########## */
+/* TYPOGRAPHY */
+/* ---------- */
+
 @font-face {
   font-family: 'Chaparral Pro Bold';
   src: font-url('ChaparralPro-Bold.otf') format('truetype');
@@ -11,6 +15,8 @@
   src: font-url('telegrafico.ttf') format('truetype');
 }
 
+/* ---------- */
+
 .container.portfolio h1,
 .portfolio-figcaption-h4,
 .portfolio-figcaption-p { color: #ddd; }
@@ -23,6 +29,8 @@
   font-family: 'Chaparral Pro';
   margin: .1em 0;
 }
+
+/* ---------- */
 
 h1 {
   color: #666;
@@ -73,13 +81,13 @@ mark.rh2 {
 
 ul.aside { padding-left: 1rem; }
 
-ul.roofing-suppliers {
+.roofing-suppliers-ul {
   font-size: .9rem;
   list-style-type: none;
   padding-left: 0;
 }
 
-li.roofing-supplier {
+.roofing-supplier-li {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
@@ -92,11 +100,31 @@ main li { margin-bottom: 1rem; }
 
 footer a { color: whitesmoke; }
 
+/* ---------- */
+
 @media (min-width: 768px) {
 
   blockquote {
     padding-left: 1em;
     padding-right: 2em;
   }
+
+}
+
+@media (min-width: 640px) {
+
+  .roofing-supplier-li { flex-wrap: nowrap; }
+
+}
+
+@media (min-width: 1200px) {
+
+  .roofing-supplier-li { flex-wrap: wrap; }
+
+}
+
+@media (min-width: 1440px) {
+
+  .roofing-supplier-li { flex-wrap: nowrap; }
 
 }

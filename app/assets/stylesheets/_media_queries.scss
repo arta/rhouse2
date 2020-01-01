@@ -41,7 +41,6 @@
 }
 
 @media (min-width: 640px) {
-  li.roofing-supplier { flex-wrap: nowrap; }
   .griddle.admin-portfolio {
     grid-template-columns: 1fr 1fr;
   }
@@ -104,7 +103,6 @@
     float: none;
     margin: 0 auto;
   }
-  li.roofing-supplier { flex-wrap: wrap; }
   section.portfolio { grid-template-columns: 1fr 1fr 1fr; }
   .portfolio-spacer {
     border:3px solid #3a3a3a;
@@ -129,7 +127,6 @@
     float: right;
     margin: .3rem 0 0 1rem;
   }
-  li.roofing-supplier { flex-wrap: nowrap; }
   .container { max-width: 1280px; }
 }
 

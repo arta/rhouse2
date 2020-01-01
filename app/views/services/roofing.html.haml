@@ -55,8 +55,8 @@
         One way to fix the problem is always use the finest products available.
         #{rh2} uses the finest roofing products available including:
 
-      %ul.roofing-suppliers
-        %li.roofing-supplier
+      %ul.roofing-suppliers-ul
+        %li.roofing-supplier-li
           %figure.mr--1rem
             = link_to image_tag(gcs('logo-CarlisleSynTec.jpg'),
               class: 'roofing-supplier-carlisle-img'),
@@ -64,7 +64,7 @@
           - carlisle = "Carlisle SynTec single-ply membrane roofing systems      |
             and materials."                                                      |
           = link_to carlisle, 'http://www.carlisle-syntec.com'
-        %li.roofing-supplier
+        %li.roofing-supplier-li
           %figure.mr--1rem
             = link_to image_tag(gcs('logo-CertainTeed.jpg'),
               class: 'roofing-supplier-certainteed-img'),
@@ -72,7 +72,7 @@
           - certainteed = "CertainTeed Corporation is a leading North American   |
             manufacturer of building roofing materials."                         |
           = link_to certainteed, 'http://www.certainteed.com/products/roofing'
-        %li.roofing-supplier
+        %li.roofing-supplier-li
           %figure.mr--1rem
             = link_to image_tag(gcs('logo-GAF.jpg'),
               class: 'roofing-supplier-gaf-img'), 'http://www.gaf.com/'
