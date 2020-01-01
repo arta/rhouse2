@@ -39,8 +39,8 @@ footer {
 /* ---------- */
 
 .footer-container {
-  flex: initial; /* override .container's 1 0 auto #<= odd, fix it, see above */
-  margin: 0 auto;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .footer-flextrack {
