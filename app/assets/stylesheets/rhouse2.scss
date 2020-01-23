@@ -1,3 +1,13 @@
+/* ###### */
+/* GLOBAL */
+/* ------ */
+
+// 1-23-20: gem sassc-rails wants these imports
+// in foundation_and_overrides.scss
+// and in every stylesheet invoking the variables in these files:
+// @import 'settings'; // not needed since all variables are copied into:
+@import 'settings_overrides';
+
 // https://www.paulirish.com/2012/box-sizing-border-box-ftw/
 html { box-sizing: border-box; }
 *, *:before, *:after { box-sizing: inherit; }

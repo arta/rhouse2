@@ -4,13 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.0'
 
 gem 'rails', '~> 6.0.2.1'
+
 gem 'pg'#, '>= 0.18', '< 2.0'
 gem 'puma'#, '~> 3.11'
-# 12-28-19: sassc-rails doesn't play nice with foundation (<= remove F)
-# gem 'sassc-rails'#, '~> 2.1.0'
-# 11-14-19: sass-rails 6.0.0 doesn't play nice with foundation (<= remove F)
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier'#, '>= 1.3.0'
+gem 'sassc-rails'#, '~> 2.1.0'
 gem 'coffee-rails'#, '~> 4.2'
 gem 'turbolinks'#, '~> 5'
 gem 'jbuilder'#, '~> 2.5'

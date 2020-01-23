@@ -2,6 +2,12 @@
 /* NAV HEADER */
 /* ---------- */
 
+// 1-23-20: gem sassc-rails wants these imports
+// in foundation_and_overrides.scss
+// and in every stylesheet invoking the variables in these files:
+// @import 'settings'; // not needed since all variables are copied into:
+@import 'settings_overrides';
+
 /* --- Header nav hover & current view styles --- */
 
 // nav element                      idle          :hover
