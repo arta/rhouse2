@@ -1,4 +1,58 @@
 ################################################################################
+1-23-21 ########################################################################
+• WHAT:
+  : Rail's Error Msg: We're sorry but something went wrong
+  : read from Heroku GUI logs:
+    ..
+    ActionView::Template::Error (undefined method `service_name' for #<ActiveSto
+    rage::Blob id: 325, .. filename: "Ochir.m4a", content_type: "audio/mp4" ..
+
+  : same as when upgrading ruby & rails on thehouse yesterday
+  : so, this note is copy'n paste from there :)
+
+• WHEN:
+  : GET /caregivers/2442 .. with voice attachment
+
+• WHY:
+  : Rails 6.1 upgrade is a bit more involved than just gem version override
+  : specific issue here:
+  :: Rails 6.1 adds service_name field to ActiveStorage::Blob
+  :: and that's missing hence the above error
+  : Footnote:
+  :: Rails 6.1 also adds active storage variant table
+  :: finally? I think I was looking for this in the past?
+
+• Quick FIX:
+  $ rails active_storage:update
+  $ rails db:migrate
+
+• Real FIX:
+  $ bin/rails app:update
+  https://github.com/rails/rails/issues/40895
+
+################################################################################
+• WHAT:
+  : server wouldn't start
+  : slew of output with couple error messages from bootsnap
+  : but google didn't return anything productive
+
+• WHEN:
+  : upgrading to ruby 3, rails 6.1
+
+• WHY:
+  : overlooked old, ancient really, gem version in Gemfile
+
+    gem 'haml-rails', '1.0.0'
+
+• FIX:
+
+    gem 'haml-rails' # it's now 2.0.1
+
+################################################################################
+
+
+
+################################################################################
 11-18-19: ######################################################################
 ################################################################################
 • WHAT:
