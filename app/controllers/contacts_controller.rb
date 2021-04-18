@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   def create
     @inquiry = Inquiry.new(inquiry_params)
 
-    if @inquiry.valid?
+    if verify_recaptcha(model: @inquiry) && @inquiry.valid?
       VisitorMailer.inquiry(@inquiry).deliver_now
       redirect_to new_inquiry_path, notice: "Thank you for your inquiry,</br>
         we will respond as soon as we can!"

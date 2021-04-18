@@ -35,6 +35,8 @@
 			= f.text_field  :name,  placeholder: 'Name'
 			= f.email_field :email, placeholder: 'Email'
 			= f.text_area   :body,  placeholder: 'Inquiry text', rows: 7
+			.mb--1rem
+				= recaptcha_tags
 			= f.check_box 	:cc_inquiry, checked: true
 			= f.label     	:cc_inquiry, 'Send me a copy'
 			.actions.mb--0
