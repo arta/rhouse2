@@ -1,4 +1,25 @@
 ################################################################################
+4-17-21: #######################################################################
+• While implementing recaptcha, I found:
+  : a good article on understanding Rails secrets:
+  : https://www.codewithjason.com/understanding-rails-secrets-credentials/
+  :: for future reference
+  :: I did not implement it, but it's good to know
+
+• Currently, recaptcha implemented with:
+  : config/initializers/recaptcha.rb
+  : environment variables
+  : Gave 2 domains, when generating the keys:
+  :: rhouse2.com, rhouse2-staging.herokuapp.com
+  :: (from/under layered.rhouse2@gm)
+  :: Than added localhost for development, then removed once it worked
+  :: Google, obvi, doesn't recommend allowing localhost
+
+################################################################################
+
+
+
+################################################################################
 1-24-21: #######################################################################
 • commit for 1st push from Big Sur
 

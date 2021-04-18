@@ -32,6 +32,7 @@ gem 'haml'
 gem 'haml-rails'#, '1.0.0'
 gem 'jquery-rails'
 gem 'sendgrid-ruby'
+gem 'recaptcha'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution
