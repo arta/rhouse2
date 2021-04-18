@@ -16,6 +16,12 @@
 			If you prefer to contact us through this web page, please fill out and
 			send our inquiry form.
 
+	%aside.contact-us
+		%p
+			#{rh2} will never share, give or sell your personal information such as
+			your name or email to anyone for the purposes of advertising or
+			unsolicited email (SPAM). Your email is for our business use only.
+
 		%p
 			- if @inquiry.errors.any?
 				#error_explanation
@@ -26,11 +32,6 @@
 						- @inquiry.errors.full_messages.each do |message|
 							%li= message
 
-	%aside.contact-us
-		%p
-			#{rh2} will never share, give or sell your personal information such as
-			your name or email to anyone for the purposes of advertising or
-			unsolicited email (SPAM). Your email is for our business use only.
 		= form_for @inquiry do |f|
 			= f.text_field  :name,  placeholder: 'Name'
 			= f.email_field :email, placeholder: 'Email'
