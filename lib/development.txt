@@ -1,4 +1,19 @@
 ################################################################################
+10-16-21: ######################################################################
+• Note on addressing Portfolio#images association N+1 queries:
+  : This is an update on 3-5-19 orig note on the topic
+  : Instead of re-scoping `has_many :images` manually with includes().merge()
+    use Rails' ActiveStorage hidden magic, a dynamically generated scope:
+    `with_attached_<image(s)>`
+  : courtesy of Ruby metaprogramming
+
+• See: https://stackoverflow.com/a/51682162/247626
+
+################################################################################
+
+
+
+################################################################################
 4-17-21: #######################################################################
 • While implementing recaptcha, I found:
   : a good article on understanding Rails secrets:
