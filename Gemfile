@@ -18,7 +18,7 @@ gem 'jbuilder'#, '~> 2.5'
 gem 'webpacker'
 
 # Use ActiveStorage variant
-gem 'image_processing', '~> 1.12', '>= 1.12.1'
+gem 'image_processing', '~> 1.12'
 gem 'mini_magick'#, '~> 4.8'
 
 # Reduces boot times through caching; required in config/boot.rb
