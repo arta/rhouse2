@@ -1,13 +1,13 @@
 {
   "engines": {
-    "node": "20.9.0"
+    "node": "16.13.1"
   },
   "name": "rhouse2",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "*"
+    "@rails/webpacker": "5.4.3"
   },
   "devDependencies": {
-    "webpack-dev-server": "*"
+    "webpack-dev-server": "^4.7.1"
   }
 }
