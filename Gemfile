@@ -56,6 +56,8 @@ group :development do
   # 3-31-19:
   # https://github.com/ryanb/letter_opener
   gem 'letter_opener'
+  # 12-31-23: attempting to make solargraph work
+  gem 'solargraph'
 end
 
 group :test do
