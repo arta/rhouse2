@@ -1,4 +1,22 @@
 ################################################################################
+12-30-23: ######################################################################
+• Bump up Ruby to 3.2.2, bundle install,
+  : message from device )for reference):
+
+    Post-install message from devise:
+
+    [DEVISE] Please review the [changelog] and [upgrade guide] for more info on
+    Hotwire / Turbo integration.
+
+      [changelog] https://github.com/heartcombo/devise/blob/main/CHANGELOG.md
+      [upgrade guide] https://github.com/heartcombo/devise/wiki/
+        How-To:-Upgrade-to-Devise-4.9.0-%5BHotwire-Turbo-integration%5D
+
+################################################################################
+
+
+
+################################################################################
 12-28-23: ######################################################################
 • test push to heroku, expecting fail (goodpeople & the house failed) and having
 to downgrade Node down to latest LTS, 16.13.1 (already installed now, from gp)
