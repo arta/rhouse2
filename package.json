@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^4.7.1",
-    "webpack": "^5.0.0"
+    "webpack": "^5.0.0",
+    "babel-loader": "^8.2.3"
   }
 }
