@@ -1,4 +1,82 @@
 ################################################################################
+12-31-23: ######################################################################
+• Trying to make solargraph work in VS Code
+  : what a hassle, anyway, ..
+
+  : .. reverting to orig settings,
+    noting the custom settings, per Copee, for reference:
+
+    Solargraph: Command Path
+    /Users/arta/.asdf/shims/solargraph
+    (now reverting back to default `solargraph`, by leaving the field blank)
+
+  : ok, the above VSC settings didn't help, but this one did!
+
+    Solargraph: Use Bundler
+    uncheck the checkbox (= set to false),
+    which is the same as in (vs code) settings.json:
+      ...,
+      "solargraph.useBundler": false, // or no such line, again, the default
+      ...
+
+    : I figured from the accompanying explanation of what this does it could
+      help and it did
+
+        Use `bundle exec` to run solargraph. (If this is true,
+        the solargraph.commandPath setting is ignored.)
+
+  : 1. Solargraph now works
+
+  : 2. Leaving the above two settings on their VSCode default since my specific
+    settings didn't resolve the issue and the defaults work
+
+    : Caveats, per Copee:
+
+      That's great to hear! Disabling `bundle exec` makes VS Code use
+      the `solargraph` command directly, which in your case seems to have
+      resolved the issue. This means it's using the version of Solargraph
+      that's in your `PATH`, which should be the `asdf`-managed version if
+      you've set up your `PATH` correctly.
+
+      Remember, if you encounter any issues related to gem versions in
+      the future, you might need to re-enable the `useBundler` setting to
+      ensure that commands are run with the exact versions of gems specified
+      in your `Gemfile.lock`.
+
+      And:
+
+      (in response to my: "Hi Copee, this one thing confuses me though. Running
+      Solargraph via bundler (bundle exec) seems tighter, more specific to each
+      project, and less likely to cause troubles, so why does it work the other
+      way around for me, i.e. by disabling this option?")
+
+      Running Solargraph via `bundle exec` does indeed ensure that the version
+      of Solargraph (and any other gems it depends on) used is the one specified
+      in your project's `Gemfile.lock`. This can help prevent issues caused by
+      version mismatches between different gems.
+
+      However, `bundle exec` also changes the Ruby environment to the one
+      specified by Bundler, which is determined by the `BUNDLED WITH` line in
+      your `Gemfile.lock`. If there's a mismatch between this Ruby version and
+      the one `asdf` is set to use, it could cause issues.
+
+      In your case, it seems like there was such a mismatch. By disabling the
+      `useBundler` option, you're telling VS Code to use the `solargraph`
+      command directly, without `bundle exec`. This means it uses the version of
+      Solargraph that's in your `PATH`, which should be the `asdf`-managed
+      version if you've set up your `PATH` correctly. It also means it uses the
+      Ruby version managed by `asdf`, not Bundler.
+
+      So, while using `bundle exec` can make things more specific and prevent
+      certain issues, it can also introduce other issues if there's a mismatch
+      between the Bundler and `asdf` environments. It's a trade-off, and in your
+      case, it seems like not using `bundle exec` is the better option.
+
+################################################################################
+
+
+
+################################################################################
 12-30-23: ######################################################################
 • Bump up Ruby to 3.2.2, bundle install,
   : message from device )for reference):
