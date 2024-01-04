@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+# Source:
+# https://github.com/jkevinbaluyot/foundation-test/blob/main/bin/dev
+
+# Copee says:
+# 1) foreman is a manager for Procfile-based applications, which can be used to
+# run multiple processes in your application at the same time
+# 2) Remember to make this script executable with: `rhouse2 % chmod +x bin/dev`
+#
+# = foreman allows to run local server with `% ./bin/dev` instead of `% rails s`
+
+if ! command -v foreman &> /dev/null
+then
+  echo "Installing foreman..."
+  gem install foreman
+fi
+
+foreman start -f Procfile.dev "$@"

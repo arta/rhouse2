@@ -1,0 +1,8 @@
+# 1-3-24: Integrate Zurb Foundation via Yarn (instead of gem)
+# Source:
+# https://github.com/jkevinbaluyot/foundation-test/blob/main/Procfile.dev
+# run local server with `% ./bin/dev` instead of `% rails s`
+
+web: bin/rails server -p 3000
+# enable when ZF Yarn integration complete:
+# css: yarn build:css --watch

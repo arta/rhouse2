@@ -38,6 +38,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution
   # and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # 1-3-24: Integrate Zurb Foundation (ZF) CSS & JS via Yarn (instead of gem)
+  # foreman will run Procfile.dev, which will run
+  # `% rails s`, and `% yarn build:css --watch`
+  gem 'foreman'
 end
 
 group :development do
