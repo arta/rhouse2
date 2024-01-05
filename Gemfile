@@ -25,7 +25,7 @@ gem 'mini_magick'#, '~> 4.8'
 gem 'bootsnap', '~> 1.5', '>= 1.5.1', require: false
 
 gem 'devise'
-gem 'foundation-rails'
+# gem 'foundation-rails' #1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
 gem 'autoprefixer-rails'
 gem 'google-cloud-storage', '~> 1.30', require: false
 gem 'haml'
