@@ -294,8 +294,6 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_http_client (3.5.5)
     rubyzip (2.3.2)
-    sassc (2.4.0)
-      ffi (~> 1.9)
     selenium-webdriver (4.16.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -392,7 +390,6 @@ DEPENDENCIES
   puma
   rails (~> 6.1, >= 6.1.1)
   recaptcha
-  sassc
   selenium-webdriver
   sendgrid-ruby
   solargraph
