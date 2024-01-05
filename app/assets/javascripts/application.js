@@ -14,21 +14,25 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-// require jquery // 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
-//= require foundation
 
-$(document).on('turbolinks:load', function() {
-  $(function(){ $(document).foundation(); });
-});
-
+// 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+//
+// require jquery
+// require foundation
+//
+// this is now in app/javascript/packs/application.js
+// $(document).on('turbolinks:load', function() {
+//   $(function(){ $(document).foundation(); });
+// });
+//
 // Rails (5.2) will not pick this up if in hero-overlay.js,
 // dunno why ... no word anywhere, extremely frustrating, so here it goes:
-$(function() {
-  $(window).scroll(function() {
-    var currentScrollTop = $(window).scrollTop();
-    $('.hero-overlay').css('opacity',
-      (currentScrollTop) / ($('.hero-overlay').height()));
-  });
-  $('#flash-notice').fadeOut(12000);
-  $('#flash-alert').fadeOut(12000);
-});
+// $(function() {
+//   $(window).scroll(function() {
+//     var currentScrollTop = $(window).scrollTop();
+//     $('.hero-overlay').css('opacity',
+//       (currentScrollTop) / ($('.hero-overlay').height()));
+//   });
+//   $('#flash-notice').fadeOut(12000);
+//   $('#flash-alert').fadeOut(12000);
+// });

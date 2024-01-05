@@ -16,3 +16,24 @@
 // const imagePath = (name) => images(name, true)
 
 console.log('Hello World from Webpacker')
+
+// 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+
+import $ from "jquery";
+import 'foundation-sites';
+
+// moved in here from app/javascript/packs/application.js
+
+$(document).on('turbolinks:load', function () {
+  $(document).foundation();
+});
+
+$(function () {
+  $(window).on('scroll', function () {
+    var currentScrollTop = $(window).scrollTop();
+    $('.hero-overlay').css('opacity',
+      (currentScrollTop) / ($('.hero-overlay').height()));
+  });
+  $('#flash-notice').fadeOut(12000);
+  $('#flash-alert').fadeOut(12000);
+});
