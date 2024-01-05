@@ -30,7 +30,7 @@ gem 'autoprefixer-rails'
 gem 'google-cloud-storage', '~> 1.30', require: false
 gem 'haml'
 gem 'haml-rails'#, '1.0.0'
-gem 'jquery-rails'
+# gem 'jquery-rails' #1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
 gem 'sendgrid-ruby'
 gem 'recaptcha'
 

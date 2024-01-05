@@ -14,7 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
-//= require jquery
+// require jquery // 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
 //= require foundation
 
 $(document).on('turbolinks:load', function() {
