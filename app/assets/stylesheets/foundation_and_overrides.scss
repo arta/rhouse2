@@ -2,7 +2,9 @@
 
 // @import 'settings'; // not needed since all variables are copied into:
 @import 'settings_overrides';
-@import 'foundation';
+// 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+@import '../../../node_modules/foundation-sites/scss/foundation';
+// @import 'foundation'; // 1-4-24
 
 // If you'd like to include motion-ui the foundation-rails gem comes prepackaged with it, uncomment the 3 @imports, if you are not using the gem you need to install the motion-ui sass package.
 //

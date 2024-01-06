@@ -11,7 +11,10 @@ default: &default
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
-  resolved_paths: []
+  # resolved_paths: []
+  # 1-5-24: Integrate ZF CSS & JS via Yarn, instead of gem
+  # message in terminaL: resolved_paths deprecated in favor of additional_paths
+  additional_paths: ['app/assets']
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false

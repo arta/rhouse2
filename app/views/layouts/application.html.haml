@@ -13,6 +13,8 @@
     %title= content_for?(:title) ? yield(:title) : 'RHouse2'
     = csrf_meta_tags
     = csp_meta_tag
+    -# 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+    = stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload'
     = stylesheet_link_tag 'application', media: 'all',
       data_turbolinks_track: 'reload'
     = stylesheet_link_tag 'https://use.fontawesome.com/releases/v5.7.1/css/all.css',
@@ -20,6 +22,8 @@
       crossorigin: 'anonymous'
     = stylesheet_link_tag 'https://fonts.googleapis.com/css?family=Monteserrat'
     = javascript_include_tag 'application', data_turbolinks_track: 'reload'
+    -# 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
 
   %body
     %header= render 'header'

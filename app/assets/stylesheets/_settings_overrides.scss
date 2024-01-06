@@ -21,7 +21,9 @@
 //
 //  55. Top Bar
 
-@import 'util/util'; // To access F6's get-color(); rem-calc(); etc. in here
+// 1-4-24: Integrate ZF CSS & JS via Yarn, instead of gem
+@import '../../../node_modules/foundation-sites/scss/util/util';
+// @import 'util/util'; // To access F6's get-color(); rem-calc(); etc. in here
 
 // 1. Global
 // ---------

@@ -1,5 +1,9 @@
+// 1-5-24: Integrate ZF CSS & JS via Yarn, instead of gem
+// gem cssbundling-rails manages this file to combine all css files into one
+
+// Entry point for your Sass build
+
 @import "foundation_and_overrides";
-/* Add imports of custom sass/scss files here */
 
 @import 'rhouse2';
 @import 'typography';

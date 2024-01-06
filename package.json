@@ -15,5 +15,8 @@
   "devDependencies": {
     "webpack": "^4.46.0",
     "webpack-dev-server": "^4.9.2"
+  },
+  "scripts": {
+    "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
   }
 }

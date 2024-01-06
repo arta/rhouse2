@@ -5,4 +5,4 @@
 
 web: bin/rails server -p 3000
 # enable when ZF Yarn integration complete:
-# css: yarn build:css --watch
+css: yarn build:css --watch

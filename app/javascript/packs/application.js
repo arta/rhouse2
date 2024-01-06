@@ -21,6 +21,7 @@ console.log('Hello World from Webpacker')
 
 import $ from "jquery";
 import 'foundation-sites';
+import 'stylesheets/application';
 
 // moved in here from app/javascript/packs/application.js
 
