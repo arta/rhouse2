@@ -21,6 +21,7 @@ gem 'puma'
 gem 'recaptcha'
 gem 'sassc'
 gem 'sendgrid-ruby'
+gem 'sprockets-rails'
 gem 'turbolinks'
 gem 'webpacker'
 
