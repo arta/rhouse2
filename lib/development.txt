@@ -1,5 +1,19 @@
 ################################################################################
-1-2-24: ######################################################################
+1-12-24: #######################################################################
+• Email not working, figuring it out w Heroku support (they contacted sendgrid,
+  waiting for their response)
+  : also old m.f@g sendgrid account deleted long ago, now tried to set anew (was
+    able to set up 2FA w that email, but not the sendgrid account), no success
+    (received email from sendgrid w rather bizarre explanation, see gm to read),
+    but that's probably np here since rh2 sendgrid is using add-on credentials
+    by heroku (username, pwd, api_key all in env variables, on local & heroku)
+
+################################################################################
+
+
+
+################################################################################
+1-2-24: ########################################################################
 • Edit to push to heroku-22 stack
 
 ################################################################################
