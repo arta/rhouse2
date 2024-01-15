@@ -42,7 +42,6 @@ end
 group :test do
   gem 'capybara', '~> 3.34'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
 end
 
 # gem 'bcrypt', '~> 3.1.7'
