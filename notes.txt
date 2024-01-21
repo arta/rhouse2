@@ -1,0 +1,21 @@
+1-21-24:
+
+bluehost at https://www.bluehost.com/help/article/renewal-price-faq
+
+Hosting Plan Renewal Pricing
+Shared Hosting
+Term                        Basic
+Intro Pricing (12 months)   $2.95
+Intro Pricing (36 months)   $4.95
+1 Year Term                 $11.99
+3 Year Term                 $9.99
+
+Translated, purchasing:
+
+: 1 year:
+:: $36 for the 1st year,
+:: $144/y thereafter
+
+: 3 years:
+:: $180 for the 1st 3 years,
+:: $360/3y thereafter = $120/y
