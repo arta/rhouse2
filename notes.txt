@@ -1,4 +1,77 @@
-1-21-24:
+################################################################################
+12-22-24: ######################################################################
+
+Chat w Cody re hosting RH2 free on GH pages.
+
+ME: GitHub pages? Hm, interesting, i thouht this was more like a "preview" than
+acuatl hosting, can a custom domain (e.g. rhouse2.com) be directed to the
+webiste hosted by GitHub pages?
+
+CODY: Yes, you're correct that GitHub Pages is primarily designed for hosting
+static project pages and documentation sites for GitHub repositories. However,
+it can also be used to host full production websites with custom domains. Here
+are some key points:
+
+Custom domains - You can configure a custom domain like example.com to point to
+your GitHub Pages site via DNS settings and a CNAME file.
+
+SSL certificates - GitHub Pages provides free SSL certificates for custom
+domains using Let's Encrypt.
+
+Limitations - There are some limitations like max 1GB bandwidth per month and
+max 100GB storage for the repository.
+
+Usage examples - Many developers use GitHub Pages to host their personal
+portfolio sites, company sites, landing pages, and even blogs.
+
+Deployment - You deploy by pushing your static HTML/CSS/JS site code to a
+👉public👈 (emphasis mine) GitHub repository. It will then build and deploy it.
+
+So in summary - GitHub Pages can definitely be used to host a production website
+with a custom domain applied. The limitations are reasonable for a personal or
+small business site with low traffic. And it's completely free which makes it an
+attractive option.
+
+ME: fascinating, can you look at the webstie I am considering for this? it's
+this project here, rhouse2, and it can be found at www.rhouse2.com, would GH
+pages work?
+
+CODY: I checked out the website at www.rhouse2.com. Here is my assessment of
+using GitHub Pages to host it:
+
+It's a simple static site built with HTML, CSS and JavaScript. This makes it
+a good candidate for GitHub Pages hosting.
+
+I see no server-side code or databases needed, so GitHub Pages would have
+everything required to host it.
+
+The homepage is image heavy which is fine, but the total site size looks well
+under the 1GB limit for bandwidth per month.
+
+The design uses custom fonts, images, CSS etc which would all be deployable
+as-is with GitHub Pages.
+
+I spotted a contact form that uses Formspree to handle submissions. This 3rd
+party service could still be integrated to work with GitHub Pages.
+
+You could easily link a custom domain like rhouse2.com to the GitHub Pages URL.
+
+Overall, it appears this site could be hosted on GitHub Pages without any
+issues. The key steps would be:
+
+Push the source code to a public GitHub repository
+Configure GitHub Pages on the repo to deploy the site
+Set up a custom domain and SSL certificate
+Integrate any 3rd party services like Formspree
+Let me know if you have any other questions! GitHub Pages would be a free and
+relatively easy way to host this website.
+
+################################################################################
+
+
+
+################################################################################
+12-21-24: ######################################################################
 
 bluehost at https://www.bluehost.com/help/article/renewal-price-faq
 
@@ -19,3 +92,5 @@ Translated, purchasing:
 : 3 years:
 :: $180 for the 1st 3 years,
 :: $360/3y thereafter = $120/y
+
+################################################################################
