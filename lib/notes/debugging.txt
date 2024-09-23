@@ -1,3 +1,30 @@
+################################################################################
+9-23-24: #######################################################################
+• WHAT:
+  : http://localhost:3000/portfolios/kitchens doesn't load images
+  : right click to Open Image in New Tab has error page with:
+
+    RuntimeError at /rails/active_storage/representations/redirect/eyJfcmFpbHMiO
+    nsiZGF0YSI6MTQwLCJwdXIiOiJibG9iX2lkIn19--f52e1f61bb5f159eea6cf52248623b19184
+    65ec4/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJqcGciLCJyZXNpemVfdG9fbGltaXQiOl
+    s4MDAsbnVsbF19LCJwdXIiOiJ2YXJpYXRpb24ifX0=--ba30705f2260e28860e7d40aee1ac2e0
+    93b5b4e4/2019_5322_Arapaho_Rd_hr-1.jpg
+    The keyfile '/Users/arta/sites/rhouse2/config/secrets/rhouse2-development.js
+    on' is not a valid file.
+
+  : coming from:
+    Google::Cloud::Storage::Credentials#verify_keyfile_exists!
+    googleauth (1.9.1) lib/googleauth/credentials.rb, line 483
+
+• WHEN:
+  : GET /portfolios/kitchens
+
+• FIX #TODO:
+  : explore when on Ventura OS
+
+################################################################################
+
+
 
 ################################################################################
 12-28-23: ######################################################################
